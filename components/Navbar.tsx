@@ -20,14 +20,11 @@ export default function Navbar() {
     >
       {/* Logo — clicking takes user to homepage */}
       <Link href="/" aria-label="XiliHerb Home" className="flex items-center">
-        <Image
-          src="/logo.png"
-          alt="XiliHerb Logo"
-          width={120}
-          height={40}
-          className="h-10 w-auto"
-          priority
-        />
+        <img
+  src="/logo.png"
+  alt="XiliHerb Logo"
+  className="h-14 w-auto"
+/>
       </Link>
 
       {/* Desktop nav links */}

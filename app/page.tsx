@@ -129,7 +129,8 @@ export default function Home() {
             src="/biomass.jpg"
             alt="Agricultural biomass used as raw material for xylitol production"
             fill
-            className="object-cover"
+             className="object-cover rounded-xl"
+  sizes="(max-width: 768px) 100vw, 50vw"
             priority
           />
           {/* Dark overlay so stat cards are readable */}
@@ -388,7 +389,7 @@ export default function Home() {
             alt="High purity xylitol crystals produced by XiliHerb"
             width={600}
             height={256}
-            className="h-64 w-full object-cover rounded-xl"
+            className="w-full h-auto max-h-[400px] object-cover rounded-lg"
           />
         </div>
       </section>
