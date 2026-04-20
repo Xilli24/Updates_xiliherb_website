@@ -63,10 +63,12 @@ export default function Process() {
         </div>
       </section>
 
-      {/* VISUAL FLOW PLACEHOLDER */}
-      <div className="h-48 bg-gray-200 rounded-lg mb-12 flex items-center justify-center text-gray-500 text-sm">
-        Process Flow Diagram (Biomass → Xylitol)
-      </div>
+      {/* IMAGE */}
+      <img
+        src="/processabout.jpg"
+        alt="Processing setup"
+        className="w-full h-72 object-cover rounded-lg mb-12"
+      />
 
       {/* APPROACH */}
       <section className="mb-12">
