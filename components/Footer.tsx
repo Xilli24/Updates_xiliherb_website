@@ -68,7 +68,7 @@ export default function Footer() {
             <li>Bangalore, India</li>
             <li>
               <a
-                href="mailto:info@xiliherb.com"
+                href="mailto:xilliherb@gmail.com"
                 className="transition-colors hover:text-white"
                 style={{ color: "rgba(255,255,255,0.5)" }}
               >
