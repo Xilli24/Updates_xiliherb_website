@@ -72,7 +72,7 @@ export default function Footer() {
                 className="transition-colors hover:text-white"
                 style={{ color: "rgba(255,255,255,0.5)" }}
               >
-                info@xiliherb.com
+                xilliherb@gmail.com
               </a>
             </li>
           </ul>
