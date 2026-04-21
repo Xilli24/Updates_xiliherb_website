@@ -21,13 +21,13 @@ export default function Navbar() {
       {/* Logo */}
       <Link href="/" className="flex items-center gap-2">
         <Image
-          src="/Logoxili.png"
-          alt="XiliHerb Logo"
-          width={120}
-          height={60}
-          className="h-14 w-auto"
-          priority
-        />
+  src="/logoxili.svg"
+  alt="XiliHerb Logo"
+  width={140}
+  height={60}
+  className="h-14 w-auto"
+  priority
+/>
       </Link>
 
       {/* Nav Links */}
