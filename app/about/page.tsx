@@ -14,7 +14,7 @@ export default function About() {
 
       {/* IMAGE PLACEHOLDER */}
       <img
-  src="/biomassabout.jpg"
+  src="/Biomassabout.jpg"
   alt="Biomass raw material"
   className="h-64 w-full object-cover rounded-lg mb-12"
 />
