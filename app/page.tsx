@@ -1,23 +1,24 @@
-import Link from "next/link";
 import { Leaf, FlaskConical, Droplets, Sparkles } from "lucide-react";
-
-const GRAIN = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")`;
+import { GRAIN } from "@/lib/constants";
+import MolecularGraph from "@/components/MolecularGraph";
+import TypewriterText from "@/components/TypewriterText";
+import MagneticButton from "@/components/MagneticButton";
 
 const pillars = [
   {
     num: "01",
-    title: "Feedstock Exploration",
-    desc: "Evaluating agricultural residues — including non-GMO corn cobs — as scalable raw material inputs for naturally derived ingredient pathways.",
+    title: "Feedstock Selection",
+    desc: "Non-GMO corn cobs and other agricultural residues serve as our scalable raw material inputs for naturally derived ingredient pathways.",
   },
   {
     num: "02",
     title: "Conversion Pathways",
-    desc: "Exploring bioconversion and sustainable extraction techniques for bio-based molecular transformation and circular resource utilization.",
+    desc: "We apply bioconversion and sustainable extraction techniques for bio-based molecular transformation and circular resource utilization.",
   },
   {
     num: "03",
     title: "Platform Thinking",
-    desc: "Designing a long-term technology system capable of generating multiple ingredient outputs from a single renewable biomass feedstock.",
+    desc: "Our technology platform generates multiple ingredient outputs from a single renewable biomass feedstock.",
   },
 ];
 
@@ -34,6 +35,7 @@ export default function Home() {
 
       {/* ══════════ HERO — Obsidian ══════════ */}
       <section
+        data-section="dark"
         className="relative overflow-hidden"
         style={{ background: "#1A1A18", minHeight: "90vh" }}
       >
@@ -59,7 +61,10 @@ export default function Home() {
                 className="text-5xl md:text-[58px] font-semibold leading-[1.06] mb-8"
                 style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
               >
-                Engineering Sustainable Pathways for Bio-Based Ingredients
+                <TypewriterText
+                  text="Engineering Sustainable Pathways for Bio-Based Ingredients"
+                  delay={300}
+                />
               </h1>
 
               <p
@@ -76,20 +81,19 @@ export default function Home() {
                 style={{ color: "#44433E" }}
               >
                 At the intersection of biotechnology, sustainability, and process
-                innovation, we are developing scalable approaches to next-generation
-                ingredient systems through research-led innovation and agricultural
-                biomass valorization.
+                innovation, we build scalable next-generation ingredient systems through
+                research-led process development and agricultural biomass valorization.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-12">
-                <Link
+                <MagneticButton
                   href="/about"
                   className="text-[13px] font-medium px-6 py-3 transition-opacity hover:opacity-80"
                   style={{ background: "#F5F4EF", color: "#1A1A18", borderRadius: "2px" }}
                 >
                   Explore Our Vision
-                </Link>
-                <Link
+                </MagneticButton>
+                <MagneticButton
                   href="/contact"
                   className="text-[13px] px-6 py-3 transition-colors hover:bg-white/5"
                   style={{
@@ -99,7 +103,7 @@ export default function Home() {
                   }}
                 >
                   Partner With Us
-                </Link>
+                </MagneticButton>
               </div>
 
               <p
@@ -110,56 +114,21 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Right — animated SVG */}
-            <div className="flex justify-center">
-              <svg
-                width="480"
-                height="240"
-                viewBox="0 0 520 240"
-                xmlns="http://www.w3.org/2000/svg"
-                style={{ borderRadius: "4px" }}
+            {/* Right — molecular graph */}
+            <div className="flex flex-col">
+              <MolecularGraph />
+              <p
+                style={{
+                  fontSize: 10,
+                  letterSpacing: "0.14em",
+                  color: "#44433E",
+                  textTransform: "uppercase",
+                  textAlign: "center",
+                  marginTop: 12,
+                }}
               >
-                <defs>
-                  <linearGradient id="fg" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%"   stopColor="#44433E" />
-                    <stop offset="50%"  stopColor="#6B6A62" />
-                    <stop offset="100%" stopColor="#C9CBBE" />
-                  </linearGradient>
-                  <filter id="glow">
-                    <feGaussianBlur stdDeviation="3" result="b" />
-                    <feMerge>
-                      <feMergeNode in="b" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                </defs>
-
-                <rect width="520" height="240" rx="4" fill="#222220" />
-
-                <path
-                  d="M 80 120 C 180 60, 340 180, 440 120"
-                  stroke="url(#fg)"
-                  strokeWidth="1.5"
-                  fill="none"
-                  strokeDasharray="6 4"
-                >
-                  <animate attributeName="stroke-dashoffset" values="0;10" dur="1.2s" repeatCount="indefinite" />
-                </path>
-
-                <g filter="url(#glow)">
-                  <circle cx="80"  cy="120" r="14" fill="#44433E" />
-                  <circle cx="260" cy="120" r="14" fill="#6B6A62" />
-                  <circle cx="440" cy="120" r="14" fill="#C9CBBE" />
-                </g>
-
-                <text x="80"  y="154" textAnchor="middle" fontSize="9" fill="#6B6A62" fontFamily="Arial" letterSpacing="1.5">BIOMASS</text>
-                <text x="260" y="154" textAnchor="middle" fontSize="9" fill="#6B6A62" fontFamily="Arial" letterSpacing="1.5">CONVERSION</text>
-                <text x="440" y="154" textAnchor="middle" fontSize="9" fill="#6B6A62" fontFamily="Arial" letterSpacing="1.5">INGREDIENT</text>
-
-                <circle r="4" fill="#C9CBBE" opacity="0.9">
-                  <animateMotion dur="3s" repeatCount="indefinite" path="M 80 120 C 180 60, 340 180, 440 120" />
-                </circle>
-              </svg>
+                Biomass · Conversion · Ingredient Network
+              </p>
             </div>
 
           </div>
@@ -172,13 +141,13 @@ export default function Home() {
       </section>
 
       {/* ══════════ WHAT WE BUILD — Linen ══════════ */}
-      <section style={{ background: "#F5F4EF" }}>
+      <section data-section="light" style={{ background: "#F5F4EF" }}>
         <div className="max-w-7xl mx-auto px-8 py-28">
 
           <div className="mb-16">
             <p
-              className="text-[11px] uppercase tracking-[0.2em] font-medium mb-5"
-              style={{ color: "#C9CBBE" }}
+              className="text-[13px] uppercase tracking-[0.16em] font-medium mb-5"
+              style={{ color: "#44433E" }}
             >
               What We Build &nbsp;&nbsp; 01 / 03
             </p>
@@ -186,7 +155,7 @@ export default function Home() {
               className="text-3xl md:text-[38px] font-semibold leading-tight max-w-2xl"
               style={{ color: "#1A1A18", fontFamily: "var(--font-display)" }}
             >
-              Designing a New Approach to Sustainable Ingredient Production
+              A New Standard in Sustainable Ingredient Production
             </h2>
           </div>
 
@@ -220,7 +189,7 @@ export default function Home() {
       </section>
 
       {/* ══════════ PROCESS — Obsidian ══════════ */}
-      <section className="relative overflow-hidden" style={{ background: "#1A1A18" }}>
+      <section data-section="dark" className="relative overflow-hidden" style={{ background: "#1A1A18" }}>
         <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: GRAIN }} />
 
         <div className="relative z-10 max-w-7xl mx-auto px-8 py-28">
@@ -242,8 +211,8 @@ export default function Home() {
               className="mt-6 text-[15px] max-w-xl mx-auto leading-[1.8]"
               style={{ color: "#6B6A62" }}
             >
-              We are developing research-oriented process systems focused on sustainable
-              extraction, biomass utilization, and bio-based molecular innovation.
+              Our process systems combine sustainable extraction, biomass utilization,
+              and bio-based molecular innovation into a coherent, scalable pipeline.
             </p>
           </div>
 
@@ -274,14 +243,14 @@ export default function Home() {
       </section>
 
       {/* ══════════ CTA — Linen ══════════ */}
-      <section style={{ background: "#F5F4EF" }}>
+      <section data-section="light" style={{ background: "#F5F4EF" }}>
         <div className="max-w-7xl mx-auto px-8 py-28">
           <div className="grid lg:grid-cols-[1fr,auto] gap-16 items-end">
 
             <div>
               <p
-                className="text-[11px] uppercase tracking-[0.2em] font-medium mb-5"
-                style={{ color: "#C9CBBE" }}
+                className="text-[13px] uppercase tracking-[0.16em] font-medium mb-5"
+                style={{ color: "#44433E" }}
               >
                 Long-Term Vision &nbsp;&nbsp; 03 / 03
               </p>
@@ -301,14 +270,14 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-3 shrink-0 min-w-[180px]">
-              <Link
+              <MagneticButton
                 href="/contact"
                 className="text-[13px] font-medium px-6 py-3 text-center transition-opacity hover:opacity-80"
                 style={{ background: "#1A1A18", color: "#F5F4EF", borderRadius: "2px" }}
               >
                 Connect With Us
-              </Link>
-              <Link
+              </MagneticButton>
+              <MagneticButton
                 href="/technology"
                 className="text-[13px] px-6 py-3 text-center transition-colors hover:bg-[#E8E6DE]"
                 style={{
@@ -318,7 +287,7 @@ export default function Home() {
                 }}
               >
                 Explore Our Technology
-              </Link>
+              </MagneticButton>
             </div>
 
           </div>

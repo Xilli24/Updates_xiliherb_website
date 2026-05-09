@@ -1,24 +1,14 @@
+import type { Metadata } from "next";
 import Divider from "@/components/Divider";
+import Callout from "@/components/Callout";
+import ComparisonTable from "@/components/ComparisonTable";
+import RevealImage from "@/components/RevealImage";
 
-const GRAIN = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")`;
-
-
-function Callout({ text }: { text: string }) {
-  return (
-    <div
-      className="my-10 p-8 relative overflow-hidden"
-      style={{ background: "#1A1A18", borderRadius: "2px" }}
-    >
-      <div className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: GRAIN }} />
-      <p
-        className="relative z-10 text-[17px] leading-[1.75] font-medium"
-        style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
-      >
-        {text}
-      </p>
-    </div>
-  );
-}
+export const metadata: Metadata = {
+  title: "About — XiliHerb",
+  description:
+    "XiliHerb is a science-driven bio-innovation startup building sustainable technologies for natural extracts and next-generation bio-based ingredient systems.",
+};
 
 export default function About() {
   return (
@@ -26,17 +16,24 @@ export default function About() {
 
       {/* ── HERO — light editorial ── */}
       <section
+        data-section="light"
         className="relative overflow-hidden"
         style={{ background: "#F5F4EF", minHeight: "62vh" }}
       >
+        {/* radial gradient */}
         <div
           className="absolute inset-0"
-          style={{ background: "radial-gradient(ellipse at 15% 70%, rgba(201,203,190,0.45) 0%, transparent 60%)" }}
+          style={{ background: "radial-gradient(ellipse at 15% 70%, rgba(201,203,190,0.45) 0%, transparent 60%)", zIndex: 0 }}
+        />
+        {/* dot grid texture */}
+        <div
+          className="absolute inset-0 dot-grid pointer-events-none"
+          style={{ opacity: 0.6, zIndex: 0 }}
         />
         <div className="relative z-10 max-w-6xl mx-auto px-8 pt-28 pb-20">
           <p
-            className="text-[11px] uppercase tracking-[0.2em] font-medium mb-10"
-            style={{ color: "#C9CBBE" }}
+            className="text-[13px] uppercase tracking-[0.16em] font-medium mb-10"
+            style={{ color: "#44433E" }}
           >
             About XiliHerb
           </p>
@@ -45,7 +42,7 @@ export default function About() {
               className="text-5xl md:text-[62px] font-semibold leading-[1.04]"
               style={{ color: "#1A1A18", fontFamily: "var(--font-display)" }}
             >
-              Engineering Sustainable Pathways for the Future of Bio-Based Ingredients
+              A Science-First Company at the Frontier of Bio-Based Innovation
             </h1>
             <div className="space-y-4 pb-1">
               <p className="text-[15px] leading-[1.8]" style={{ color: "#6B6A62" }}>
@@ -67,8 +64,13 @@ export default function About() {
       </section>
 
       {/* ── 01: OUR VISION ── */}
-      <section className="py-24" style={{ background: "#F5F4EF" }}>
-        <div className="max-w-6xl mx-auto px-8">
+      <section data-section="light" className="py-24 relative" style={{ background: "#F5F4EF" }}>
+        {/* dot grid texture */}
+        <div
+          className="absolute inset-0 dot-grid pointer-events-none"
+          style={{ opacity: 0.45, zIndex: 0 }}
+        />
+        <div className="relative z-10 max-w-6xl mx-auto px-8">
           <div className="grid lg:grid-cols-[260px,1fr] gap-16 items-start">
             <div>
               <p
@@ -110,7 +112,7 @@ export default function About() {
       <Divider />
 
       {/* ── 02: TECHNOLOGY DIRECTION ── */}
-      <section className="py-24" style={{ background: "#FAFAF8" }}>
+      <section data-section="light" className="py-24" style={{ background: "#FAFAF8" }}>
         <div className="max-w-6xl mx-auto px-8">
           <div className="grid lg:grid-cols-[260px,1fr] gap-16 items-start">
             <div>
@@ -132,17 +134,26 @@ export default function About() {
                 </h2>
               </div>
             </div>
-            <div>
-              <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
-                XiliHerb is currently focused on exploring sustainable extraction and conversion
-                technologies that can enable naturally derived ingredient pathways from
-                agricultural biomass.
-              </p>
-              <p className="text-[15px] leading-[1.8]" style={{ color: "#6B6A62" }}>
-                Our approach combines scientific research, process development, and
-                sustainability-oriented engineering — with a focus on long-term platform
-                potential rather than short-term product commercialization.
-              </p>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
+                  XiliHerb is currently focused on exploring sustainable extraction and conversion
+                  technologies that can enable naturally derived ingredient pathways from
+                  agricultural biomass.
+                </p>
+                <p className="text-[15px] leading-[1.8]" style={{ color: "#6B6A62" }}>
+                  Our approach combines scientific research, process development, and
+                  sustainability-oriented engineering — with a focus on long-term platform
+                  potential rather than short-term product commercialization.
+                </p>
+              </div>
+              <RevealImage
+                src="/processabout.jpg"
+                alt="Processing technology"
+                width={520}
+                height={360}
+                style={{ filter: "saturate(0.8)" }}
+              />
             </div>
           </div>
         </div>
@@ -151,8 +162,13 @@ export default function About() {
       <Divider />
 
       {/* ── 03: WHY NATURAL EXTRACTS ── */}
-      <section className="py-24" style={{ background: "#F5F4EF" }}>
-        <div className="max-w-6xl mx-auto px-8">
+      <section data-section="light" className="py-24 relative" style={{ background: "#F5F4EF" }}>
+        {/* dot grid texture */}
+        <div
+          className="absolute inset-0 dot-grid pointer-events-none"
+          style={{ opacity: 0.45, zIndex: 0 }}
+        />
+        <div className="relative z-10 max-w-6xl mx-auto px-8">
           <div className="grid lg:grid-cols-[260px,1fr] gap-16 items-start">
             <div>
               <p
@@ -184,6 +200,13 @@ export default function About() {
                 technologies that can leverage renewable biological resources more efficiently
                 and responsibly.
               </p>
+              <ComparisonTable rows={[
+                { factor: "Raw material",     conventional: "Petroleum or imported hardwood",       ours: "Domestic agricultural crop residue" },
+                { factor: "Chemistry",        conventional: "Synthetic catalysts & solvents",       ours: "Enzymatic & bio-based conversion" },
+                { factor: "Carbon footprint", conventional: "High — energy-intensive refining",     ours: "Low — ambient-temperature process" },
+                { factor: "Traceability",     conventional: "Multi-tier opaque supply chain",       ours: "Direct farm-to-lab sourcing" },
+                { factor: "End product",      conventional: "Chemically identical but synthetic",   ours: "Naturally identical, bio-derived" },
+              ]} />
               <Callout text="At XiliHerb, we see natural extract and bio-based ingredient innovation as part of a broader transition toward circular and sustainable industrial ecosystems — where agricultural resources, scientific advancement, and process innovation can collectively create long-term value." />
             </div>
           </div>

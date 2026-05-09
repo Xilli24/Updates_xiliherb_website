@@ -1,5 +1,6 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import ProgressBar from "../components/ProgressBar";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body className="flex flex-col min-h-screen">
+        <ProgressBar />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

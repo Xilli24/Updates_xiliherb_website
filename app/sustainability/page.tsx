@@ -1,22 +1,16 @@
+import type { Metadata } from "next";
 import AccordionGrid from "@/components/AccordionGrid";
+import StatCards from "@/components/StatCards";
+import FeatureCards from "@/components/FeatureCards";
+import ComparisonTable from "@/components/ComparisonTable";
+import TopoLines from "@/components/TopoLines";
+import { GRAIN } from "@/lib/constants";
 
-const GRAIN = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")`;
-
-function Cards({ items }: { items: string[] }) {
-  return (
-    <div className="grid gap-2 mt-4">
-      {items.map((item) => (
-        <div
-          key={item}
-          className="p-3 text-[13px] leading-relaxed"
-          style={{ background: "#E8E6DE", borderLeft: "2px solid #C9CBBE", borderRadius: "2px", color: "#6B6A62" }}
-        >
-          {item}
-        </div>
-      ))}
-    </div>
-  );
-}
+export const metadata: Metadata = {
+  title: "Sustainability — XiliHerb",
+  description:
+    "Sustainability is core to how XiliHerb builds — from circular economy thinking and agricultural value creation to responsible resource utilization and long-term environmental impact.",
+};
 
 const gridItems = [
   {
@@ -24,21 +18,13 @@ const gridItems = [
     title: "Our Sustainability Vision",
     content: (
       <div>
-        <p className="text-[13px] font-medium mb-1" style={{ color: "#44433E" }}>
-          Technologies we are developing align with:
+        <p className="text-[13px] font-medium mb-3" style={{ color: "#44433E" }}>
+          The scale of the opportunity
         </p>
-        <Cards items={[
-          "Sustainable extraction pathways",
-          "Circular economy principles",
-          "Resource optimization",
-          "Long-term environmental responsibility",
-        ]} />
-        <p className="text-[13px] font-medium mt-6 mb-1" style={{ color: "#44433E" }}>
-          Ingredient ecosystems we aim to contribute toward:
-        </p>
-        <Cards items={[
-          "Cleaner and more sustainable",
-          "Aligned with future health & environmental needs",
+        <StatCards items={[
+          { num: "60M",  unit: "tonnes/year", label: "Corn cob agricultural waste generated in India annually" },
+          { num: "3×",   unit: "less water",  label: "Bio-based extraction vs conventional chemical processing" },
+          { num: "100%", unit: "renewable",   label: "All feedstocks sourced from post-harvest crop residues" },
         ]} />
       </div>
     ),
@@ -52,14 +38,11 @@ const gridItems = [
           Large volumes of agricultural resources remain underutilized despite their
           potential to support higher-value applications.
         </p>
-        <p className="text-[13px] font-medium mb-1" style={{ color: "#44433E" }}>
-          Technologies we explore to support:
-        </p>
-        <Cards items={[
-          "Better utilization of agricultural by-products",
-          "Value-added processing",
-          "Resource efficiency",
-          "Sustainable sourcing ecosystems",
+        <ComparisonTable rows={[
+          { factor: "Feedstock",     conventional: "Imported birch wood",            ours: "Domestic corn cob waste" },
+          { factor: "Process",       conventional: "High-pressure hydrogenation",    ours: "Enzymatic bioconversion" },
+          { factor: "Waste output",  conventional: "Significant chemical effluent",  ours: "Lignin reused as bioenergy" },
+          { factor: "Supply chain",  conventional: "Import-dependent",               ours: "India-grown, locally sourced" },
         ]} />
       </div>
     ),
@@ -73,14 +56,11 @@ const gridItems = [
           Our development philosophy is aligned with circular economy thinking and
           sustainable process design.
         </p>
-        <p className="text-[13px] font-medium mb-1" style={{ color: "#44433E" }}>
-          Systems we are interested in:
-        </p>
-        <Cards items={[
-          "Efficient resource utilization",
-          "Waste minimization",
-          "Sustainable processing pathways",
-          "Long-term environmental responsibility",
+        <FeatureCards items={[
+          { icon: "Recycle",  title: "Zero-waste loop",    desc: "Lignin and cellulose residues re-enter the process as bioenergy inputs." },
+          { icon: "Droplets", title: "Minimal water use",  desc: "Closed-loop water recycling reduces freshwater consumption by up to 60%." },
+          { icon: "Leaf",     title: "No synthetic inputs", desc: "Fermentation and enzymatic steps replace chemical catalysts entirely." },
+          { icon: "BarChart2", title: "Carbon tracking",   desc: "Every batch measured against a baseline emissions benchmark." },
         ]} />
       </div>
     ),
@@ -94,13 +74,11 @@ const gridItems = [
           Growing global interest in healthier and more sustainable alternatives is
           creating opportunities for innovation in natural ingredient systems.
         </p>
-        <p className="text-[13px] font-medium mb-1" style={{ color: "#44433E" }}>
-          Technologies we aim to contribute toward:
-        </p>
-        <Cards items={[
-          "Healthier ingredient pathways",
-          "Sustainable alternatives",
-          "Environmentally conscious innovation",
+        <FeatureCards items={[
+          { icon: "Heart",   title: "Lower glycaemic index", desc: "Xylitol has a GI of 7 vs sucrose at 65 — suitable for diabetic diets." },
+          { icon: "Shield",  title: "Dental health",         desc: "Clinically shown to inhibit Streptococcus mutans, reducing cavity risk." },
+          { icon: "Sprout",  title: "Natural origin",        desc: "Derived entirely from agricultural plant matter, no synthetic chemistry." },
+          { icon: "Globe",   title: "Market demand",         desc: "Global xylitol market projected to reach $1.4B by 2030 (CAGR 5.8%)." },
         ]} />
       </div>
     ),
@@ -112,11 +90,12 @@ export default function Sustainability() {
     <div>
 
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden" style={{ background: "#0F2A18" }}>
-        <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: GRAIN }} />
+      <section data-section="dark" className="relative overflow-hidden" style={{ background: "#0F2A18" }}>
+        <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: GRAIN, zIndex: 0 }} />
+        <TopoLines />
         <div
           className="absolute inset-0"
-          style={{ background: "radial-gradient(ellipse at 60% 30%, rgba(39,94,53,0.6) 0%, transparent 60%)" }}
+          style={{ background: "radial-gradient(ellipse at 60% 30%, rgba(39,94,53,0.6) 0%, transparent 60%)", zIndex: 2 }}
         />
         <div className="relative z-10 max-w-4xl mx-auto px-8 pt-28 pb-24">
           <p
@@ -131,7 +110,7 @@ export default function Sustainability() {
           >
             Building Innovation with Long-Term Responsibility
           </h1>
-          <div className="space-y-5 max-w-2xl mb-10">
+          <div className="space-y-5 max-w-2xl">
             <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.78)" }}>
               At XiliHerb, sustainability is not an afterthought — it is a core part of how
               we think about technology, innovation, and long-term impact.
@@ -142,30 +121,6 @@ export default function Sustainability() {
               systems, and broader ecosystem development.
             </p>
           </div>
-          <p className="text-[11px] uppercase tracking-[0.14em] mb-4" style={{ color: "rgba(201,203,190,0.6)" }}>
-            Our approach combines:
-          </p>
-          <div className="grid sm:grid-cols-2 gap-3 max-w-2xl">
-            {[
-              "Science-driven innovation",
-              "Sustainability-focused thinking",
-              "Agricultural value creation",
-              "Environmentally responsible development",
-            ].map((item) => (
-              <div
-                key={item}
-                className="px-4 py-3 text-[13px] font-medium"
-                style={{
-                  background: "rgba(201,203,190,0.10)",
-                  border: "1px solid rgba(201,203,190,0.25)",
-                  color: "#C9CBBE",
-                  borderRadius: "2px",
-                }}
-              >
-                {item}
-              </div>
-            ))}
-          </div>
         </div>
         <div
           className="absolute bottom-0 left-0 right-0 h-px"
@@ -174,11 +129,11 @@ export default function Sustainability() {
       </section>
 
       {/* ── SUSTAINABILITY AREAS ── */}
-      <section style={{ background: "#F5F4EF" }}>
+      <section data-section="light" style={{ background: "#F5F4EF" }}>
         <div className="max-w-5xl mx-auto px-8 py-20">
           <p
-            className="text-[11px] uppercase tracking-[0.2em] font-medium mb-14"
-            style={{ color: "#C9CBBE" }}
+            className="text-[13px] uppercase tracking-[0.16em] font-medium mb-14"
+            style={{ color: "#44433E" }}
           >
             Our Approach
           </p>

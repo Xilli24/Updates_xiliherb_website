@@ -39,3 +39,9 @@ body {
 h1, h2, h3 {
   font-family: var(--font-display);
 }
+
+.dot-grid {
+  background-image: radial-gradient(circle, #9A9990 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  background-position: 0 0;
+}

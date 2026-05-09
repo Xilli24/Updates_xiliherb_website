@@ -1,126 +1,123 @@
+import type { Metadata } from "next";
 import Accordion from "@/components/Accordion";
+import Callout from "@/components/Callout";
+import StatCards from "@/components/StatCards";
+import FeatureCards from "@/components/FeatureCards";
+import ProcessFlow from "@/components/ProcessFlow";
+import RevealSection from "@/components/RevealSection";
+import RevealImage from "@/components/RevealImage";
+import { GRAIN } from "@/lib/constants";
 
-const GRAIN = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")`;
-
-function Cards({ items }: { items: string[] }) {
-  return (
-    <div className="grid sm:grid-cols-2 gap-3 mt-5">
-      {items.map((item) => (
-        <div
-          key={item}
-          className="p-4 text-[13px] leading-relaxed"
-          style={{ background: "#E8E6DE", borderLeft: "2px solid #C9CBBE", borderRadius: "2px", color: "#6B6A62" }}
-        >
-          {item}
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function Callout({ text }: { text: string }) {
-  return (
-    <div
-      className="my-8 p-8 relative overflow-hidden"
-      style={{ background: "#1A1A18", borderRadius: "2px" }}
-    >
-      <div className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: GRAIN }} />
-      <p
-        className="relative z-10 text-[17px] leading-[1.75] font-medium"
-        style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
-      >
-        {text}
-      </p>
-    </div>
-  );
-}
+export const metadata: Metadata = {
+  title: "Technology — XiliHerb",
+  description:
+    "XiliHerb's technology combines sustainable extraction, agricultural biomass valorization, and bio-based molecular conversion to build next-generation ingredient systems.",
+};
 
 const accordionItems = [
   {
     num: "01",
     title: "Sustainable Extraction Philosophy",
     content: (
-      <div>
-        <p className="text-[14px] font-medium mb-5" style={{ color: "#44433E" }}>
-          Research-Led Approaches to Resource-Efficient Processing
-        </p>
-        <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
-          At XiliHerb, sustainable extraction is viewed as more than a manufacturing
-          step — it is a foundational design philosophy.
-        </p>
-        <p className="text-[15px] leading-[1.8]" style={{ color: "#6B6A62" }}>
-          We are exploring process pathways that emphasize resource efficiency, renewable
-          feedstocks, and responsible utilization of agricultural biomass — understanding how
-          naturally occurring compounds can be developed through scientifically grounded,
-          sustainability-oriented extraction methodologies.
-        </p>
-      </div>
+      <RevealSection threshold={0} delay={0}>
+        <div>
+          <p className="text-[14px] font-medium mb-5" style={{ color: "#44433E" }}>
+            Research-Led Approaches to Resource-Efficient Processing
+          </p>
+          <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
+            At XiliHerb, sustainable extraction is viewed as more than a manufacturing
+            step — it is a foundational design philosophy.
+          </p>
+          <p className="text-[15px] leading-[1.8] mb-2" style={{ color: "#6B6A62" }}>
+            We are exploring process pathways that emphasize resource efficiency, renewable
+            feedstocks, and responsible utilization of agricultural biomass — understanding how
+            naturally occurring compounds can be developed through scientifically grounded,
+            sustainability-oriented extraction methodologies.
+          </p>
+          <FeatureCards items={[
+            { icon: "Leaf",          title: "Renewable feedstock",  desc: "Non-GMO corn cob residues — a crop byproduct with no competing use." },
+            { icon: "FlaskConical",  title: "Enzymatic hydrolysis", desc: "Breaks xylan polysaccharides into fermentable xylose without strong acids." },
+            { icon: "Recycle",       title: "Solvent recovery",     desc: "Process solvents are recovered and recycled within the same batch cycle." },
+            { icon: "Zap",           title: "Low energy input",     desc: "Ambient-temperature bioconversion significantly reduces thermal energy load." },
+          ]} />
+        </div>
+      </RevealSection>
     ),
   },
   {
     num: "02",
     title: "Agricultural Resource Utilization",
     content: (
-      <div>
-        <p className="text-[14px] font-medium mb-5" style={{ color: "#44433E" }}>
-          Unlocking Greater Value From Agricultural Biomass
-        </p>
-        <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
-          XiliHerb is exploring technologies that utilize agricultural feedstocks such as
-          non-GMO corn cobs as raw material inputs for naturally derived ingredient pathways.
-          Through biomass valorization approaches, we are studying how agricultural side
-          streams can support higher-value molecular applications while encouraging more
-          circular resource utilization models.
-        </p>
-        <p className="text-[15px] leading-[1.8]" style={{ color: "#6B6A62" }}>
-          This reflects a broader commitment toward reducing dependency on conventional
-          resource-intensive systems and creating sustainable value chains rooted in
-          renewable biological resources.
-        </p>
-      </div>
+      <RevealSection threshold={0} delay={0}>
+        <div>
+          <p className="text-[14px] font-medium mb-5" style={{ color: "#44433E" }}>
+            Unlocking Greater Value From Agricultural Biomass
+          </p>
+          <p className="text-[15px] leading-[1.8] mb-2" style={{ color: "#6B6A62" }}>
+            XiliHerb uses agricultural feedstocks such as non-GMO corn cobs as raw material
+            inputs for naturally derived ingredient pathways. Through biomass valorization,
+            agricultural side streams support higher-value molecular applications while
+            encouraging more circular resource utilization models.
+          </p>
+          <StatCards items={[
+            { num: "40%",  unit: "of corn plant",  label: "Corn cob represents ~40% of the harvestable plant by dry weight" },
+            { num: "90%+", unit: "xylan content",  label: "Corn cob hemicellulose is among the richest natural xylan sources" },
+            { num: "₹0",   unit: "feedstock cost", label: "Agricultural residue sourced as a byproduct — near-zero raw material cost" },
+          ]} />
+        </div>
+      </RevealSection>
     ),
   },
   {
     num: "03",
     title: "Xylitol Technology Direction",
     content: (
-      <div>
-        <p className="text-[14px] font-medium mb-5" style={{ color: "#44433E" }}>
-          Exploring Naturally Derived Xylitol Pathways
-        </p>
-        <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
-          Our research is focused on sustainable extraction and conversion approaches that
-          can support future bio-based xylitol pathways through renewable feedstock
-          utilization and process-oriented innovation.
-        </p>
-        <Callout text="The objective is not simply ingredient production, but the development of foundational technologies that align scientific advancement, sustainability priorities, and long-term industrial relevance." />
-        <p className="text-[13px] font-medium mb-1" style={{ color: "#44433E" }}>Key areas of exploration:</p>
-        <Cards items={[
-          "Agricultural biomass valorization",
-          "Sustainable extraction methodologies",
-          "Bio-based molecular conversion pathways",
-          "Resource-efficient processing systems",
-          "Circular economy integration",
-          "Future-oriented ingredient technologies",
-        ]} />
-      </div>
+      <RevealSection threshold={0} delay={0}>
+        <div>
+          <p className="text-[14px] font-medium mb-5" style={{ color: "#44433E" }}>
+            Naturally Derived Xylitol Pathways
+          </p>
+          <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
+            Our research targets sustainable extraction and conversion approaches that
+            support bio-based xylitol pathways through renewable feedstock utilization
+            and process-oriented innovation.
+          </p>
+          <Callout text="The objective is not simply ingredient production, but the development of foundational technologies that align scientific advancement, sustainability priorities, and long-term industrial relevance." />
+          <ProcessFlow steps={[
+            { num: "01", title: "Harvest",     desc: "Post-harvest corn cobs collected from partner farms" },
+            { num: "02", title: "Pretreat",    desc: "Steam explosion breaks lignocellulosic structure" },
+            { num: "03", title: "Hydrolyse",   desc: "Enzymes release xylose sugars from hemicellulose" },
+            { num: "04", title: "Ferment",     desc: "Xylose converted via bioconversion pathway" },
+            { num: "05", title: "Purify",      desc: "Chromatographic separation removes impurities" },
+            { num: "06", title: "Crystallise", desc: "Food-grade xylitol crystals formed and dried" },
+          ]} />
+        </div>
+      </RevealSection>
     ),
   },
   {
     num: "04",
     title: "Future Technology Vision",
     content: (
-      <div>
-        <p className="text-[14px] font-medium mb-5" style={{ color: "#44433E" }}>
-          Advancing the Future of Sustainable Molecular Systems
-        </p>
-        <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
-          Looking ahead, XiliHerb envisions contributing to a new generation of sustainable
-          ingredient and molecular technologies shaped by biotechnology, renewable resources,
-          and advanced process innovation.
-        </p>
-        <Callout text="Our long-term ambition is to help enable industrial systems where agricultural resources can be transformed more intelligently, efficiently, and sustainably into higher-value bio-based applications." />
-      </div>
+      <RevealSection threshold={0} delay={0}>
+        <div>
+          <p className="text-[14px] font-medium mb-5" style={{ color: "#44433E" }}>
+            Advancing the Future of Sustainable Molecular Systems
+          </p>
+          <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
+            Looking ahead, XiliHerb contributes to a new generation of sustainable
+            ingredient and molecular technologies shaped by biotechnology, renewable resources,
+            and advanced process innovation.
+          </p>
+          <Callout text="Our long-term ambition is to help enable industrial systems where agricultural resources can be transformed more intelligently, efficiently, and sustainably into higher-value bio-based applications." />
+          <FeatureCards items={[
+            { icon: "Layers",     title: "Multi-output platform", desc: "Same biomass feedstock can yield xylose, arabinoxylan, and lignin derivatives." },
+            { icon: "Globe",      title: "Export readiness",      desc: "Targeting EU and US food-grade certifications for international supply." },
+            { icon: "Users",      title: "FPO integration",       desc: "Direct sourcing partnerships with farmer producer organisations across Karnataka." },
+            { icon: "Microscope", title: "R&D pipeline",          desc: "Three second-generation extraction protocols currently in lab-scale testing." },
+          ]} />
+        </div>
+      </RevealSection>
     ),
   },
 ];
@@ -130,7 +127,7 @@ export default function Technology() {
     <div>
 
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden" style={{ background: "#0A2D3A" }}>
+      <section data-section="dark" className="relative overflow-hidden" style={{ background: "#0A2D3A" }}>
         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: GRAIN }} />
         <div
           className="absolute inset-0"
@@ -140,23 +137,27 @@ export default function Technology() {
           <p className="text-[11px] uppercase tracking-[0.2em] font-medium mb-7" style={{ color: "#C9CBBE" }}>
             Technology
           </p>
-          <h1
-            className="text-4xl md:text-[52px] font-semibold leading-tight mb-8"
-            style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
-          >
-            Engineering Sustainable Pathways for Next-Generation Bio-Based Ingredients
-          </h1>
-          <div className="space-y-5 max-w-2xl">
-            <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.78)" }}>
-              Our technology direction combines biotechnology, extraction science, and agricultural
-              resource utilization to explore how renewable biomass can support more sustainable
-              molecular and ingredient pathways.
-            </p>
-            <p className="text-[14px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.55)" }}>
-              Currently in technology development stage, the company is focused on research-oriented
-              process innovation for scalable, environmentally responsible bio-based ingredient production.
-            </p>
-          </div>
+          <RevealSection delay={0}>
+            <div>
+              <h1
+                className="text-4xl md:text-[52px] font-semibold leading-tight mb-8"
+                style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
+              >
+                From Corn Cob to Ingredient: How Our Process Works
+              </h1>
+              <div className="space-y-5 max-w-2xl">
+                <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.78)" }}>
+                  Our technology combines biotechnology, extraction science, and agricultural
+                  resource utilization to convert renewable biomass into sustainable molecular
+                  and ingredient pathways.
+                </p>
+                <p className="text-[14px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.55)" }}>
+                  Currently in technology development stage, the company is focused on research-oriented
+                  process innovation for scalable, environmentally responsible bio-based ingredient production.
+                </p>
+              </div>
+            </div>
+          </RevealSection>
         </div>
         <div
           className="absolute bottom-0 left-0 right-0 h-px"
@@ -164,12 +165,40 @@ export default function Technology() {
         />
       </section>
 
+      {/* ── FEEDSTOCK & INGREDIENT IMAGES ── */}
+      <section data-section="light" style={{ background: "#F5F4EF", padding: "80px 0" }}>
+        <div className="max-w-6xl mx-auto px-8">
+          <div className="grid lg:grid-cols-2 gap-8">
+            <RevealImage
+              src="/biomass.jpg"
+              alt="Raw corn cob feedstock"
+              width={560}
+              height={400}
+              delay={0}
+            />
+            <RevealImage
+              src="/xylitolabout.jpg"
+              alt="Refined xylitol ingredient"
+              width={560}
+              height={400}
+              delay={200}
+            />
+          </div>
+          <p
+            className="text-center mt-8"
+            style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.12em", color: "#C9CBBE" }}
+          >
+            Raw Feedstock &nbsp;·&nbsp; Refined Ingredient
+          </p>
+        </div>
+      </section>
+
       {/* ── TECHNOLOGY AREAS ── */}
-      <section style={{ background: "#F5F4EF" }}>
+      <section data-section="light" style={{ background: "#F5F4EF" }}>
         <div className="max-w-5xl mx-auto px-8 py-20">
           <p
-            className="text-[11px] uppercase tracking-[0.2em] font-medium mb-14"
-            style={{ color: "#C9CBBE" }}
+            className="text-[13px] uppercase tracking-[0.16em] font-medium mb-14"
+            style={{ color: "#44433E" }}
           >
             Technology Areas
           </p>
