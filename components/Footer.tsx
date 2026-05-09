@@ -1,53 +1,46 @@
 import Link from "next/link";
 
 const navLinks = [
-  { href: "/",              label: "Home" },
   { href: "/about",         label: "About" },
-  { href: "/product",       label: "Xylitol" },
-  { href: "/process",       label: "Process" },
+  { href: "/technology",    label: "Technology" },
   { href: "/sustainability", label: "Sustainability" },
+  { href: "/innovation",    label: "Innovation & Ecosystem" },
   { href: "/contact",       label: "Contact" },
 ];
 
 export default function Footer() {
   return (
-    <footer style={{ background: "#111", color: "rgba(255,255,255,0.5)" }}>
+    <footer style={{ background: "#1A1A18" }}>
 
-      {/* Main grid */}
-      <div className="max-w-5xl mx-auto px-6 pt-14 pb-10 grid md:grid-cols-3 gap-12">
+      <div className="max-w-7xl mx-auto px-8 pt-16 pb-10 grid md:grid-cols-3 gap-12">
 
-        {/* Brand */}
         <div>
           <p
-            className="text-lg font-semibold mb-3"
-            style={{
-              fontFamily: "var(--font-display)",
-              color: "#fff",
-            }}
+            className="text-[15px] font-semibold mb-4"
+            style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
           >
             XiliHerb
           </p>
-          <p className="text-sm leading-relaxed font-light">
-            Plant-derived xylitol production focused on efficiency,
-            consistency, and sustainable industrial supply.
+          <p className="text-[13px] leading-relaxed max-w-xs" style={{ color: "#6B6A62" }}>
+            Science-driven bio-innovation developing sustainable technologies
+            for natural extracts and next-generation bio-based ingredient systems.
           </p>
         </div>
 
-        {/* Navigation */}
         <div>
           <h4
-            className="text-xs uppercase tracking-widest mb-4"
-            style={{ color: "rgba(255,255,255,0.35)" }}
+            className="text-[11px] uppercase tracking-[0.14em] mb-5"
+            style={{ color: "#44433E" }}
           >
-            Navigation
+            Navigate
           </h4>
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-col gap-3">
             {navLinks.map(({ href, label }) => (
               <li key={href}>
                 <Link
                   href={href}
-                  className="text-sm transition-colors hover:text-white"
-                  style={{ color: "rgba(255,255,255,0.5)" }}
+                  className="text-[13px] transition-colors hover:text-[#C9CBBE]"
+                  style={{ color: "#6B6A62" }}
                 >
                   {label}
                 </Link>
@@ -56,37 +49,40 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Contact */}
         <div>
           <h4
-            className="text-xs uppercase tracking-widest mb-4"
-            style={{ color: "rgba(255,255,255,0.35)" }}
+            className="text-[11px] uppercase tracking-[0.14em] mb-5"
+            style={{ color: "#44433E" }}
           >
-            Contact
+            Connect
           </h4>
-          <ul className="flex flex-col gap-2 text-sm font-light">
-            <li>Bangalore, India</li>
+          <ul className="flex flex-col gap-3">
+            <li className="text-[13px]" style={{ color: "#6B6A62" }}>
+              Bangalore, India
+            </li>
             <li>
               <a
                 href="mailto:xilliherb@gmail.com"
-                className="transition-colors hover:text-white"
-                style={{ color: "rgba(255,255,255,0.5)" }}
+                className="text-[13px] transition-colors hover:text-[#C9CBBE]"
+                style={{ color: "#6B6A62" }}
               >
                 xilliherb@gmail.com
               </a>
             </li>
           </ul>
         </div>
+
       </div>
 
-      {/* Bottom bar */}
       <div
-        className="max-w-5xl mx-auto px-6 py-5 flex flex-wrap justify-between items-center gap-4 text-xs"
-        style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
+        className="max-w-7xl mx-auto px-8 py-5 flex flex-wrap justify-between items-center gap-4 text-[11px]"
+        style={{ borderTop: "1px solid #2A2A28" }}
       >
-        <span>© {new Date().getFullYear()} XiliHerb. All rights reserved.</span>
-        <span style={{ color: "rgba(255,255,255,0.3)" }}>
-          Plant-Derived · Research-Backed · Globally Supplied
+        <span style={{ color: "#44433E" }}>
+          © {new Date().getFullYear()} XiliHerb. All rights reserved.
+        </span>
+        <span className="uppercase tracking-[0.1em]" style={{ color: "#44433E" }}>
+          Science-Led · Sustainable · Bio-Based
         </span>
       </div>
 

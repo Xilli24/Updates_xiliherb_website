@@ -1,437 +1,330 @@
 import Link from "next/link";
-import Image from "next/image";
+import { Leaf, FlaskConical, Droplets, Sparkles } from "lucide-react";
 
-/* ─── small reusable pieces ─────────────────────────────────────── */
+const GRAIN = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")`;
 
-function CheckIcon() {
-  return (
-    <span
-      className="flex-shrink-0 flex items-center justify-center w-5 h-5 rounded-full"
-      style={{ background: "rgba(122,182,72,0.18)" }}
-    >
-      <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-        <path
-          d="M2 5l2 2 4-4"
-          stroke="#7AB648"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </span>
-  );
-}
+const pillars = [
+  {
+    num: "01",
+    title: "Feedstock Exploration",
+    desc: "Evaluating agricultural residues — including non-GMO corn cobs — as scalable raw material inputs for naturally derived ingredient pathways.",
+  },
+  {
+    num: "02",
+    title: "Conversion Pathways",
+    desc: "Exploring bioconversion and sustainable extraction techniques for bio-based molecular transformation and circular resource utilization.",
+  },
+  {
+    num: "03",
+    title: "Platform Thinking",
+    desc: "Designing a long-term technology system capable of generating multiple ingredient outputs from a single renewable biomass feedstock.",
+  },
+];
 
-function PurityBar({
-  label,
-  value,
-  pct,
-}: {
-  label: string;
-  value: string;
-  pct: number;
-}) {
-  return (
-    <div>
-      <p
-        className="text-xs uppercase tracking-widest mb-2"
-        style={{ color: "rgba(255,255,255,0.45)" }}
-      >
-        {label}
-      </p>
-      <div
-        className="w-full h-2 rounded-full overflow-hidden"
-        style={{ background: "rgba(255,255,255,0.1)" }}
-      >
-        <div
-          className="h-full rounded-full"
-          style={{ width: `${pct}%`, background: "#7AB648" }}
-        />
-      </div>
-      <p
-        className="mt-2 text-2xl"
-        style={{ fontFamily: "var(--font-display)", color: "#fff" }}
-      >
-        {value}
-      </p>
-    </div>
-  );
-}
-
-/* ─── page ───────────────────────────────────────────────────────── */
+const steps = [
+  { label: "Biomass",     Icon: Leaf },
+  { label: "Conversion",  Icon: FlaskConical },
+  { label: "Refinement",  Icon: Droplets },
+  { label: "Ingredients", Icon: Sparkles },
+];
 
 export default function Home() {
   return (
-    <>
-      {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section className="grid md:grid-cols-2 min-h-[520px]">
+    <div>
 
-        {/* Left — headline + CTA */}
+      {/* ══════════ HERO — Obsidian ══════════ */}
+      <section
+        className="relative overflow-hidden"
+        style={{ background: "#1A1A18", minHeight: "90vh" }}
+      >
+        <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: GRAIN }} />
         <div
-          className="flex flex-col justify-center px-10 py-20"
-          style={{ background: "var(--color-forest)" }}
-        >
-          {/* Tag */}
-          <span
-            className="inline-block self-start text-xs uppercase tracking-widest px-4 py-1.5 rounded-full mb-6"
-            style={{
-              background: "rgba(122,182,72,0.18)",
-              color: "#a8d87a",
-            }}
-          >
-            Sustainable Biotechnology
-          </span>
+          className="absolute inset-0"
+          style={{ background: "radial-gradient(ellipse at 75% 50%, rgba(201,203,190,0.05) 0%, transparent 65%)" }}
+        />
 
-          <h1
-            className="text-4xl md:text-5xl leading-tight font-semibold mb-5"
-            style={{ color: "#fff", fontFamily: "var(--font-display)" }}
-          >
-            Plant-Derived Xylitol for a{" "}
-            <em className="not-italic" style={{ color: "#a8d87a" }}>
-              Cleaner
-            </em>{" "}
-            Industry
-          </h1>
+        <div className="relative z-10 max-w-7xl mx-auto px-8 py-32">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
 
-          <p
-            className="text-base leading-relaxed mb-10 max-w-sm font-light"
-            style={{ color: "rgba(255,255,255,0.65)" }}
-          >
-            High-purity xylitol produced from agricultural biomass —
-            consistent, scalable, and designed for food, oral care, and
-            pharmaceutical sectors.
-          </p>
+            {/* Left — copy */}
+            <div>
+              <p
+                className="text-[11px] uppercase tracking-[0.2em] font-medium mb-7"
+                style={{ color: "#C9CBBE" }}
+              >
+                Science-Driven Bio Innovation
+              </p>
 
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href="/contact"
-              className="text-sm font-medium text-white px-6 py-3 rounded transition-opacity hover:opacity-90"
-              style={{ background: "#7AB648" }}
-            >
-              Request a Sample
-            </Link>
-            <Link
-              href="/process"
-              className="text-sm px-6 py-3 rounded transition-colors"
-              style={{
-                border: "1px solid rgba(255,255,255,0.25)",
-                color: "rgba(255,255,255,0.8)",
-              }}
-            >
-              View Our Process
-            </Link>
+              <h1
+                className="text-5xl md:text-[58px] font-semibold leading-[1.06] mb-8"
+                style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
+              >
+                Engineering Sustainable Pathways for Bio-Based Ingredients
+              </h1>
+
+              <p
+                className="text-[15px] leading-[1.8] mb-5 max-w-lg"
+                style={{ color: "#6B6A62" }}
+              >
+                XiliHerb is a science-driven biotechnology startup advancing natural
+                extract and molecular conversion technologies using renewable
+                agricultural resources.
+              </p>
+
+              <p
+                className="text-[14px] leading-[1.8] mb-10 max-w-lg"
+                style={{ color: "#44433E" }}
+              >
+                At the intersection of biotechnology, sustainability, and process
+                innovation, we are developing scalable approaches to next-generation
+                ingredient systems through research-led innovation and agricultural
+                biomass valorization.
+              </p>
+
+              <div className="flex flex-wrap gap-4 mb-12">
+                <Link
+                  href="/about"
+                  className="text-[13px] font-medium px-6 py-3 transition-opacity hover:opacity-80"
+                  style={{ background: "#F5F4EF", color: "#1A1A18", borderRadius: "2px" }}
+                >
+                  Explore Our Vision
+                </Link>
+                <Link
+                  href="/contact"
+                  className="text-[13px] px-6 py-3 transition-colors hover:bg-white/5"
+                  style={{
+                    border: "1px solid rgba(245,244,239,0.2)",
+                    color: "#F5F4EF",
+                    borderRadius: "2px",
+                  }}
+                >
+                  Partner With Us
+                </Link>
+              </div>
+
+              <p
+                className="text-[11px] uppercase tracking-[0.14em]"
+                style={{ color: "#44433E" }}
+              >
+                Science-Led &nbsp;·&nbsp; Biotechnology &nbsp;·&nbsp; Agricultural Biomass Valorization
+              </p>
+            </div>
+
+            {/* Right — animated SVG */}
+            <div className="flex justify-center">
+              <svg
+                width="480"
+                height="240"
+                viewBox="0 0 520 240"
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ borderRadius: "4px" }}
+              >
+                <defs>
+                  <linearGradient id="fg" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%"   stopColor="#44433E" />
+                    <stop offset="50%"  stopColor="#6B6A62" />
+                    <stop offset="100%" stopColor="#C9CBBE" />
+                  </linearGradient>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="3" result="b" />
+                    <feMerge>
+                      <feMergeNode in="b" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <rect width="520" height="240" rx="4" fill="#222220" />
+
+                <path
+                  d="M 80 120 C 180 60, 340 180, 440 120"
+                  stroke="url(#fg)"
+                  strokeWidth="1.5"
+                  fill="none"
+                  strokeDasharray="6 4"
+                >
+                  <animate attributeName="stroke-dashoffset" values="0;10" dur="1.2s" repeatCount="indefinite" />
+                </path>
+
+                <g filter="url(#glow)">
+                  <circle cx="80"  cy="120" r="14" fill="#44433E" />
+                  <circle cx="260" cy="120" r="14" fill="#6B6A62" />
+                  <circle cx="440" cy="120" r="14" fill="#C9CBBE" />
+                </g>
+
+                <text x="80"  y="154" textAnchor="middle" fontSize="9" fill="#6B6A62" fontFamily="Arial" letterSpacing="1.5">BIOMASS</text>
+                <text x="260" y="154" textAnchor="middle" fontSize="9" fill="#6B6A62" fontFamily="Arial" letterSpacing="1.5">CONVERSION</text>
+                <text x="440" y="154" textAnchor="middle" fontSize="9" fill="#6B6A62" fontFamily="Arial" letterSpacing="1.5">INGREDIENT</text>
+
+                <circle r="4" fill="#C9CBBE" opacity="0.9">
+                  <animateMotion dur="3s" repeatCount="indefinite" path="M 80 120 C 180 60, 340 180, 440 120" />
+                </circle>
+              </svg>
+            </div>
+
           </div>
         </div>
 
-        {/* Right — hero image with stat cards */}
-        <div className="relative flex items-center justify-center overflow-hidden">
-          <Image
-            src="/biomass.jpg"
-            alt="Agricultural biomass used as raw material for xylitol production"
-            fill
-             className="object-cover rounded-xl"
-  sizes="(max-width: 768px) 100vw, 50vw"
-            priority
-          />
-          {/* Dark overlay so stat cards are readable */}
-          <div
-            className="absolute inset-0"
-            style={{ background: "rgba(30,77,58,0.55)" }}
-          />
+        <div
+          className="absolute bottom-0 left-0 right-0 h-px"
+          style={{ background: "linear-gradient(to right, transparent 5%, #C9CBBE 50%, transparent 95%)" }}
+        />
+      </section>
 
-          {/* Stat cards */}
-          <div className="relative z-10 flex flex-col gap-4 p-8">
-            {[
-              { num: "99.2%", label: "Purity Grade" },
-              { num: "100%",  label: "Plant-Based Input" },
-              { num: "3+",    label: "Industry Applications" },
-            ].map(({ num, label }) => (
+      {/* ══════════ WHAT WE BUILD — Linen ══════════ */}
+      <section style={{ background: "#F5F4EF" }}>
+        <div className="max-w-7xl mx-auto px-8 py-28">
+
+          <div className="mb-16">
+            <p
+              className="text-[11px] uppercase tracking-[0.2em] font-medium mb-5"
+              style={{ color: "#C9CBBE" }}
+            >
+              What We Build &nbsp;&nbsp; 01 / 03
+            </p>
+            <h2
+              className="text-3xl md:text-[38px] font-semibold leading-tight max-w-2xl"
+              style={{ color: "#1A1A18", fontFamily: "var(--font-display)" }}
+            >
+              Designing a New Approach to Sustainable Ingredient Production
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {pillars.map((item) => (
               <div
-                key={label}
-                className="px-6 py-5 rounded-xl"
-                style={{
-                  background: "rgba(255,255,255,0.1)",
-                  border: "1px solid rgba(255,255,255,0.15)",
-                  backdropFilter: "blur(6px)",
-                }}
+                key={item.num}
+                className="pt-8"
+                style={{ borderTop: "1px solid #E8E6DE" }}
               >
-                <p
-                  className="text-3xl font-semibold"
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    color: "#fff",
-                  }}
+                <span
+                  className="font-mono text-[11px]"
+                  style={{ color: "#C9CBBE" }}
                 >
-                  {num}
+                  {item.num}.
+                </span>
+                <h3
+                  className="text-[17px] font-semibold mt-4 mb-3 leading-snug"
+                  style={{ color: "#1A1A18", fontFamily: "var(--font-display)" }}
+                >
+                  {item.title}
+                </h3>
+                <p className="text-[14px] leading-[1.75]" style={{ color: "#6B6A62" }}>
+                  {item.desc}
                 </p>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ══════════ PROCESS — Obsidian ══════════ */}
+      <section className="relative overflow-hidden" style={{ background: "#1A1A18" }}>
+        <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: GRAIN }} />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-8 py-28">
+
+          <div className="text-center mb-20">
+            <p
+              className="text-[11px] uppercase tracking-[0.2em] font-medium mb-5"
+              style={{ color: "#C9CBBE" }}
+            >
+              Technology Direction &nbsp;&nbsp; 02 / 03
+            </p>
+            <h2
+              className="text-3xl md:text-[38px] font-semibold leading-tight max-w-2xl mx-auto"
+              style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
+            >
+              From Agricultural Biomass to Future-Ready Ingredient Systems
+            </h2>
+            <p
+              className="mt-6 text-[15px] max-w-xl mx-auto leading-[1.8]"
+              style={{ color: "#6B6A62" }}
+            >
+              We are developing research-oriented process systems focused on sustainable
+              extraction, biomass utilization, and bio-based molecular innovation.
+            </p>
+          </div>
+
+          <div className="relative flex flex-col md:flex-row items-center justify-between gap-12 md:gap-0 max-w-3xl mx-auto">
+            <div
+              className="hidden md:block absolute top-[27px] left-[56px] right-[56px] h-px"
+              style={{ background: "linear-gradient(to right, #44433E, #6B6A62, #C9CBBE)" }}
+            />
+            {steps.map(({ label, Icon }, i) => (
+              <div key={i} className="relative z-10 flex flex-col items-center gap-4">
+                <div
+                  className="w-14 h-14 flex items-center justify-center rounded-full border"
+                  style={{ background: "#222220", borderColor: "#44433E" }}
+                >
+                  <Icon className="w-5 h-5" style={{ color: "#C9CBBE" }} />
+                </div>
                 <p
-                  className="text-xs uppercase tracking-widest mt-1"
-                  style={{ color: "rgba(255,255,255,0.55)" }}
+                  className="text-[11px] uppercase tracking-[0.14em]"
+                  style={{ color: "#6B6A62" }}
                 >
                   {label}
                 </p>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
-      {/* ── TRUST STRIP ──────────────────────────────────────────── */}
-      <div
-        className="border-y py-4 px-6 flex flex-wrap justify-center gap-8"
-        style={{ background: "#fff", borderColor: "var(--color-border)" }}
-      >
-        {[
-          "Headquartered in Bangalore",
-          "Serving Global Markets",
-          "Research-Backed Process",
-          "Agricultural Biomass Input",
-        ].map((item) => (
-          <span
-            key={item}
-            className="flex items-center gap-2 text-xs uppercase tracking-wider text-gray-500"
-          >
-            <span
-              className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-              style={{ background: "#7AB648" }}
-            />
-            {item}
-          </span>
-        ))}
-      </div>
+      {/* ══════════ CTA — Linen ══════════ */}
+      <section style={{ background: "#F5F4EF" }}>
+        <div className="max-w-7xl mx-auto px-8 py-28">
+          <div className="grid lg:grid-cols-[1fr,auto] gap-16 items-end">
 
-      {/* ── WHAT WE DO ───────────────────────────────────────────── */}
-      <section
-        className="py-24 px-6"
-        style={{ background: "var(--color-cream)" }}
-      >
-        <div className="max-w-5xl mx-auto">
-          <p
-            className="text-xs uppercase tracking-widest mb-3 font-medium"
-            style={{ color: "var(--color-leaf)" }}
-          >
-            What We Do
-          </p>
-          <h2
-            className="text-3xl md:text-4xl font-semibold mb-14 leading-snug"
-            style={{
-              color: "var(--color-forest)",
-              fontFamily: "var(--font-display)",
-            }}
-          >
-            Engineered for Efficiency,
-            <br />
-            Built for Scale
-          </h2>
-
-          {/* Feature grid */}
-          <div
-            className="grid md:grid-cols-3 rounded-xl overflow-hidden"
-            style={{
-              border: "1px solid var(--color-border)",
-              gap: "1px",
-              background: "var(--color-border)",
-            }}
-          >
-            {[
-              {
-                title: "Sustainable Input",
-                body: "Utilizing agricultural biomass and plant-based raw materials to drive resource efficiency and reduce industrial waste streams.",
-                icon: (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#1E4D3A" strokeWidth="1.5" width="20" height="20">
-                    <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
-                    <path d="M12 6v6l4 2" strokeLinecap="round" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Refined Conversion",
-                body: "A controlled, process-driven approach that ensures batch-to-batch consistency and high xylitol yield at every stage.",
-                icon: (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#1E4D3A" strokeWidth="1.5" width="20" height="20">
-                    <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Industrial Readiness",
-                body: "Designed from day one for scalability — adaptable across food, oral care, and pharmaceutical manufacturing environments.",
-                icon: (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#1E4D3A" strokeWidth="1.5" width="20" height="20">
-                    <path d="M13 10V3L4 14h7v7l9-11h-7z" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                ),
-              },
-            ].map(({ title, body, icon }) => (
-              <div
-                key={title}
-                className="bg-white p-8"
+            <div>
+              <p
+                className="text-[11px] uppercase tracking-[0.2em] font-medium mb-5"
+                style={{ color: "#C9CBBE" }}
               >
-                <div
-                  className="w-10 h-10 rounded-lg flex items-center justify-center mb-5"
-                  style={{ background: "var(--color-leaf-light)" }}
-                >
-                  {icon}
-                </div>
-                <h3 className="text-base font-medium text-gray-900 mb-2">
-                  {title}
-                </h3>
-                <p className="text-sm text-gray-500 leading-relaxed font-light">
-                  {body}
-                </p>
-              </div>
-            ))}
+                Long-Term Vision &nbsp;&nbsp; 03 / 03
+              </p>
+              <h2
+                className="text-3xl md:text-[44px] font-semibold leading-[1.1] max-w-2xl"
+                style={{ color: "#1A1A18", fontFamily: "var(--font-display)" }}
+              >
+                Building the Future of Sustainable Ingredient Innovation.
+              </h2>
+              <p
+                className="mt-5 text-[15px] leading-[1.8] max-w-xl"
+                style={{ color: "#6B6A62" }}
+              >
+                We welcome collaboration across science, sustainability, biotechnology,
+                and future-oriented industrial ecosystems.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-3 shrink-0 min-w-[180px]">
+              <Link
+                href="/contact"
+                className="text-[13px] font-medium px-6 py-3 text-center transition-opacity hover:opacity-80"
+                style={{ background: "#1A1A18", color: "#F5F4EF", borderRadius: "2px" }}
+              >
+                Connect With Us
+              </Link>
+              <Link
+                href="/technology"
+                className="text-[13px] px-6 py-3 text-center transition-colors hover:bg-[#E8E6DE]"
+                style={{
+                  border: "1px solid #E8E6DE",
+                  color: "#1A1A18",
+                  borderRadius: "2px",
+                }}
+              >
+                Explore Our Technology
+              </Link>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* ── PRODUCT ──────────────────────────────────────────────── */}
-      <section
-        className="py-24 px-6"
-        style={{ background: "var(--color-forest)" }}
-      >
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-
-          {/* Left — copy */}
-          <div>
-            <p
-              className="text-xs uppercase tracking-widest mb-3 font-medium"
-              style={{ color: "#7AB648" }}
-            >
-              Our Product
-            </p>
-            <h2
-              className="text-3xl md:text-4xl font-semibold mb-5 leading-snug"
-              style={{ color: "#fff", fontFamily: "var(--font-display)" }}
-            >
-              Xylitol — High Purity,
-              <br />
-              Reliable Supply
-            </h2>
-            <p
-              className="text-sm leading-relaxed mb-8 font-light"
-              style={{ color: "rgba(255,255,255,0.65)" }}
-            >
-              Plant-derived, consistently graded, and suitable for demanding
-              applications in food manufacturing, oral health, and
-              pharmaceutical formulation.
-            </p>
-
-            <ul className="flex flex-col gap-3">
-              {[
-                "Food-grade certification ready",
-                "Pharmaceutical applications",
-                "Oral care formulations",
-                "Bulk & custom order quantities",
-              ].map((item) => (
-                <li
-                  key={item}
-                  className="flex items-center gap-3 text-sm"
-                  style={{ color: "rgba(255,255,255,0.8)" }}
-                >
-                  <CheckIcon />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Right — spec card */}
-          <div
-            className="rounded-2xl p-8 flex flex-col gap-8"
-            style={{
-              background: "rgba(255,255,255,0.06)",
-              border: "1px solid rgba(255,255,255,0.12)",
-            }}
-          >
-            <PurityBar label="Purity Grade"       value="99.2%" pct={99} />
-            <PurityBar label="Biomass Utilisation" value="87%"   pct={87} />
-            <PurityBar label="Plant-Based Input"   value="100%"  pct={100} />
-          </div>
-        </div>
-      </section>
-
-      {/* ── PRODUCT IMAGE ────────────────────────────────────────── */}
-      <section className="bg-white py-20 px-6">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p
-              className="text-xs uppercase tracking-widest mb-3 font-medium"
-              style={{ color: "var(--color-leaf)" }}
-            >
-              Grade & Specification
-            </p>
-            <h2
-              className="text-2xl font-semibold mb-4"
-              style={{
-                color: "var(--color-forest)",
-                fontFamily: "var(--font-display)",
-              }}
-            >
-              Xylitol (High Purity)
-            </h2>
-            <p className="text-sm text-gray-500 leading-relaxed font-light mb-6">
-              Plant-derived, consistent, and suitable for food, oral care,
-              and pharmaceutical applications. Available for bulk orders and
-              custom specifications on request.
-            </p>
-            <Link
-              href="/product"
-              className="text-sm font-medium underline underline-offset-4"
-              style={{ color: "var(--color-forest)" }}
-            >
-              View full specification →
-            </Link>
-          </div>
-
-          <Image
-            src="/xylitol.jpg"
-            alt="High purity xylitol crystals produced by XiliHerb"
-            width={600}
-            height={256}
-            className="w-full h-auto max-h-[400px] object-cover rounded-lg"
-          />
-        </div>
-      </section>
-
-      {/* ── CTA ──────────────────────────────────────────────────── */}
-      <section
-        className="py-24 px-6 text-center"
-        style={{ background: "var(--color-cream)" }}
-      >
-        <h2
-          className="text-3xl md:text-4xl font-semibold mb-4"
-          style={{
-            color: "var(--color-forest)",
-            fontFamily: "var(--font-display)",
-          }}
-        >
-          Looking for a Reliable Xylitol Supply Partner?
-        </h2>
-        <p className="text-gray-500 text-base mb-10 font-light max-w-lg mx-auto">
-          Talk to our team about your requirements — volume, purity grade,
-          and application.
-        </p>
-        <div className="flex flex-wrap justify-center gap-4">
-          <Link
-            href="/contact"
-            className="text-sm font-medium text-white px-8 py-3.5 rounded transition-opacity hover:opacity-90"
-            style={{ background: "var(--color-forest)" }}
-          >
-            Get in Touch
-          </Link>
-          <Link
-            href="/contact"
-            className="text-sm font-medium px-8 py-3.5 rounded border transition-colors hover:bg-gray-50"
-            style={{
-              color: "var(--color-forest)",
-              borderColor: "var(--color-forest)",
-            }}
-          >
-            Download Spec Sheet
-          </Link>
-        </div>
-      </section>
-    </>
+    </div>
   );
 }
