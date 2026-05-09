@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Accordion from "@/components/Accordion";
 import Callout from "@/components/Callout";
 import StatCards from "@/components/StatCards";
 import FeatureCards from "@/components/FeatureCards";
 import ProcessFlow from "@/components/ProcessFlow";
 import RevealSection from "@/components/RevealSection";
-import RevealImage from "@/components/RevealImage";
 import { GRAIN } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -133,64 +133,63 @@ export default function Technology() {
           className="absolute inset-0"
           style={{ background: "radial-gradient(ellipse at 70% 40%, rgba(22,88,111,0.35) 0%, transparent 65%)" }}
         />
-        <div className="relative z-10 max-w-4xl mx-auto px-8 pt-28 pb-24">
-          <p className="text-[11px] uppercase tracking-[0.2em] font-medium mb-7" style={{ color: "#C9CBBE" }}>
-            Technology
-          </p>
-          <RevealSection delay={0}>
+        <div className="relative z-10 max-w-7xl mx-auto px-8 pt-28 pb-24">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+
+            {/* Left — copy */}
             <div>
-              <h1
-                className="text-4xl md:text-[52px] font-semibold leading-tight mb-8"
-                style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
-              >
-                From Corn Cob to Ingredient: How Our Process Works
-              </h1>
-              <div className="space-y-5 max-w-2xl">
-                <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.78)" }}>
-                  Our technology combines biotechnology, extraction science, and agricultural
-                  resource utilization to convert renewable biomass into sustainable molecular
-                  and ingredient pathways.
-                </p>
-                <p className="text-[14px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.55)" }}>
-                  Currently in technology development stage, the company is focused on research-oriented
-                  process innovation for scalable, environmentally responsible bio-based ingredient production.
-                </p>
-              </div>
+              <p className="text-[11px] uppercase tracking-[0.2em] font-medium mb-7" style={{ color: "#C9CBBE" }}>
+                Technology
+              </p>
+              <RevealSection delay={0}>
+                <div>
+                  <h1
+                    className="text-4xl md:text-[52px] font-semibold leading-tight mb-8"
+                    style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
+                  >
+                    From Corn Cob to Ingredient: How Our Process Works
+                  </h1>
+                  <div className="space-y-5 max-w-2xl">
+                    <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.78)" }}>
+                      Our technology combines biotechnology, extraction science, and agricultural
+                      resource utilization to convert renewable biomass into sustainable molecular
+                      and ingredient pathways.
+                    </p>
+                    <p className="text-[14px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.55)" }}>
+                      Currently in technology development stage, the company is focused on research-oriented
+                      process innovation for scalable, environmentally responsible bio-based ingredient production.
+                    </p>
+                  </div>
+                </div>
+              </RevealSection>
             </div>
-          </RevealSection>
+
+            {/* Right — image */}
+            <div className="hidden lg:block relative" style={{ height: "480px", borderRadius: "4px", overflow: "hidden" }}>
+              <Image
+                src="/Techno.png"
+                alt="XiliHerb technology process"
+                fill
+                className="hero-img-kenburns"
+                style={{ objectFit: "cover" }}
+                priority
+              />
+              <div
+                className="absolute inset-0"
+                style={{ background: "linear-gradient(to right, #0A2D3A 0%, transparent 40%)" }}
+              />
+              <div
+                className="absolute inset-0"
+                style={{ background: "linear-gradient(to top, #0A2D3A 0%, transparent 35%)" }}
+              />
+            </div>
+
+          </div>
         </div>
         <div
           className="absolute bottom-0 left-0 right-0 h-px"
           style={{ background: "linear-gradient(to right, transparent 5%, #C9CBBE 50%, transparent 95%)" }}
         />
-      </section>
-
-      {/* ── FEEDSTOCK & INGREDIENT IMAGES ── */}
-      <section data-section="light" style={{ background: "#F5F4EF", padding: "80px 0" }}>
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="grid lg:grid-cols-2 gap-8">
-            <RevealImage
-              src="/biomass.jpg"
-              alt="Raw corn cob feedstock"
-              width={560}
-              height={400}
-              delay={0}
-            />
-            <RevealImage
-              src="/xylitolabout.jpg"
-              alt="Refined xylitol ingredient"
-              width={560}
-              height={400}
-              delay={200}
-            />
-          </div>
-          <p
-            className="text-center mt-8"
-            style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.12em", color: "#C9CBBE" }}
-          >
-            Raw Feedstock &nbsp;·&nbsp; Refined Ingredient
-          </p>
-        </div>
       </section>
 
       {/* ── TECHNOLOGY AREAS ── */}

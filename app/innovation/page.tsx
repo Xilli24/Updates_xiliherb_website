@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Callout from "@/components/Callout";
 import FeatureCards from "@/components/FeatureCards";
 import StatCards from "@/components/StatCards";
@@ -22,59 +23,86 @@ export default function Innovation() {
           className="absolute inset-0"
           style={{ background: "radial-gradient(ellipse at 75% 50%, rgba(106,156,64,0.12) 0%, transparent 65%)" }}
         />
-        <div className="relative z-10 max-w-4xl mx-auto px-8 pt-28 pb-24">
-          <RevealSection delay={0}>
+        <div className="relative z-10 max-w-7xl mx-auto px-8 pt-28 pb-24">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+
+            {/* Left — copy */}
             <div>
-              <p
-                className="text-[11px] uppercase tracking-[0.2em] font-medium mb-7"
-                style={{ color: "#C9CBBE" }}
-              >
-                Innovation Ecosystem
-              </p>
-              <h1
-                className="text-4xl md:text-[52px] font-semibold leading-tight mb-8"
-                style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
-              >
-                Backed by AIC-GKVK — Built for the Long Term
-              </h1>
-              <div className="space-y-5 max-w-2xl mb-10">
-                <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.78)" }}>
-                  XiliHerb is proudly associated with the AIC &amp; GKVK innovation ecosystem.
-                </p>
-                <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.78)" }}>
-                  Access to mentorship, research networks, startup infrastructure, and
-                  innovation-driven communities plays an important role in strengthening our
-                  long-term technology and sustainability vision.
-                </p>
-              </div>
-            </div>
-          </RevealSection>
-          <p className="text-[11px] uppercase tracking-[0.14em] mb-4" style={{ color: "rgba(201,203,190,0.6)" }}>
-            Ecosystem Support Includes:
-          </p>
-          <RevealSection delay={150}>
-            <div className="grid sm:grid-cols-2 gap-3 max-w-2xl">
-              {[
-                "Research & mentorship access",
-                "Innovation-driven startup environment",
-                "Technical guidance & ecosystem collaboration",
-                "Exposure to sustainability-focused innovation networks",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="px-4 py-3 text-[13px] font-medium"
-                  style={{
-                    background: "rgba(201,203,190,0.10)",
-                    border: "1px solid rgba(201,203,190,0.25)",
-                    color: "#C9CBBE",
-                    borderRadius: "2px",
-                  }}
-                >
-                  {item}
+              <RevealSection delay={0}>
+                <div>
+                  <p
+                    className="text-[11px] uppercase tracking-[0.2em] font-medium mb-7"
+                    style={{ color: "#C9CBBE" }}
+                  >
+                    Innovation Ecosystem
+                  </p>
+                  <h1
+                    className="text-4xl md:text-[52px] font-semibold leading-tight mb-8"
+                    style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
+                  >
+                    Backed by AIC-GKVK — Built for the Long Term
+                  </h1>
+                  <div className="space-y-5 max-w-2xl mb-10">
+                    <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.78)" }}>
+                      XiliHerb is proudly associated with the AIC &amp; GKVK innovation ecosystem.
+                    </p>
+                    <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.78)" }}>
+                      Access to mentorship, research networks, startup infrastructure, and
+                      innovation-driven communities plays an important role in strengthening our
+                      long-term technology and sustainability vision.
+                    </p>
+                  </div>
                 </div>
-              ))}
+              </RevealSection>
+              <p className="text-[11px] uppercase tracking-[0.14em] mb-4" style={{ color: "rgba(201,203,190,0.6)" }}>
+                Ecosystem Support Includes:
+              </p>
+              <RevealSection delay={150}>
+                <div className="grid sm:grid-cols-2 gap-3 max-w-2xl">
+                  {[
+                    "Research & mentorship access",
+                    "Innovation-driven startup environment",
+                    "Technical guidance & ecosystem collaboration",
+                    "Exposure to sustainability-focused innovation networks",
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className="px-4 py-3 text-[13px] font-medium"
+                      style={{
+                        background: "rgba(201,203,190,0.10)",
+                        border: "1px solid rgba(201,203,190,0.25)",
+                        color: "#C9CBBE",
+                        borderRadius: "2px",
+                      }}
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </RevealSection>
             </div>
-          </RevealSection>
+
+            {/* Right — image */}
+            <div className="hidden lg:block relative" style={{ height: "480px", borderRadius: "4px", overflow: "hidden" }}>
+              <Image
+                src="/innova.png"
+                alt="XiliHerb innovation ecosystem"
+                fill
+                className="hero-img-kenburns"
+                style={{ objectFit: "cover" }}
+                priority
+              />
+              <div
+                className="absolute inset-0"
+                style={{ background: "linear-gradient(to right, #1A1407 0%, transparent 40%)" }}
+              />
+              <div
+                className="absolute inset-0"
+                style={{ background: "linear-gradient(to top, #1A1407 0%, transparent 35%)" }}
+              />
+            </div>
+
+          </div>
         </div>
         <div
           className="absolute bottom-0 left-0 right-0 h-px"
@@ -124,10 +152,9 @@ export default function Innovation() {
                   Our ecosystem credentials:
                 </p>
                 <RevealSection delay={250}>
-                  <StatCards items={[
+                  <StatCards cols={2} items={[
                     { num: "AIC",   unit: "GKVK · UASB",  label: "Incubated at AIC-GKVK, one of India's top agri-innovation incubators" },
-                    { num: "BIRAC", unit: "affiliated",    label: "Connected to the Biotechnology Industry Research Assistance Council ecosystem" },
-                    { num: "2024",  unit: "cohort",        label: "Selected for the AIC incubation programme — Bangalore, Karnataka" },
+                    { num: "2026",  unit: "cohort",        label: "Selected for the AIC incubation programme — Bangalore, Karnataka" },
                   ]} />
                 </RevealSection>
               </div>

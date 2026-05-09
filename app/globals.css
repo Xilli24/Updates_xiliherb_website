@@ -45,3 +45,14 @@ h1, h2, h3 {
   background-size: 28px 28px;
   background-position: 0 0;
 }
+
+@keyframes kenburns {
+  0%   { transform: scale(1)    translate(0,    0);    }
+  100% { transform: scale(1.09) translate(-1.5%, 1%);  }
+}
+
+.hero-img-kenburns {
+  animation: kenburns 10s ease-in-out infinite alternate;
+  transform-origin: center center;
+  will-change: transform;
+}

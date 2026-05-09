@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { GRAIN } from "@/lib/constants";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact — XiliHerb",
@@ -107,56 +108,7 @@ export default function Contact() {
             </div>
 
             {/* Right: form */}
-            <form className="space-y-4">
-              <input
-                type="text"
-                placeholder="Name"
-                style={inputStyle}
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                style={inputStyle}
-              />
-              <input
-                type="text"
-                placeholder="Company / Organisation"
-                style={inputStyle}
-              />
-              <select
-                style={{ ...inputStyle, color: "#6B6A62", appearance: "none" }}
-                defaultValue=""
-              >
-                <option value="" disabled style={{ color: "#6B6A62" }}>Nature of Inquiry</option>
-                <option value="partnership">Partnership</option>
-                <option value="research">Research Collaboration</option>
-                <option value="investment">Investment</option>
-                <option value="sourcing">Agricultural Sourcing</option>
-                <option value="other">Other</option>
-              </select>
-              <textarea
-                placeholder="Your message"
-                rows={5}
-                style={{ ...inputStyle, resize: "vertical" }}
-              />
-              <button
-                type="submit"
-                className="w-full text-[12px] uppercase tracking-[0.14em] font-medium transition-colors duration-150"
-                style={{
-                  background: "#1A1A18",
-                  color: "#F5F4EF",
-                  borderRadius: "2px",
-                  padding: "15px 24px",
-                  border: "none",
-                  cursor: "pointer",
-                }}
-              >
-                Submit Inquiry
-              </button>
-              <p className="text-[12px] text-center" style={{ color: "#C9CBBE" }}>
-                We typically respond within 2–3 business days.
-              </p>
-            </form>
+            <ContactForm />
 
           </div>
         </div>

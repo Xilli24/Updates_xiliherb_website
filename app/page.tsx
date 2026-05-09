@@ -1,6 +1,7 @@
+import Image from "next/image";
 import { Leaf, FlaskConical, Droplets, Sparkles } from "lucide-react";
 import { GRAIN } from "@/lib/constants";
-import MolecularGraph from "@/components/MolecularGraph";
+import HeroCarousel from "@/components/HeroCarousel";
 import TypewriterText from "@/components/TypewriterText";
 import MagneticButton from "@/components/MagneticButton";
 
@@ -46,7 +47,7 @@ export default function Home() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-8 py-32">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-20 items-start">
 
             {/* Left — copy */}
             <div>
@@ -114,21 +115,9 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Right — molecular graph */}
-            <div className="flex flex-col">
-              <MolecularGraph />
-              <p
-                style={{
-                  fontSize: 10,
-                  letterSpacing: "0.14em",
-                  color: "#44433E",
-                  textTransform: "uppercase",
-                  textAlign: "center",
-                  marginTop: 12,
-                }}
-              >
-                Biomass · Conversion · Ingredient Network
-              </p>
+            {/* Right — image carousel */}
+            <div className="hidden lg:block">
+              <HeroCarousel />
             </div>
 
           </div>
@@ -138,6 +127,22 @@ export default function Home() {
           className="absolute bottom-0 left-0 right-0 h-px"
           style={{ background: "linear-gradient(to right, transparent 5%, #C9CBBE 50%, transparent 95%)" }}
         />
+        <div
+          style={{
+            position: "absolute", right: "-24px", bottom: "-36px",
+            opacity: 0.045, pointerEvents: "none", zIndex: 0,
+            userSelect: "none",
+          }}
+          aria-hidden="true"
+        >
+          <Image
+            src="/logoxili.png"
+            alt=""
+            width={340}
+            height={274}
+            style={{ filter: "brightness(0) invert(1)" }}
+          />
+        </div>
       </section>
 
       {/* ══════════ WHAT WE BUILD — Linen ══════════ */}

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import Divider from "@/components/Divider";
 import Callout from "@/components/Callout";
 import ComparisonTable from "@/components/ComparisonTable";
 import RevealImage from "@/components/RevealImage";
+import AboutCards from "@/components/AboutCards";
+import type { SectionMeta } from "@/components/AboutCards";
 
 export const metadata: Metadata = {
   title: "About — XiliHerb",
@@ -10,46 +11,68 @@ export const metadata: Metadata = {
     "XiliHerb is a science-driven bio-innovation startup building sustainable technologies for natural extracts and next-generation bio-based ingredient systems.",
 };
 
+const sections: SectionMeta[] = [
+  {
+    num: "01",
+    label: "Our Vision",
+    title: "Building Smarter Pathways for Sustainable Molecular Innovation",
+    teaser:
+      "We believe ingredient innovation will be shaped by technologies that are simultaneously more sustainable, resource-efficient, and scientifically advanced.",
+  },
+  {
+    num: "02",
+    label: "Technology Direction",
+    title: "Research-Led Development for Bio-Based Ingredient Systems",
+    teaser:
+      "Exploring sustainable extraction and conversion technologies that enable naturally derived ingredient pathways from agricultural biomass.",
+  },
+  {
+    num: "03",
+    label: "Why Natural Extracts",
+    title: "Advancing a More Sustainable Ingredient Future",
+    teaser:
+      "Natural extract technologies represent an important shift toward more environmentally responsible and resource-conscious industrial systems.",
+  },
+];
+
 export default function About() {
   return (
     <div>
 
-      {/* ── HERO — light editorial ── */}
+      {/* ── HERO ── */}
       <section
-        data-section="light"
+        data-section="dark"
         className="relative overflow-hidden"
-        style={{ background: "#F5F4EF", minHeight: "62vh" }}
+        style={{ background: "#0F162A", minHeight: "62vh" }}
       >
-        {/* radial gradient */}
         <div
           className="absolute inset-0"
-          style={{ background: "radial-gradient(ellipse at 15% 70%, rgba(201,203,190,0.45) 0%, transparent 60%)", zIndex: 0 }}
+          style={{ background: "radial-gradient(ellipse at 15% 70%, rgba(30,50,100,0.5) 0%, transparent 60%)", zIndex: 0 }}
         />
-        {/* dot grid texture */}
         <div
           className="absolute inset-0 dot-grid pointer-events-none"
-          style={{ opacity: 0.6, zIndex: 0 }}
+          style={{ opacity: 0.18, zIndex: 0 }}
         />
         <div className="relative z-10 max-w-6xl mx-auto px-8 pt-28 pb-20">
           <p
             className="text-[13px] uppercase tracking-[0.16em] font-medium mb-10"
-            style={{ color: "#44433E" }}
+            style={{ color: "#C9CBBE" }}
           >
             About XiliHerb
           </p>
           <div className="grid lg:grid-cols-[1fr,360px] gap-16 items-end">
             <h1
               className="text-5xl md:text-[62px] font-semibold leading-[1.04]"
-              style={{ color: "#1A1A18", fontFamily: "var(--font-display)" }}
+              style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
             >
               A Science-First Company at the Frontier of Bio-Based Innovation
             </h1>
             <div className="space-y-4 pb-1">
-              <p className="text-[15px] leading-[1.8]" style={{ color: "#6B6A62" }}>
+              <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.75)" }}>
                 XiliHerb is a science-driven bio-innovation startup developing sustainable
                 technologies for natural extracts and next-generation bio-based ingredient systems.
               </p>
-              <p className="text-[13px] leading-[1.8]" style={{ color: "#44433E" }}>
+              <p className="text-[13px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.5)" }}>
                 Rather than positioning ourselves as a conventional product company, XiliHerb is
                 being built as a long-term technology and innovation platform — where science,
                 scalability, and environmental responsibility advance together.
@@ -59,45 +82,30 @@ export default function About() {
         </div>
         <div
           className="absolute bottom-0 left-0 right-0 h-px"
-          style={{ background: "linear-gradient(to right, transparent 5%, #E8E6DE 50%, transparent 95%)" }}
+          style={{ background: "linear-gradient(to right, transparent 5%, #C9CBBE 50%, transparent 95%)" }}
         />
       </section>
 
-      {/* ── 01: OUR VISION ── */}
-      <section data-section="light" className="py-24 relative" style={{ background: "#F5F4EF" }}>
-        {/* dot grid texture */}
-        <div
-          className="absolute inset-0 dot-grid pointer-events-none"
-          style={{ opacity: 0.45, zIndex: 0 }}
-        />
-        <div className="relative z-10 max-w-6xl mx-auto px-8">
-          <div className="grid lg:grid-cols-[260px,1fr] gap-16 items-start">
-            <div>
-              <p
-                className="text-[80px] font-bold leading-none select-none"
-                style={{ color: "#E8E6DE", fontFamily: "var(--font-display)" }}
-              >
-                01
-              </p>
-              <div className="mt-4 pt-4" style={{ borderTop: "2px solid #C9CBBE" }}>
-                <span className="text-[11px] uppercase tracking-[0.14em]" style={{ color: "#C9CBBE" }}>
-                  Our Vision
-                </span>
-                <h2
-                  className="text-xl font-semibold mt-2 leading-snug"
-                  style={{ color: "#1A1A18", fontFamily: "var(--font-display)" }}
-                >
-                  Building Smarter Pathways for Sustainable Molecular Innovation
-                </h2>
-              </div>
-            </div>
+      {/* ── SECTION CARDS ── */}
+      <section data-section="light" style={{ background: "#F5F4EF" }}>
+        <div className="max-w-6xl mx-auto px-8 py-20">
+          <p
+            className="text-[13px] uppercase tracking-[0.16em] font-medium mb-12"
+            style={{ color: "#44433E" }}
+          >
+            Explore Our Story
+          </p>
+
+          <AboutCards sections={sections}>
+
+            {/* 01 — Vision */}
             <div>
               <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
                 We believe the future of ingredient innovation will be shaped by technologies
                 that are simultaneously more sustainable, resource-efficient, and scientifically
                 advanced.
               </p>
-              <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
+              <p className="text-[15px] leading-[1.8] mb-6" style={{ color: "#6B6A62" }}>
                 XiliHerb's vision is to help accelerate the transition toward bio-based
                 ingredient ecosystems by developing technologies that utilize renewable
                 feedstocks, reduce dependency on conventional chemical-intensive pathways,
@@ -105,35 +113,8 @@ export default function About() {
               </p>
               <Callout text="Our long-term ambition is to contribute to a new generation of sustainable molecular production systems — where science, scalability, and environmental responsibility can coexist." />
             </div>
-          </div>
-        </div>
-      </section>
 
-      <Divider />
-
-      {/* ── 02: TECHNOLOGY DIRECTION ── */}
-      <section data-section="light" className="py-24" style={{ background: "#FAFAF8" }}>
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="grid lg:grid-cols-[260px,1fr] gap-16 items-start">
-            <div>
-              <p
-                className="text-[80px] font-bold leading-none select-none"
-                style={{ color: "#E8E6DE", fontFamily: "var(--font-display)" }}
-              >
-                02
-              </p>
-              <div className="mt-4 pt-4" style={{ borderTop: "2px solid #C9CBBE" }}>
-                <span className="text-[11px] uppercase tracking-[0.14em]" style={{ color: "#C9CBBE" }}>
-                  Technology Direction
-                </span>
-                <h2
-                  className="text-xl font-semibold mt-2 leading-snug"
-                  style={{ color: "#1A1A18", fontFamily: "var(--font-display)" }}
-                >
-                  Research-Led Development for Bio-Based Ingredient Systems
-                </h2>
-              </div>
-            </div>
+            {/* 02 — Technology Direction */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
@@ -155,46 +136,14 @@ export default function About() {
                 style={{ filter: "saturate(0.8)" }}
               />
             </div>
-          </div>
-        </div>
-      </section>
 
-      <Divider />
-
-      {/* ── 03: WHY NATURAL EXTRACTS ── */}
-      <section data-section="light" className="py-24 relative" style={{ background: "#F5F4EF" }}>
-        {/* dot grid texture */}
-        <div
-          className="absolute inset-0 dot-grid pointer-events-none"
-          style={{ opacity: 0.45, zIndex: 0 }}
-        />
-        <div className="relative z-10 max-w-6xl mx-auto px-8">
-          <div className="grid lg:grid-cols-[260px,1fr] gap-16 items-start">
-            <div>
-              <p
-                className="text-[80px] font-bold leading-none select-none"
-                style={{ color: "#E8E6DE", fontFamily: "var(--font-display)" }}
-              >
-                03
-              </p>
-              <div className="mt-4 pt-4" style={{ borderTop: "2px solid #C9CBBE" }}>
-                <span className="text-[11px] uppercase tracking-[0.14em]" style={{ color: "#C9CBBE" }}>
-                  Why Natural Extracts
-                </span>
-                <h2
-                  className="text-xl font-semibold mt-2 leading-snug"
-                  style={{ color: "#1A1A18", fontFamily: "var(--font-display)" }}
-                >
-                  Advancing a More Sustainable Ingredient Future
-                </h2>
-              </div>
-            </div>
+            {/* 03 — Why Natural Extracts */}
             <div>
               <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
                 Natural extract technologies represent an important shift toward more
                 environmentally responsible and resource-conscious industrial systems.
               </p>
-              <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
+              <p className="text-[15px] leading-[1.8] mb-6" style={{ color: "#6B6A62" }}>
                 As industries increasingly seek sustainable alternatives to traditional
                 ingredient manufacturing approaches, there is growing importance in developing
                 technologies that can leverage renewable biological resources more efficiently
@@ -209,7 +158,8 @@ export default function About() {
               ]} />
               <Callout text="At XiliHerb, we see natural extract and bio-based ingredient innovation as part of a broader transition toward circular and sustainable industrial ecosystems — where agricultural resources, scientific advancement, and process innovation can collectively create long-term value." />
             </div>
-          </div>
+
+          </AboutCards>
         </div>
       </section>
 

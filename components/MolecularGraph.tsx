@@ -4,7 +4,11 @@ import { useEffect, useRef } from "react";
 
 type Node = { x: number; y: number; vx: number; vy: number; r: number };
 
-export default function MolecularGraph() {
+interface Props {
+  fillParent?: boolean;
+}
+
+export default function MolecularGraph({ fillParent = false }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -12,8 +16,10 @@ export default function MolecularGraph() {
     if (!canvas) return;
 
     const isMobile = window.innerWidth < 768;
-    const nodeCount = isMobile ? 18 : 28;
-    const H = isMobile ? 200 : 320;
+    const nodeCount = fillParent ? 38 : (isMobile ? 18 : 28);
+    const H = fillParent
+      ? (canvas.parentElement?.offsetHeight || window.innerHeight)
+      : (isMobile ? 200 : 320);
 
     canvas.style.height = `${H}px`;
     let W = canvas.offsetWidth || 480;
@@ -92,14 +98,16 @@ export default function MolecularGraph() {
   }, []);
 
   return (
-    <div className="relative w-full">
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: "radial-gradient(ellipse at 60% 50%, rgba(201,203,190,0.06) 0%, transparent 65%)",
-        }}
-      />
+    <div className={fillParent ? "absolute inset-0" : "relative w-full"}>
+      {!fillParent && (
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse at 60% 50%, rgba(201,203,190,0.06) 0%, transparent 65%)",
+          }}
+        />
+      )}
       <canvas
         ref={canvasRef}
         aria-hidden="true"

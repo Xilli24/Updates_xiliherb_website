@@ -14,7 +14,7 @@ function parseNum(str: string): { prefix: string; value: number; suffix: string 
 
 const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
 
-export default function StatCards({ items }: { items: StatItem[] }) {
+export default function StatCards({ items, cols }: { items: StatItem[]; cols?: number }) {
   const gridRef = useRef<HTMLDivElement>(null);
   const spanRefs = useRef<(HTMLSpanElement | null)[]>([]);
   const triggered = useRef(false);
@@ -60,7 +60,7 @@ export default function StatCards({ items }: { items: StatItem[] }) {
   }, [items]);
 
   return (
-    <div ref={gridRef} className="grid grid-cols-3 gap-3 mt-5">
+    <div ref={gridRef} className="grid gap-3 mt-5" style={{ gridTemplateColumns: `repeat(${cols ?? items.length}, minmax(0,1fr))` }}>
       {items.map((item, i) => (
         <div
           key={i}
