@@ -15,7 +15,7 @@ export default function Accordion({ items }: { items: AccordionItem[] }) {
   return (
     <div>
       {items.map((item, i) => (
-        <div key={i} style={{ borderTop: "1px solid #E8E6DE" }}>
+        <div key={i} style={{ borderTop: "1px solid #E0E0DA" }}>
 
           {/* Header row */}
           <button
@@ -25,14 +25,14 @@ export default function Accordion({ items }: { items: AccordionItem[] }) {
           >
             <span
               className="shrink-0 text-[20px] font-light"
-              style={{ color: "#C9CBBE", fontFamily: "var(--font-display)", width: "52px" }}
+              style={{ color: "#5BAC2E", fontFamily: "var(--font-display)", width: "52px" }}
             >
               {item.num}.
             </span>
             <span
               className="flex-1 text-[28px] md:text-[36px] font-semibold leading-tight transition-colors duration-150"
               style={{
-                color: open === i ? "#1A1A18" : "#2A2A26",
+                color: open === i ? "#1E3F6E" : "#2C2C2C",
                 fontFamily: "var(--font-display)",
               }}
             >
@@ -41,7 +41,7 @@ export default function Accordion({ items }: { items: AccordionItem[] }) {
             <span
               className="shrink-0 text-[24px] font-light transition-transform duration-300 select-none"
               style={{
-                color: "#6B6A62",
+                color: "#6B6B6B",
                 transform: open === i ? "rotate(45deg)" : "rotate(0deg)",
                 display: "inline-block",
                 lineHeight: 1,
@@ -73,7 +73,7 @@ export default function Accordion({ items }: { items: AccordionItem[] }) {
       ))}
 
       {/* Bottom border */}
-      <div style={{ borderTop: "1px solid #E8E6DE" }} />
+      <div style={{ borderTop: "1px solid #E0E0DA" }} />
     </div>
   );
 }

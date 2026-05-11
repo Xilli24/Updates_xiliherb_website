@@ -5,12 +5,12 @@ import { sendEmail } from "@/app/actions/sendEmail";
 
 const inputStyle: React.CSSProperties = {
   width: "100%",
-  background: "#FAFAF8",
-  border: "1px solid #E8E6DE",
+  background: "#F7F6F2",
+  border: "1px solid #E0E0DA",
   borderRadius: "2px",
   padding: "12px 16px",
   fontSize: "14px",
-  color: "#1A1A18",
+  color: "#2C2C2C",
   outline: "none",
   display: "block",
 };
@@ -48,11 +48,11 @@ export default function ContactForm() {
     return (
       <div
         style={{
-          border: "1px solid #E8E6DE",
+          border: "1px solid #E0E0DA",
           borderRadius: 2,
           padding: "48px 32px",
           textAlign: "center",
-          background: "#FAFAF8",
+          background: "#F7F6F2",
         }}
       >
         <div
@@ -60,22 +60,22 @@ export default function ContactForm() {
             width: 48,
             height: 48,
             borderRadius: "50%",
-            background: "#0D2418",
+            background: "#1E3F6E",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             margin: "0 auto 20px",
           }}
         >
-          <span style={{ color: "#7EC4A0", fontSize: 22, lineHeight: 1 }}>✓</span>
+          <span style={{ color: "#5BAC2E", fontSize: 22, lineHeight: 1 }}>✓</span>
         </div>
         <p
           className="text-[18px] font-semibold mb-2"
-          style={{ color: "#1A1A18", fontFamily: "var(--font-display)" }}
+          style={{ color: "#1E3F6E", fontFamily: "var(--font-display)" }}
         >
           Inquiry sent
         </p>
-        <p className="text-[14px] leading-[1.7]" style={{ color: "#6B6A62" }}>
+        <p className="text-[14px] leading-[1.7]" style={{ color: "#6B6B6B" }}>
           Thank you — we'll be in touch within 2–3 business days.
         </p>
       </div>
@@ -110,9 +110,9 @@ export default function ContactForm() {
       <select
         value={form.inquiry}
         onChange={set("inquiry")}
-        style={{ ...inputStyle, color: form.inquiry ? "#1A1A18" : "#6B6A62", appearance: "none" }}
+        style={{ ...inputStyle, color: form.inquiry ? "#2C2C2C" : "#6B6B6B", appearance: "none" }}
       >
-        <option value="" disabled style={{ color: "#6B6A62" }}>Nature of Inquiry</option>
+        <option value="" disabled style={{ color: "#6B6B6B" }}>Nature of Inquiry</option>
         <option value="partnership">Partnership</option>
         <option value="research">Research Collaboration</option>
         <option value="investment">Investment</option>
@@ -137,8 +137,8 @@ export default function ContactForm() {
         disabled={status === "sending"}
         className="w-full text-[12px] uppercase tracking-[0.14em] font-medium transition-opacity duration-150"
         style={{
-          background: "#1A1A18",
-          color: "#F5F4EF",
+          background: "#1A9BA0",
+          color: "#FFFFFF",
           borderRadius: "2px",
           padding: "15px 24px",
           border: "none",
@@ -149,7 +149,7 @@ export default function ContactForm() {
         {status === "sending" ? "Sending…" : "Submit Inquiry"}
       </button>
 
-      <p className="text-[12px] text-center" style={{ color: "#C9CBBE" }}>
+      <p className="text-[12px] text-center" style={{ color: "#6B6B6B" }}>
         We typically respond within 2–3 business days.
       </p>
     </form>

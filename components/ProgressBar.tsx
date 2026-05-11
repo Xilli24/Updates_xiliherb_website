@@ -28,7 +28,7 @@ export default function ProgressBar() {
         zIndex: 100,
         height: 2,
         width: "0%",
-        background: "#C9CBBE",
+        background: "#5BAC2E",
         willChange: "width",
         pointerEvents: "none",
       }}

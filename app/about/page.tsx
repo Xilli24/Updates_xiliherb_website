@@ -43,11 +43,11 @@ export default function About() {
       <section
         data-section="dark"
         className="relative overflow-hidden"
-        style={{ background: "#0F162A", minHeight: "62vh" }}
+        style={{ background: "#1E3F6E", minHeight: "62vh" }}
       >
         <div
           className="absolute inset-0"
-          style={{ background: "radial-gradient(ellipse at 15% 70%, rgba(30,50,100,0.5) 0%, transparent 60%)", zIndex: 0 }}
+          style={{ background: "radial-gradient(ellipse at 15% 70%, rgba(26,155,160,0.2) 0%, transparent 60%)", zIndex: 0 }}
         />
         <div
           className="absolute inset-0 dot-grid pointer-events-none"
@@ -56,23 +56,23 @@ export default function About() {
         <div className="relative z-10 max-w-6xl mx-auto px-8 pt-28 pb-20">
           <p
             className="text-[13px] uppercase tracking-[0.16em] font-medium mb-10"
-            style={{ color: "#C9CBBE" }}
+            style={{ color: "#5BAC2E" }}
           >
             About XiliHerb
           </p>
           <div className="grid lg:grid-cols-[1fr,360px] gap-16 items-end">
             <h1
               className="text-5xl md:text-[62px] font-semibold leading-[1.04]"
-              style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
+              style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
             >
               A Science-First Company at the Frontier of Bio-Based Innovation
             </h1>
             <div className="space-y-4 pb-1">
-              <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.75)" }}>
+              <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.75)" }}>
                 XiliHerb is a science-driven bio-innovation startup developing sustainable
                 technologies for natural extracts and next-generation bio-based ingredient systems.
               </p>
-              <p className="text-[13px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.5)" }}>
+              <p className="text-[13px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.5)" }}>
                 Rather than positioning ourselves as a conventional product company, XiliHerb is
                 being built as a long-term technology and innovation platform — where science,
                 scalability, and environmental responsibility advance together.
@@ -82,16 +82,16 @@ export default function About() {
         </div>
         <div
           className="absolute bottom-0 left-0 right-0 h-px"
-          style={{ background: "linear-gradient(to right, transparent 5%, #C9CBBE 50%, transparent 95%)" }}
+          style={{ background: "linear-gradient(to right, transparent 5%, #5BAC2E 50%, transparent 95%)" }}
         />
       </section>
 
       {/* ── SECTION CARDS ── */}
-      <section data-section="light" style={{ background: "#F5F4EF" }}>
+      <section data-section="light" style={{ background: "#F7F6F2" }}>
         <div className="max-w-6xl mx-auto px-8 py-20">
           <p
             className="text-[13px] uppercase tracking-[0.16em] font-medium mb-12"
-            style={{ color: "#44433E" }}
+            style={{ color: "#2C2C2C" }}
           >
             Explore Our Story
           </p>
@@ -100,12 +100,12 @@ export default function About() {
 
             {/* 01 — Vision */}
             <div>
-              <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
+              <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6B6B" }}>
                 We believe the future of ingredient innovation will be shaped by technologies
                 that are simultaneously more sustainable, resource-efficient, and scientifically
                 advanced.
               </p>
-              <p className="text-[15px] leading-[1.8] mb-6" style={{ color: "#6B6A62" }}>
+              <p className="text-[15px] leading-[1.8] mb-6" style={{ color: "#6B6B6B" }}>
                 XiliHerb's vision is to help accelerate the transition toward bio-based
                 ingredient ecosystems by developing technologies that utilize renewable
                 feedstocks, reduce dependency on conventional chemical-intensive pathways,
@@ -117,12 +117,12 @@ export default function About() {
             {/* 02 — Technology Direction */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
+                <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6B6B" }}>
                   XiliHerb is currently focused on exploring sustainable extraction and conversion
                   technologies that can enable naturally derived ingredient pathways from
                   agricultural biomass.
                 </p>
-                <p className="text-[15px] leading-[1.8]" style={{ color: "#6B6A62" }}>
+                <p className="text-[15px] leading-[1.8]" style={{ color: "#6B6B6B" }}>
                   Our approach combines scientific research, process development, and
                   sustainability-oriented engineering — with a focus on long-term platform
                   potential rather than short-term product commercialization.
@@ -139,11 +139,11 @@ export default function About() {
 
             {/* 03 — Why Natural Extracts */}
             <div>
-              <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
+              <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6B6B" }}>
                 Natural extract technologies represent an important shift toward more
                 environmentally responsible and resource-conscious industrial systems.
               </p>
-              <p className="text-[15px] leading-[1.8] mb-6" style={{ color: "#6B6A62" }}>
+              <p className="text-[15px] leading-[1.8] mb-6" style={{ color: "#6B6B6B" }}>
                 As industries increasingly seek sustainable alternatives to traditional
                 ingredient manufacturing approaches, there is growing importance in developing
                 technologies that can leverage renewable biological resources more efficiently

@@ -18,7 +18,7 @@ const gridItems = [
     title: "Our Sustainability Vision",
     content: (
       <div>
-        <p className="text-[13px] font-medium mb-3" style={{ color: "#44433E" }}>
+        <p className="text-[13px] font-medium mb-3" style={{ color: "#2C2C2C" }}>
           The scale of the opportunity
         </p>
         <StatCards items={[
@@ -34,7 +34,7 @@ const gridItems = [
     title: "Agricultural Value Creation",
     content: (
       <div>
-        <p className="text-[14px] leading-[1.75] mb-4" style={{ color: "#6B6A62" }}>
+        <p className="text-[14px] leading-[1.75] mb-4" style={{ color: "#6B6B6B" }}>
           Large volumes of agricultural resources remain underutilized despite their
           potential to support higher-value applications.
         </p>
@@ -52,7 +52,7 @@ const gridItems = [
     title: "Circular Economy Thinking",
     content: (
       <div>
-        <p className="text-[14px] leading-[1.75] mb-4" style={{ color: "#6B6A62" }}>
+        <p className="text-[14px] leading-[1.75] mb-4" style={{ color: "#6B6B6B" }}>
           Our development philosophy is aligned with circular economy thinking and
           sustainable process design.
         </p>
@@ -70,7 +70,7 @@ const gridItems = [
     title: "Health & Sustainability",
     content: (
       <div>
-        <p className="text-[14px] leading-[1.75] mb-4" style={{ color: "#6B6A62" }}>
+        <p className="text-[14px] leading-[1.75] mb-4" style={{ color: "#6B6B6B" }}>
           Growing global interest in healthier and more sustainable alternatives is
           creating opportunities for innovation in natural ingredient systems.
         </p>
@@ -90,32 +90,32 @@ export default function Sustainability() {
     <div>
 
       {/* ── HERO ── */}
-      <section data-section="dark" className="relative overflow-hidden" style={{ background: "#0F2A18" }}>
+      <section data-section="dark" className="relative overflow-hidden" style={{ background: "#1E3F6E" }}>
         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: GRAIN, zIndex: 0 }} />
         <TopoLines />
         <div
           className="absolute inset-0"
-          style={{ background: "radial-gradient(ellipse at 60% 30%, rgba(39,94,53,0.6) 0%, transparent 60%)", zIndex: 2 }}
+          style={{ background: "radial-gradient(ellipse at 60% 30%, rgba(45,107,53,0.45) 0%, transparent 60%)", zIndex: 2 }}
         />
         <div className="relative z-10 max-w-4xl mx-auto px-8 pt-28 pb-24">
           <p
             className="text-[11px] uppercase tracking-[0.2em] font-medium mb-7"
-            style={{ color: "#C9CBBE" }}
+            style={{ color: "#5BAC2E" }}
           >
             Sustainability &amp; Impact
           </p>
           <h1
             className="text-4xl md:text-[52px] font-semibold leading-tight mb-8"
-            style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
+            style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
           >
             Building Innovation with Long-Term Responsibility
           </h1>
           <div className="space-y-5 max-w-2xl">
-            <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.78)" }}>
+            <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.78)" }}>
               At XiliHerb, sustainability is not an afterthought — it is a core part of how
               we think about technology, innovation, and long-term impact.
             </p>
-            <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.78)" }}>
+            <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.78)" }}>
               We believe future ingredient technologies should create value not only through
               products, but also through responsible resource utilization, sustainable processing
               systems, and broader ecosystem development.
@@ -124,16 +124,16 @@ export default function Sustainability() {
         </div>
         <div
           className="absolute bottom-0 left-0 right-0 h-px"
-          style={{ background: "linear-gradient(to right, transparent 5%, #C9CBBE 50%, transparent 95%)" }}
+          style={{ background: "linear-gradient(to right, transparent 5%, #5BAC2E 50%, transparent 95%)" }}
         />
       </section>
 
       {/* ── SUSTAINABILITY AREAS ── */}
-      <section data-section="light" style={{ background: "#F5F4EF" }}>
+      <section data-section="light" style={{ background: "#F7F6F2" }}>
         <div className="max-w-5xl mx-auto px-8 py-20">
           <p
             className="text-[13px] uppercase tracking-[0.16em] font-medium mb-14"
-            style={{ color: "#44433E" }}
+            style={{ color: "#2C2C2C" }}
           >
             Our Approach
           </p>

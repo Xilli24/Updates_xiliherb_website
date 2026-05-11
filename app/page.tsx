@@ -34,16 +34,16 @@ export default function Home() {
   return (
     <div>
 
-      {/* ══════════ HERO — Obsidian ══════════ */}
+      {/* ══════════ HERO — Navy ══════════ */}
       <section
         data-section="dark"
         className="relative overflow-hidden"
-        style={{ background: "#1A1A18", minHeight: "90vh" }}
+        style={{ background: "#1E3F6E", minHeight: "90vh" }}
       >
         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: GRAIN }} />
         <div
           className="absolute inset-0"
-          style={{ background: "radial-gradient(ellipse at 75% 50%, rgba(201,203,190,0.05) 0%, transparent 65%)" }}
+          style={{ background: "radial-gradient(ellipse at 75% 50%, rgba(91,172,46,0.08) 0%, transparent 65%)" }}
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-8 py-32">
@@ -53,14 +53,14 @@ export default function Home() {
             <div>
               <p
                 className="text-[11px] uppercase tracking-[0.2em] font-medium mb-7"
-                style={{ color: "#C9CBBE" }}
+                style={{ color: "#5BAC2E" }}
               >
                 Science-Driven Bio Innovation
               </p>
 
               <h1
                 className="text-5xl md:text-[58px] font-semibold leading-[1.06] mb-8"
-                style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
+                style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
               >
                 <TypewriterText
                   text="Engineering Sustainable Pathways for Bio-Based Ingredients"
@@ -70,7 +70,7 @@ export default function Home() {
 
               <p
                 className="text-[15px] leading-[1.8] mb-5 max-w-lg"
-                style={{ color: "#6B6A62" }}
+                style={{ color: "rgba(255,255,255,0.72)" }}
               >
                 XiliHerb is a science-driven biotechnology startup advancing natural
                 extract and molecular conversion technologies using renewable
@@ -79,7 +79,7 @@ export default function Home() {
 
               <p
                 className="text-[14px] leading-[1.8] mb-10 max-w-lg"
-                style={{ color: "#44433E" }}
+                style={{ color: "rgba(255,255,255,0.45)" }}
               >
                 At the intersection of biotechnology, sustainability, and process
                 innovation, we build scalable next-generation ingredient systems through
@@ -90,7 +90,7 @@ export default function Home() {
                 <MagneticButton
                   href="/about"
                   className="text-[13px] font-medium px-6 py-3 transition-opacity hover:opacity-80"
-                  style={{ background: "#F5F4EF", color: "#1A1A18", borderRadius: "2px" }}
+                  style={{ background: "#5BAC2E", color: "#FFFFFF", borderRadius: "2px" }}
                 >
                   Explore Our Vision
                 </MagneticButton>
@@ -98,8 +98,8 @@ export default function Home() {
                   href="/contact"
                   className="text-[13px] px-6 py-3 transition-colors hover:bg-white/5"
                   style={{
-                    border: "1px solid rgba(245,244,239,0.2)",
-                    color: "#F5F4EF",
+                    border: "1px solid rgba(255,255,255,0.25)",
+                    color: "#F7F6F2",
                     borderRadius: "2px",
                   }}
                 >
@@ -109,7 +109,7 @@ export default function Home() {
 
               <p
                 className="text-[11px] uppercase tracking-[0.14em]"
-                style={{ color: "#44433E" }}
+                style={{ color: "rgba(255,255,255,0.35)" }}
               >
                 Science-Led &nbsp;·&nbsp; Biotechnology &nbsp;·&nbsp; Agricultural Biomass Valorization
               </p>
@@ -125,7 +125,7 @@ export default function Home() {
 
         <div
           className="absolute bottom-0 left-0 right-0 h-px"
-          style={{ background: "linear-gradient(to right, transparent 5%, #C9CBBE 50%, transparent 95%)" }}
+          style={{ background: "linear-gradient(to right, transparent 5%, #5BAC2E 50%, transparent 95%)" }}
         />
         <div
           style={{
@@ -145,20 +145,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════ WHAT WE BUILD — Linen ══════════ */}
-      <section data-section="light" style={{ background: "#F5F4EF" }}>
+      {/* ══════════ WHAT WE BUILD — Off-White ══════════ */}
+      <section data-section="light" style={{ background: "#F7F6F2" }}>
         <div className="max-w-7xl mx-auto px-8 py-28">
 
           <div className="mb-16">
             <p
               className="text-[13px] uppercase tracking-[0.16em] font-medium mb-5"
-              style={{ color: "#44433E" }}
+              style={{ color: "#2C2C2C" }}
             >
               What We Build &nbsp;&nbsp; 01 / 03
             </p>
             <h2
               className="text-3xl md:text-[38px] font-semibold leading-tight max-w-2xl"
-              style={{ color: "#1A1A18", fontFamily: "var(--font-display)" }}
+              style={{ color: "#1E3F6E", fontFamily: "var(--font-display)" }}
             >
               A New Standard in Sustainable Ingredient Production
             </h2>
@@ -169,21 +169,21 @@ export default function Home() {
               <div
                 key={item.num}
                 className="pt-8"
-                style={{ borderTop: "1px solid #E8E6DE" }}
+                style={{ borderTop: "1px solid #E0E0DA" }}
               >
                 <span
                   className="font-mono text-[11px]"
-                  style={{ color: "#C9CBBE" }}
+                  style={{ color: "#5BAC2E" }}
                 >
                   {item.num}.
                 </span>
                 <h3
                   className="text-[17px] font-semibold mt-4 mb-3 leading-snug"
-                  style={{ color: "#1A1A18", fontFamily: "var(--font-display)" }}
+                  style={{ color: "#1E3F6E", fontFamily: "var(--font-display)" }}
                 >
                   {item.title}
                 </h3>
-                <p className="text-[14px] leading-[1.75]" style={{ color: "#6B6A62" }}>
+                <p className="text-[14px] leading-[1.75]" style={{ color: "#6B6B6B" }}>
                   {item.desc}
                 </p>
               </div>
@@ -193,8 +193,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════ PROCESS — Obsidian ══════════ */}
-      <section data-section="dark" className="relative overflow-hidden" style={{ background: "#1A1A18" }}>
+      {/* ══════════ PROCESS — Navy ══════════ */}
+      <section data-section="dark" className="relative overflow-hidden" style={{ background: "#1E3F6E" }}>
         <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: GRAIN }} />
 
         <div className="relative z-10 max-w-7xl mx-auto px-8 py-28">
@@ -202,19 +202,19 @@ export default function Home() {
           <div className="text-center mb-20">
             <p
               className="text-[11px] uppercase tracking-[0.2em] font-medium mb-5"
-              style={{ color: "#C9CBBE" }}
+              style={{ color: "#5BAC2E" }}
             >
               Technology Direction &nbsp;&nbsp; 02 / 03
             </p>
             <h2
               className="text-3xl md:text-[38px] font-semibold leading-tight max-w-2xl mx-auto"
-              style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
+              style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
             >
               From Agricultural Biomass to Future-Ready Ingredient Systems
             </h2>
             <p
               className="mt-6 text-[15px] max-w-xl mx-auto leading-[1.8]"
-              style={{ color: "#6B6A62" }}
+              style={{ color: "rgba(255,255,255,0.6)" }}
             >
               Our process systems combine sustainable extraction, biomass utilization,
               and bio-based molecular innovation into a coherent, scalable pipeline.
@@ -224,19 +224,19 @@ export default function Home() {
           <div className="relative flex flex-col md:flex-row items-center justify-between gap-12 md:gap-0 max-w-3xl mx-auto">
             <div
               className="hidden md:block absolute top-[27px] left-[56px] right-[56px] h-px"
-              style={{ background: "linear-gradient(to right, #44433E, #6B6A62, #C9CBBE)" }}
+              style={{ background: "linear-gradient(to right, #2D6B35, #5BAC2E, #1A9BA0)" }}
             />
             {steps.map(({ label, Icon }, i) => (
               <div key={i} className="relative z-10 flex flex-col items-center gap-4">
                 <div
                   className="w-14 h-14 flex items-center justify-center rounded-full border"
-                  style={{ background: "#222220", borderColor: "#44433E" }}
+                  style={{ background: "#16325A", borderColor: "#2D6B35" }}
                 >
-                  <Icon className="w-5 h-5" style={{ color: "#C9CBBE" }} />
+                  <Icon className="w-5 h-5" style={{ color: "#5BAC2E" }} />
                 </div>
                 <p
                   className="text-[11px] uppercase tracking-[0.14em]"
-                  style={{ color: "#6B6A62" }}
+                  style={{ color: "rgba(255,255,255,0.55)" }}
                 >
                   {label}
                 </p>
@@ -247,27 +247,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════ CTA — Linen ══════════ */}
-      <section data-section="light" style={{ background: "#F5F4EF" }}>
+      {/* ══════════ CTA — Off-White ══════════ */}
+      <section data-section="light" style={{ background: "#F7F6F2" }}>
         <div className="max-w-7xl mx-auto px-8 py-28">
           <div className="grid lg:grid-cols-[1fr,auto] gap-16 items-end">
 
             <div>
               <p
                 className="text-[13px] uppercase tracking-[0.16em] font-medium mb-5"
-                style={{ color: "#44433E" }}
+                style={{ color: "#2C2C2C" }}
               >
                 Long-Term Vision &nbsp;&nbsp; 03 / 03
               </p>
               <h2
                 className="text-3xl md:text-[44px] font-semibold leading-[1.1] max-w-2xl"
-                style={{ color: "#1A1A18", fontFamily: "var(--font-display)" }}
+                style={{ color: "#1E3F6E", fontFamily: "var(--font-display)" }}
               >
                 Building the Future of Sustainable Ingredient Innovation.
               </h2>
               <p
                 className="mt-5 text-[15px] leading-[1.8] max-w-xl"
-                style={{ color: "#6B6A62" }}
+                style={{ color: "#6B6B6B" }}
               >
                 We welcome collaboration across science, sustainability, biotechnology,
                 and future-oriented industrial ecosystems.
@@ -278,16 +278,16 @@ export default function Home() {
               <MagneticButton
                 href="/contact"
                 className="text-[13px] font-medium px-6 py-3 text-center transition-opacity hover:opacity-80"
-                style={{ background: "#1A1A18", color: "#F5F4EF", borderRadius: "2px" }}
+                style={{ background: "#1A9BA0", color: "#FFFFFF", borderRadius: "2px" }}
               >
                 Connect With Us
               </MagneticButton>
               <MagneticButton
                 href="/technology"
-                className="text-[13px] px-6 py-3 text-center transition-colors hover:bg-[#E8E6DE]"
+                className="text-[13px] px-6 py-3 text-center transition-colors hover:bg-[#E0E0DA]"
                 style={{
-                  border: "1px solid #E8E6DE",
-                  color: "#1A1A18",
+                  border: "1px solid #E0E0DA",
+                  color: "#1E3F6E",
                   borderRadius: "2px",
                 }}
               >

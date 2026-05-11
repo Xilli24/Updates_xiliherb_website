@@ -1,26 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600&display=swap');
 
 @import "tailwindcss";
 
 :root {
-  /* IB-inspired palette */
-  --color-obsidian:   #1A1A18;
-  --color-sage:       #C9CBBE;
-  --color-linen:      #F5F4EF;
-  --color-warm-gray:  #E8E6DE;
-  --color-stone:      #6B6A62;
-  --color-taupe:      #44433E;
-  --color-off-white:  #F9F8F4;
+  /* Xiliherb brand palette */
+  --color-navy:       #1E3F6E;  /* Primary — Trust & Science */
+  --color-xili-green: #5BAC2E;  /* Primary — Growth & Nature */
+  --color-teal:       #1A9BA0;  /* Accent — Innovation */
+  --color-deep-green: #2D6B35;  /* Accent — Depth & Roots */
+  --color-charcoal:   #2C2C2C;  /* Body text */
+  --color-mid-gray:   #6B6B6B;  /* Subtext / captions */
+  --color-light-gray: #E0E0DA;  /* Borders / dividers */
+  --color-off-white:  #F7F6F2;  /* Backgrounds */
 
-  /* Legacy aliases mapped to IB palette — keeps all existing pages working */
-  --color-forest:     #1A1A18;
-  --color-leaf:       #C9CBBE;
-  --color-leaf-light: #E8E6DE;
-  --color-cream:      #F5F4EF;
-  --color-border:     #D4D2CA;
+  /* Legacy aliases — keeps existing CSS-variable references working */
+  --color-obsidian:   #1E3F6E;
+  --color-sage:       #5BAC2E;
+  --color-linen:      #F7F6F2;
+  --color-warm-gray:  #E0E0DA;
+  --color-stone:      #6B6B6B;
+  --color-taupe:      #2C2C2C;
+  --color-off-white:  #F7F6F2;
+  --color-forest:     #1E3F6E;
+  --color-leaf:       #5BAC2E;
+  --color-leaf-light: #E0E0DA;
+  --color-cream:      #F7F6F2;
+  --color-border:     #E0E0DA;
 
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'DM Sans', Arial, sans-serif;
+  --font-display: 'Montserrat', sans-serif;
+  --font-body:    'Inter', Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -28,9 +36,10 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--color-linen);
-  color: var(--color-obsidian);
+  background: var(--color-off-white);
+  color: var(--color-charcoal);
   font-family: var(--font-body);
+  font-size: 16px;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,7 +50,7 @@ h1, h2, h3 {
 }
 
 .dot-grid {
-  background-image: radial-gradient(circle, #9A9990 1.5px, transparent 1.5px);
+  background-image: radial-gradient(circle, rgba(30,63,110,0.35) 1.5px, transparent 1.5px);
   background-size: 28px 28px;
   background-position: 0 0;
 }

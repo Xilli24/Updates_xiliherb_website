@@ -17,11 +17,11 @@ export default function Innovation() {
     <div>
 
       {/* ── HERO ── */}
-      <section data-section="dark" className="relative overflow-hidden" style={{ background: "#1A1407" }}>
+      <section data-section="dark" className="relative overflow-hidden" style={{ background: "#1E3F6E" }}>
         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: GRAIN }} />
         <div
           className="absolute inset-0"
-          style={{ background: "radial-gradient(ellipse at 75% 50%, rgba(106,156,64,0.12) 0%, transparent 65%)" }}
+          style={{ background: "radial-gradient(ellipse at 75% 50%, rgba(91,172,46,0.10) 0%, transparent 65%)" }}
         />
         <div className="relative z-10 max-w-7xl mx-auto px-8 pt-28 pb-24">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -32,21 +32,21 @@ export default function Innovation() {
                 <div>
                   <p
                     className="text-[11px] uppercase tracking-[0.2em] font-medium mb-7"
-                    style={{ color: "#C9CBBE" }}
+                    style={{ color: "#5BAC2E" }}
                   >
                     Innovation Ecosystem
                   </p>
                   <h1
                     className="text-4xl md:text-[52px] font-semibold leading-tight mb-8"
-                    style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
+                    style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
                   >
                     Backed by AIC-GKVK — Built for the Long Term
                   </h1>
                   <div className="space-y-5 max-w-2xl mb-10">
-                    <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.78)" }}>
+                    <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.78)" }}>
                       XiliHerb is proudly associated with the AIC &amp; GKVK innovation ecosystem.
                     </p>
-                    <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.78)" }}>
+                    <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.78)" }}>
                       Access to mentorship, research networks, startup infrastructure, and
                       innovation-driven communities plays an important role in strengthening our
                       long-term technology and sustainability vision.
@@ -54,7 +54,7 @@ export default function Innovation() {
                   </div>
                 </div>
               </RevealSection>
-              <p className="text-[11px] uppercase tracking-[0.14em] mb-4" style={{ color: "rgba(201,203,190,0.6)" }}>
+              <p className="text-[11px] uppercase tracking-[0.14em] mb-4" style={{ color: "rgba(91,172,46,0.7)" }}>
                 Ecosystem Support Includes:
               </p>
               <RevealSection delay={150}>
@@ -69,9 +69,9 @@ export default function Innovation() {
                       key={item}
                       className="px-4 py-3 text-[13px] font-medium"
                       style={{
-                        background: "rgba(201,203,190,0.10)",
-                        border: "1px solid rgba(201,203,190,0.25)",
-                        color: "#C9CBBE",
+                        background: "rgba(255,255,255,0.08)",
+                        border: "1px solid rgba(255,255,255,0.18)",
+                        color: "rgba(255,255,255,0.85)",
                         borderRadius: "2px",
                       }}
                     >
@@ -94,11 +94,11 @@ export default function Innovation() {
               />
               <div
                 className="absolute inset-0"
-                style={{ background: "linear-gradient(to right, #1A1407 0%, transparent 40%)" }}
+                style={{ background: "linear-gradient(to right, #1E3F6E 0%, transparent 40%)" }}
               />
               <div
                 className="absolute inset-0"
-                style={{ background: "linear-gradient(to top, #1A1407 0%, transparent 35%)" }}
+                style={{ background: "linear-gradient(to top, #1E3F6E 0%, transparent 35%)" }}
               />
             </div>
 
@@ -106,28 +106,28 @@ export default function Innovation() {
         </div>
         <div
           className="absolute bottom-0 left-0 right-0 h-px"
-          style={{ background: "linear-gradient(to right, transparent 5%, #C9CBBE 50%, transparent 95%)" }}
+          style={{ background: "linear-gradient(to right, transparent 5%, #5BAC2E 50%, transparent 95%)" }}
         />
       </section>
 
       {/* ── 01: COLLABORATION & OPPORTUNITIES ── */}
-      <section data-section="light" className="py-24" style={{ background: "#F5F4EF" }}>
+      <section data-section="light" className="py-24" style={{ background: "#F7F6F2" }}>
         <div className="max-w-6xl mx-auto px-8">
           <div className="grid lg:grid-cols-[260px,1fr] gap-16 items-start">
             <div>
               <p
                 className="text-[80px] font-bold leading-none select-none"
-                style={{ color: "#E8E6DE", fontFamily: "var(--font-display)" }}
+                style={{ color: "#E0E0DA", fontFamily: "var(--font-display)" }}
               >
                 01
               </p>
-              <div className="mt-4 pt-4" style={{ borderTop: "2px solid #C9CBBE" }}>
-                <span className="text-[11px] uppercase tracking-[0.14em]" style={{ color: "#C9CBBE" }}>
+              <div className="mt-4 pt-4" style={{ borderTop: "2px solid #5BAC2E" }}>
+                <span className="text-[11px] uppercase tracking-[0.14em]" style={{ color: "#5BAC2E" }}>
                   Collaboration &amp; Opportunities
                 </span>
                 <h2
                   className="text-xl font-semibold mt-2 leading-snug"
-                  style={{ color: "#1A1A18", fontFamily: "var(--font-display)" }}
+                  style={{ color: "#1E3F6E", fontFamily: "var(--font-display)" }}
                 >
                   Building Meaningful Innovation Through Collaboration
                 </h2>
@@ -135,7 +135,7 @@ export default function Innovation() {
             </div>
             <RevealSection delay={100}>
               <div>
-                <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
+                <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6B6B" }}>
                   We believe meaningful innovation is built through collaboration, shared
                   learning, and ecosystem partnerships.
                 </p>
@@ -148,7 +148,7 @@ export default function Innovation() {
                   ]} />
                 </RevealSection>
                 <Callout text="As we continue to strengthen our technology direction, we remain open to partnerships aligned with our long-term vision for sustainable bio-based innovation." />
-                <p className="text-[13px] font-medium mb-3" style={{ color: "#44433E" }}>
+                <p className="text-[13px] font-medium mb-3" style={{ color: "#2C2C2C" }}>
                   Our ecosystem credentials:
                 </p>
                 <RevealSection delay={250}>

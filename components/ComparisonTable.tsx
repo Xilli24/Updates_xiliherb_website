@@ -9,22 +9,22 @@ export default function ComparisonTable({ rows }: { rows: TableRow[] }) {
         gridTemplateColumns: "1fr 1fr",
         borderRadius: 4,
         overflow: "hidden",
-        border: "1px solid #2A2820",
+        border: "1px solid #16325A",
       }}
     >
 
       {/* ── Conventional column ── */}
-      <div style={{ background: "#1E1C18", padding: "28px 26px" }}>
+      <div style={{ background: "#1A2F52", padding: "28px 26px" }}>
         <p
           style={{
             fontSize: 10,
             textTransform: "uppercase",
             letterSpacing: "0.18em",
             fontWeight: 600,
-            color: "#6B6A62",
+            color: "rgba(255,255,255,0.45)",
             marginBottom: 20,
             paddingBottom: 14,
-            borderBottom: "1px solid rgba(107,106,98,0.18)",
+            borderBottom: "1px solid rgba(255,255,255,0.12)",
           }}
         >
           Conventional
@@ -36,7 +36,7 @@ export default function ComparisonTable({ rows }: { rows: TableRow[] }) {
               style={{
                 paddingTop: i === 0 ? 0 : 16,
                 paddingBottom: i === rows.length - 1 ? 0 : 16,
-                borderBottom: i === rows.length - 1 ? "none" : "1px solid rgba(107,106,98,0.12)",
+                borderBottom: i === rows.length - 1 ? "none" : "1px solid rgba(255,255,255,0.08)",
               }}
             >
               <p
@@ -44,7 +44,7 @@ export default function ComparisonTable({ rows }: { rows: TableRow[] }) {
                   fontSize: 9,
                   textTransform: "uppercase",
                   letterSpacing: "0.14em",
-                  color: "#44433E",
+                  color: "rgba(255,255,255,0.35)",
                   marginBottom: 5,
                   fontWeight: 500,
                 }}
@@ -62,9 +62,9 @@ export default function ComparisonTable({ rows }: { rows: TableRow[] }) {
       {/* ── XiliHerb column ── */}
       <div
         style={{
-          background: "#0D2418",
+          background: "#1E3F6E",
           padding: "28px 26px",
-          borderLeft: "1px solid #1A3020",
+          borderLeft: "1px solid #16325A",
         }}
       >
         <p
@@ -73,10 +73,10 @@ export default function ComparisonTable({ rows }: { rows: TableRow[] }) {
             textTransform: "uppercase",
             letterSpacing: "0.18em",
             fontWeight: 600,
-            color: "#4A8060",
+            color: "#5BAC2E",
             marginBottom: 20,
             paddingBottom: 14,
-            borderBottom: "1px solid rgba(74,128,96,0.2)",
+            borderBottom: "1px solid rgba(91,172,46,0.25)",
           }}
         >
           XiliHerb
@@ -88,7 +88,7 @@ export default function ComparisonTable({ rows }: { rows: TableRow[] }) {
               style={{
                 paddingTop: i === 0 ? 0 : 16,
                 paddingBottom: i === rows.length - 1 ? 0 : 16,
-                borderBottom: i === rows.length - 1 ? "none" : "1px solid rgba(74,128,96,0.12)",
+                borderBottom: i === rows.length - 1 ? "none" : "1px solid rgba(91,172,46,0.12)",
               }}
             >
               <p
@@ -96,7 +96,7 @@ export default function ComparisonTable({ rows }: { rows: TableRow[] }) {
                   fontSize: 9,
                   textTransform: "uppercase",
                   letterSpacing: "0.14em",
-                  color: "#2A5038",
+                  color: "rgba(91,172,46,0.6)",
                   marginBottom: 5,
                   fontWeight: 500,
                 }}

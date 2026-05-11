@@ -22,24 +22,24 @@ export default function FeatureCards({ items }: { items: FeatureItem[] }) {
           <div
             key={i}
             className="flex gap-3 p-4"
-            style={{ border: "1px solid #E8E6DE", borderRadius: "4px" }}
+            style={{ border: "1px solid #E0E0DA", borderRadius: "4px" }}
           >
             <div
               className="shrink-0 w-9 h-9 flex items-center justify-center"
-              style={{ background: "#E8E6DE", borderRadius: "4px" }}
+              style={{ background: "#E0E0DA", borderRadius: "4px" }}
             >
-              {Icon && <Icon style={{ width: "16px", height: "16px", color: "#6B6A62" }} />}
+              {Icon && <Icon style={{ width: "16px", height: "16px", color: "#1E3F6E" }} />}
             </div>
             <div>
               <p
                 className="text-[13px] font-medium mb-1"
-                style={{ color: "#1A1A18" }}
+                style={{ color: "#1E3F6E" }}
               >
                 {item.title}
               </p>
               <p
                 className="text-[12px] leading-[1.6]"
-                style={{ color: "#6B6A62" }}
+                style={{ color: "#6B6B6B" }}
               >
                 {item.desc}
               </p>

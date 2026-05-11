@@ -21,14 +21,14 @@ const accordionItems = [
     content: (
       <RevealSection threshold={0} delay={0}>
         <div>
-          <p className="text-[14px] font-medium mb-5" style={{ color: "#44433E" }}>
+          <p className="text-[14px] font-medium mb-5" style={{ color: "#2C2C2C" }}>
             Research-Led Approaches to Resource-Efficient Processing
           </p>
-          <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
+          <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6B6B" }}>
             At XiliHerb, sustainable extraction is viewed as more than a manufacturing
             step — it is a foundational design philosophy.
           </p>
-          <p className="text-[15px] leading-[1.8] mb-2" style={{ color: "#6B6A62" }}>
+          <p className="text-[15px] leading-[1.8] mb-2" style={{ color: "#6B6B6B" }}>
             We are exploring process pathways that emphasize resource efficiency, renewable
             feedstocks, and responsible utilization of agricultural biomass — understanding how
             naturally occurring compounds can be developed through scientifically grounded,
@@ -50,10 +50,10 @@ const accordionItems = [
     content: (
       <RevealSection threshold={0} delay={0}>
         <div>
-          <p className="text-[14px] font-medium mb-5" style={{ color: "#44433E" }}>
+          <p className="text-[14px] font-medium mb-5" style={{ color: "#2C2C2C" }}>
             Unlocking Greater Value From Agricultural Biomass
           </p>
-          <p className="text-[15px] leading-[1.8] mb-2" style={{ color: "#6B6A62" }}>
+          <p className="text-[15px] leading-[1.8] mb-2" style={{ color: "#6B6B6B" }}>
             XiliHerb uses agricultural feedstocks such as non-GMO corn cobs as raw material
             inputs for naturally derived ingredient pathways. Through biomass valorization,
             agricultural side streams support higher-value molecular applications while
@@ -74,10 +74,10 @@ const accordionItems = [
     content: (
       <RevealSection threshold={0} delay={0}>
         <div>
-          <p className="text-[14px] font-medium mb-5" style={{ color: "#44433E" }}>
+          <p className="text-[14px] font-medium mb-5" style={{ color: "#2C2C2C" }}>
             Naturally Derived Xylitol Pathways
           </p>
-          <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
+          <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6B6B" }}>
             Our research targets sustainable extraction and conversion approaches that
             support bio-based xylitol pathways through renewable feedstock utilization
             and process-oriented innovation.
@@ -101,10 +101,10 @@ const accordionItems = [
     content: (
       <RevealSection threshold={0} delay={0}>
         <div>
-          <p className="text-[14px] font-medium mb-5" style={{ color: "#44433E" }}>
+          <p className="text-[14px] font-medium mb-5" style={{ color: "#2C2C2C" }}>
             Advancing the Future of Sustainable Molecular Systems
           </p>
-          <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6A62" }}>
+          <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6B6B" }}>
             Looking ahead, XiliHerb contributes to a new generation of sustainable
             ingredient and molecular technologies shaped by biotechnology, renewable resources,
             and advanced process innovation.
@@ -127,35 +127,35 @@ export default function Technology() {
     <div>
 
       {/* ── HERO ── */}
-      <section data-section="dark" className="relative overflow-hidden" style={{ background: "#0A2D3A" }}>
+      <section data-section="dark" className="relative overflow-hidden" style={{ background: "#1E3F6E" }}>
         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: GRAIN }} />
         <div
           className="absolute inset-0"
-          style={{ background: "radial-gradient(ellipse at 70% 40%, rgba(22,88,111,0.35) 0%, transparent 65%)" }}
+          style={{ background: "radial-gradient(ellipse at 70% 40%, rgba(26,155,160,0.25) 0%, transparent 65%)" }}
         />
         <div className="relative z-10 max-w-7xl mx-auto px-8 pt-28 pb-24">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
 
             {/* Left — copy */}
             <div>
-              <p className="text-[11px] uppercase tracking-[0.2em] font-medium mb-7" style={{ color: "#C9CBBE" }}>
+              <p className="text-[11px] uppercase tracking-[0.2em] font-medium mb-7" style={{ color: "#5BAC2E" }}>
                 Technology
               </p>
               <RevealSection delay={0}>
                 <div>
                   <h1
                     className="text-4xl md:text-[52px] font-semibold leading-tight mb-8"
-                    style={{ color: "#F5F4EF", fontFamily: "var(--font-display)" }}
+                    style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
                   >
                     From Corn Cob to Ingredient: How Our Process Works
                   </h1>
                   <div className="space-y-5 max-w-2xl">
-                    <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.78)" }}>
+                    <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.78)" }}>
                       Our technology combines biotechnology, extraction science, and agricultural
                       resource utilization to convert renewable biomass into sustainable molecular
                       and ingredient pathways.
                     </p>
-                    <p className="text-[14px] leading-[1.8]" style={{ color: "rgba(245,244,239,0.55)" }}>
+                    <p className="text-[14px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.55)" }}>
                       Currently in technology development stage, the company is focused on research-oriented
                       process innovation for scalable, environmentally responsible bio-based ingredient production.
                     </p>
@@ -176,11 +176,11 @@ export default function Technology() {
               />
               <div
                 className="absolute inset-0"
-                style={{ background: "linear-gradient(to right, #0A2D3A 0%, transparent 40%)" }}
+                style={{ background: "linear-gradient(to right, #1E3F6E 0%, transparent 40%)" }}
               />
               <div
                 className="absolute inset-0"
-                style={{ background: "linear-gradient(to top, #0A2D3A 0%, transparent 35%)" }}
+                style={{ background: "linear-gradient(to top, #1E3F6E 0%, transparent 35%)" }}
               />
             </div>
 
@@ -188,16 +188,16 @@ export default function Technology() {
         </div>
         <div
           className="absolute bottom-0 left-0 right-0 h-px"
-          style={{ background: "linear-gradient(to right, transparent 5%, #C9CBBE 50%, transparent 95%)" }}
+          style={{ background: "linear-gradient(to right, transparent 5%, #5BAC2E 50%, transparent 95%)" }}
         />
       </section>
 
       {/* ── TECHNOLOGY AREAS ── */}
-      <section data-section="light" style={{ background: "#F5F4EF" }}>
+      <section data-section="light" style={{ background: "#F7F6F2" }}>
         <div className="max-w-5xl mx-auto px-8 py-20">
           <p
             className="text-[13px] uppercase tracking-[0.16em] font-medium mb-14"
-            style={{ color: "#44433E" }}
+            style={{ color: "#2C2C2C" }}
           >
             Technology Areas
           </p>

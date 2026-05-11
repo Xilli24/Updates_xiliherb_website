@@ -65,24 +65,24 @@ export default function StatCards({ items, cols }: { items: StatItem[]; cols?: n
         <div
           key={i}
           className="p-5 flex flex-col"
-          style={{ background: "#1A1A18", borderRadius: "4px" }}
+          style={{ background: "#1E3F6E", borderRadius: "4px" }}
         >
           <span
             ref={(el) => { spanRefs.current[i] = el; }}
             className="text-[28px] font-semibold leading-none"
-            style={{ color: "#C9CBBE" }}
+            style={{ color: "#5BAC2E" }}
           >
             {item.num}
           </span>
           <span
             className="text-[10px] uppercase tracking-[0.08em] mt-1 mb-3"
-            style={{ color: "#6B6A62" }}
+            style={{ color: "rgba(255,255,255,0.5)" }}
           >
             {item.unit}
           </span>
           <span
             className="text-[13px] leading-[1.55]"
-            style={{ color: "#F5F4EF" }}
+            style={{ color: "rgba(255,255,255,0.85)" }}
           >
             {item.label}
           </span>

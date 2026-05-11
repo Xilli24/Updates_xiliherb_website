@@ -23,7 +23,7 @@ export default function AccordionGrid({ items }: { items: GridItem[] }) {
   return (
     <div
       className="grid md:grid-cols-2"
-      style={{ border: "1px solid #E8E6DE" }}
+      style={{ border: "1px solid #E0E0DA" }}
     >
       {items.map((item, i) => {
         const isOpen = openSet.has(i);
@@ -34,8 +34,8 @@ export default function AccordionGrid({ items }: { items: GridItem[] }) {
           <div
             key={i}
             style={{
-              borderRight:  isLeft ? "1px solid #E8E6DE" : undefined,
-              borderBottom: isTop  ? "1px solid #E8E6DE" : undefined,
+              borderRight:  isLeft ? "1px solid #E0E0DA" : undefined,
+              borderBottom: isTop  ? "1px solid #E0E0DA" : undefined,
             }}
           >
             {/* Box header */}
@@ -47,13 +47,13 @@ export default function AccordionGrid({ items }: { items: GridItem[] }) {
               <div className="flex items-start gap-4">
                 <span
                   className="text-[16px] font-light shrink-0"
-                  style={{ color: "#C9CBBE", fontFamily: "var(--font-display)", marginTop: "4px" }}
+                  style={{ color: "#5BAC2E", fontFamily: "var(--font-display)", marginTop: "4px" }}
                 >
                   {item.num}.
                 </span>
                 <span
                   className="text-[20px] md:text-[24px] font-semibold leading-snug"
-                  style={{ color: "#1A1A18", fontFamily: "var(--font-display)" }}
+                  style={{ color: "#1E3F6E", fontFamily: "var(--font-display)" }}
                 >
                   {item.title}
                 </span>
@@ -61,7 +61,7 @@ export default function AccordionGrid({ items }: { items: GridItem[] }) {
               <span
                 className="shrink-0 text-[22px] font-light select-none"
                 style={{
-                  color: "#6B6A62",
+                  color: "#6B6B6B",
                   marginTop: "2px",
                   display: "inline-block",
                   lineHeight: 1,
