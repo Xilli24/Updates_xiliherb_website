@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Accordion from "@/components/Accordion";
 import Callout from "@/components/Callout";
 import StatCards from "@/components/StatCards";
-import FeatureCards from "@/components/FeatureCards";
-import ProcessFlow from "@/components/ProcessFlow";
+import { ExtractionCards, VisionCards } from "@/components/TechSectionCards";
 import RevealSection from "@/components/RevealSection";
+import TechnologyTimeline from "@/components/TechnologyTimeline";
 import { GRAIN } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -34,12 +33,7 @@ const accordionItems = [
             naturally occurring compounds can be developed through scientifically grounded,
             sustainability-oriented extraction methodologies.
           </p>
-          <FeatureCards items={[
-            { icon: "Leaf",          title: "Renewable feedstock",  desc: "Non-GMO corn cob residues — a crop byproduct with no competing use." },
-            { icon: "FlaskConical",  title: "Enzymatic hydrolysis", desc: "Breaks xylan polysaccharides into fermentable xylose without strong acids." },
-            { icon: "Recycle",       title: "Solvent recovery",     desc: "Process solvents are recovered and recycled within the same batch cycle." },
-            { icon: "Zap",           title: "Low energy input",     desc: "Ambient-temperature bioconversion significantly reduces thermal energy load." },
-          ]} />
+          <ExtractionCards />
         </div>
       </RevealSection>
     ),
@@ -70,33 +64,6 @@ const accordionItems = [
   },
   {
     num: "03",
-    title: "Xylitol Technology Direction",
-    content: (
-      <RevealSection threshold={0} delay={0}>
-        <div>
-          <p className="text-[14px] font-medium mb-5" style={{ color: "#2C2C2C" }}>
-            Naturally Derived Xylitol Pathways
-          </p>
-          <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6B6B" }}>
-            Our research targets sustainable extraction and conversion approaches that
-            support bio-based xylitol pathways through renewable feedstock utilization
-            and process-oriented innovation.
-          </p>
-          <Callout text="The objective is not simply ingredient production, but the development of foundational technologies that align scientific advancement, sustainability priorities, and long-term industrial relevance." />
-          <ProcessFlow steps={[
-            { num: "01", title: "Harvest",     desc: "Post-harvest corn cobs collected from partner farms" },
-            { num: "02", title: "Pretreat",    desc: "Steam explosion breaks lignocellulosic structure" },
-            { num: "03", title: "Hydrolyse",   desc: "Enzymes release xylose sugars from hemicellulose" },
-            { num: "04", title: "Ferment",     desc: "Xylose converted via bioconversion pathway" },
-            { num: "05", title: "Purify",      desc: "Chromatographic separation removes impurities" },
-            { num: "06", title: "Crystallise", desc: "Food-grade xylitol crystals formed and dried" },
-          ]} />
-        </div>
-      </RevealSection>
-    ),
-  },
-  {
-    num: "04",
     title: "Future Technology Vision",
     content: (
       <RevealSection threshold={0} delay={0}>
@@ -110,12 +77,7 @@ const accordionItems = [
             and advanced process innovation.
           </p>
           <Callout text="Our long-term ambition is to help enable industrial systems where agricultural resources can be transformed more intelligently, efficiently, and sustainably into higher-value bio-based applications." />
-          <FeatureCards items={[
-            { icon: "Layers",     title: "Multi-output platform", desc: "Same biomass feedstock can yield xylose, arabinoxylan, and lignin derivatives." },
-            { icon: "Globe",      title: "Export readiness",      desc: "Targeting EU and US food-grade certifications for international supply." },
-            { icon: "Users",      title: "FPO integration",       desc: "Direct sourcing partnerships with farmer producer organisations across Karnataka." },
-            { icon: "Microscope", title: "R&D pipeline",          desc: "Three second-generation extraction protocols currently in lab-scale testing." },
-          ]} />
+          <VisionCards />
         </div>
       </RevealSection>
     ),
@@ -164,24 +126,9 @@ export default function Technology() {
               </RevealSection>
             </div>
 
-            {/* Right — image */}
-            <div className="hidden lg:block relative" style={{ height: "480px", borderRadius: "4px", overflow: "hidden" }}>
-              <Image
-                src="/Techno.png"
-                alt="XiliHerb technology process"
-                fill
-                className="hero-img-kenburns"
-                style={{ objectFit: "cover" }}
-                priority
-              />
-              <div
-                className="absolute inset-0"
-                style={{ background: "linear-gradient(to right, #1E3F6E 0%, transparent 40%)" }}
-              />
-              <div
-                className="absolute inset-0"
-                style={{ background: "linear-gradient(to top, #1E3F6E 0%, transparent 35%)" }}
-              />
+            {/* Right — orbital process timeline */}
+            <div className="hidden lg:block relative" style={{ height: "480px" }}>
+              <TechnologyTimeline />
             </div>
 
           </div>

@@ -2,6 +2,23 @@
 
 @import "tailwindcss";
 
+@theme {
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up:   accordion-up   0.2s ease-out;
+
+  --color-primary:            #1E3F6E;
+  --color-primary-foreground: #F7F6F2;
+  --color-secondary:          #E0E0DA;
+  --color-secondary-foreground: #2C2C2C;
+  --color-muted:              #E8E7E2;
+  --color-muted-foreground:   #6B6B6B;
+  --color-card:               #FFFFFF;
+  --color-card-foreground:    #2C2C2C;
+  --color-border:             #E0E0DA;
+  --color-ring:               #5BAC2E;
+  --color-foreground:         #2C2C2C;
+}
+
 :root {
   /* Xiliherb brand palette */
   --color-navy:       #1E3F6E;  /* Primary — Trust & Science */
@@ -55,6 +72,16 @@ h1, h2, h3 {
   background-position: 0 0;
 }
 
+@keyframes accordion-down {
+  from { height: 0; }
+  to   { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to   { height: 0; }
+}
+
 @keyframes kenburns {
   0%   { transform: scale(1)    translate(0,    0);    }
   100% { transform: scale(1.09) translate(-1.5%, 1%);  }
@@ -65,3 +92,13 @@ h1, h2, h3 {
   transform-origin: center center;
   will-change: transform;
 }
+
+@keyframes glass-float {
+  0%, 100% { transform: translateY(0px);   }
+  50%       { transform: translateY(-7px);  }
+}
+
+.glass-float-1 { animation: glass-float 6s ease-in-out infinite; }
+.glass-float-2 { animation: glass-float 6s ease-in-out infinite; animation-delay: 1.2s; }
+.glass-float-3 { animation: glass-float 6s ease-in-out infinite; animation-delay: 2.4s; }
+.glass-float-4 { animation: glass-float 6s ease-in-out infinite; animation-delay: 0.6s; }

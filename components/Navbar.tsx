@@ -24,8 +24,8 @@ export default function Navbar() {
       <nav
         className="w-full px-8 py-4 flex justify-between items-center sticky top-0 z-50 backdrop-blur-md"
         style={{
-          background: "rgba(30,63,110,0.97)",
-          borderBottom: "1px solid rgba(91,172,46,0.2)",
+          background: "rgba(247,246,242,0.97)",
+          borderBottom: "1px solid #E0E0DA",
           transition: "background-color 0.3s ease",
         }}
       >
@@ -36,7 +36,6 @@ export default function Navbar() {
             width={120}
             height={44}
             className="h-10 w-auto"
-            style={{ filter: "brightness(0) invert(1)" }}
             priority
           />
         </Link>
@@ -49,7 +48,7 @@ export default function Navbar() {
               <Link key={href} href={href} className="relative group py-1">
                 <span
                   className="text-[13px] transition-colors duration-300"
-                  style={{ color: isActive ? "#FFFFFF" : "rgba(255,255,255,0.72)" }}
+                  style={{ color: isActive ? "#1E3F6E" : "#6B6B6B" }}
                 >
                   {label}
                 </span>
@@ -81,11 +80,11 @@ export default function Navbar() {
           aria-label="Toggle navigation"
         >
           <span className="block w-5 h-px transition-all duration-200 origin-center"
-            style={{ background: "#FFFFFF", transform: mobileOpen ? "translateY(6px) rotate(45deg)" : "none" }} />
+            style={{ background: "#1E3F6E", transform: mobileOpen ? "translateY(6px) rotate(45deg)" : "none" }} />
           <span className="block w-5 h-px transition-all duration-200"
-            style={{ background: "#FFFFFF", opacity: mobileOpen ? 0 : 1 }} />
+            style={{ background: "#1E3F6E", opacity: mobileOpen ? 0 : 1 }} />
           <span className="block w-5 h-px transition-all duration-200 origin-center"
-            style={{ background: "#FFFFFF", transform: mobileOpen ? "translateY(-6px) rotate(-45deg)" : "none" }} />
+            style={{ background: "#1E3F6E", transform: mobileOpen ? "translateY(-6px) rotate(-45deg)" : "none" }} />
         </button>
       </nav>
 
@@ -93,7 +92,7 @@ export default function Navbar() {
       {mobileOpen && (
         <div
           className="md:hidden fixed inset-x-0 top-[65px] z-40 px-8 py-6 flex flex-col gap-1"
-          style={{ background: "rgba(30,63,110,0.98)", borderBottom: "1px solid rgba(91,172,46,0.2)" }}
+          style={{ background: "rgba(247,246,242,0.99)", borderBottom: "1px solid #E0E0DA" }}
         >
           {navLinks.map(({ href, label }) => {
             const isActive = pathname === href;
@@ -103,7 +102,7 @@ export default function Navbar() {
                 href={href}
                 onClick={() => setMobileOpen(false)}
                 className="py-3 text-[15px] font-medium"
-                style={{ color: isActive ? "#FFFFFF" : "rgba(255,255,255,0.72)", borderBottom: "1px solid rgba(255,255,255,0.1)" }}
+                style={{ color: isActive ? "#1E3F6E" : "#6B6B6B", borderBottom: "1px solid rgba(30,63,110,0.1)" }}
               >
                 {label}
               </Link>

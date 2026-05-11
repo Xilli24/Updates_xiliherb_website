@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GRAIN } from "@/lib/constants";
 import RevealSection from "@/components/RevealSection";
+import TeamBanner from "@/components/TeamBanner";
 
 export const metadata: Metadata = {
   title: "Team — XiliHerb",
@@ -133,31 +134,39 @@ export default function Team() {
           className="absolute inset-0"
           style={{ background: "radial-gradient(ellipse at 20% 60%, rgba(91,172,46,0.08) 0%, transparent 60%)" }}
         />
-        <div className="relative z-10 max-w-6xl mx-auto px-8 pt-28 pb-24">
-          <RevealSection delay={0}>
-            <div>
-              <p
-                className="text-[11px] uppercase tracking-[0.2em] font-medium mb-8"
-                style={{ color: "#5BAC2E" }}
-              >
-                Our People
-              </p>
-              <h1
-                className="text-5xl md:text-[68px] font-semibold leading-[1.04] mb-8"
-                style={{ fontFamily: "var(--font-display)", color: "#F7F6F2" }}
-              >
-                The Minds <span style={{ color: "#5BAC2E" }}>Behind XiliHerb</span>
-              </h1>
-              <p
-                className="text-[15px] leading-[1.8] max-w-xl"
-                style={{ color: "rgba(255,255,255,0.65)" }}
-              >
-                A focused team of researchers, engineers, and domain experts united
-                by a shared commitment to advancing sustainable bio-based innovation —
-                supported by an experienced advisory network.
-              </p>
-            </div>
-          </RevealSection>
+        <div className="relative z-10 max-w-7xl mx-auto px-8 pt-28 pb-24">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+
+            {/* Left — copy */}
+            <RevealSection delay={0}>
+              <div>
+                <p
+                  className="text-[11px] uppercase tracking-[0.2em] font-medium mb-8"
+                  style={{ color: "#5BAC2E" }}
+                >
+                  Our People
+                </p>
+                <h1
+                  className="text-5xl md:text-[62px] font-semibold leading-[1.04] mb-8"
+                  style={{ fontFamily: "var(--font-display)", color: "#F7F6F2" }}
+                >
+                  The Minds <span style={{ color: "#5BAC2E" }}>Behind XiliHerb</span>
+                </h1>
+                <p
+                  className="text-[15px] leading-[1.8] max-w-xl"
+                  style={{ color: "rgba(255,255,255,0.65)" }}
+                >
+                  A focused team of researchers, engineers, and domain experts united
+                  by a shared commitment to advancing sustainable bio-based innovation —
+                  supported by an experienced advisory network.
+                </p>
+              </div>
+            </RevealSection>
+
+            {/* Right — animated org structure */}
+            <TeamBanner />
+
+          </div>
         </div>
         <div
           className="absolute bottom-0 left-0 right-0 h-px"

@@ -115,17 +115,13 @@ export default function About() {
             </div>
 
             {/* 02 — Technology Direction */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div>
                 <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6B6B" }}>
-                  XiliHerb is currently focused on exploring sustainable extraction and conversion
-                  technologies that can enable naturally derived ingredient pathways from
-                  agricultural biomass.
+                  XiliHerb is currently focused on exploring sustainable extraction and conversion technologies that can enable naturally derived ingredient pathways from agricultural biomass.
                 </p>
                 <p className="text-[15px] leading-[1.8]" style={{ color: "#6B6B6B" }}>
-                  Our approach combines scientific research, process development, and
-                  sustainability-oriented engineering — with a focus on long-term platform
-                  potential rather than short-term product commercialization.
+                  Our approach combines scientific research, process development, and sustainability-oriented engineering — with a focus on long-term platform potential rather than short-term product commercialization.
                 </p>
               </div>
               <RevealImage
@@ -149,13 +145,17 @@ export default function About() {
                 technologies that can leverage renewable biological resources more efficiently
                 and responsibly.
               </p>
-              <ComparisonTable rows={[
-                { factor: "Raw material",     conventional: "Petroleum or imported hardwood",       ours: "Domestic agricultural crop residue" },
-                { factor: "Chemistry",        conventional: "Synthetic catalysts & solvents",       ours: "Enzymatic & bio-based conversion" },
-                { factor: "Carbon footprint", conventional: "High — energy-intensive refining",     ours: "Low — ambient-temperature process" },
-                { factor: "Traceability",     conventional: "Multi-tier opaque supply chain",       ours: "Direct farm-to-lab sourcing" },
-                { factor: "End product",      conventional: "Chemically identical but synthetic",   ours: "Naturally identical, bio-derived" },
-              ]} />
+              <ComparisonTable
+                convSubtitle="Petroleum-based · Synthetic"
+                xiliSubtitle="Bio-derived · Farm-to-lab"
+                rows={[
+                  { factor: "Raw material",     conventional: "Petroleum or imported hardwood",       ours: "Domestic agricultural crop residue" },
+                  { factor: "Chemistry",        conventional: "Synthetic catalysts & solvents",       ours: "Enzymatic & bio-based conversion" },
+                  { factor: "Carbon footprint", conventional: "High — energy-intensive refining",     ours: "Low — ambient-temperature process" },
+                  { factor: "Traceability",     conventional: "Multi-tier opaque supply chain",       ours: "Direct farm-to-lab sourcing" },
+                  { factor: "End product",      conventional: "Chemically identical but synthetic",   ours: "Naturally identical, bio-derived" },
+                ]}
+              />
               <Callout text="At XiliHerb, we see natural extract and bio-based ingredient innovation as part of a broader transition toward circular and sustainable industrial ecosystems — where agricultural resources, scientific advancement, and process innovation can collectively create long-term value." />
             </div>
 

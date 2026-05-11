@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import AccordionGrid from "@/components/AccordionGrid";
-import StatCards from "@/components/StatCards";
+import { Accordion05 } from "@/components/ui/accordion-05";
 import FeatureCards from "@/components/FeatureCards";
 import ComparisonTable from "@/components/ComparisonTable";
 import TopoLines from "@/components/TopoLines";
+import SustainabilityBanner from "@/components/SustainabilityBanner";
 import { GRAIN } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -12,25 +12,9 @@ export const metadata: Metadata = {
     "Sustainability is core to how XiliHerb builds — from circular economy thinking and agricultural value creation to responsible resource utilization and long-term environmental impact.",
 };
 
-const gridItems = [
+const accordionItems = [
   {
-    num: "01",
-    title: "Our Sustainability Vision",
-    content: (
-      <div>
-        <p className="text-[13px] font-medium mb-3" style={{ color: "#2C2C2C" }}>
-          The scale of the opportunity
-        </p>
-        <StatCards items={[
-          { num: "60M",  unit: "tonnes/year", label: "Corn cob agricultural waste generated in India annually" },
-          { num: "3×",   unit: "less water",  label: "Bio-based extraction vs conventional chemical processing" },
-          { num: "100%", unit: "renewable",   label: "All feedstocks sourced from post-harvest crop residues" },
-        ]} />
-      </div>
-    ),
-  },
-  {
-    num: "02",
+    id: "01",
     title: "Agricultural Value Creation",
     content: (
       <div>
@@ -38,17 +22,21 @@ const gridItems = [
           Large volumes of agricultural resources remain underutilized despite their
           potential to support higher-value applications.
         </p>
-        <ComparisonTable rows={[
-          { factor: "Feedstock",     conventional: "Imported birch wood",            ours: "Domestic corn cob waste" },
-          { factor: "Process",       conventional: "High-pressure hydrogenation",    ours: "Enzymatic bioconversion" },
-          { factor: "Waste output",  conventional: "Significant chemical effluent",  ours: "Lignin reused as bioenergy" },
-          { factor: "Supply chain",  conventional: "Import-dependent",               ours: "India-grown, locally sourced" },
-        ]} />
+        <ComparisonTable
+          convSubtitle="Chemical · Import-dependent"
+          xiliSubtitle="Bio-based · Domestically Grown"
+          rows={[
+            { factor: "Feedstock",     conventional: "Imported birch wood",            ours: "Domestic corn cob waste" },
+            { factor: "Process",       conventional: "High-pressure hydrogenation",    ours: "Enzymatic bioconversion" },
+            { factor: "Waste output",  conventional: "Significant chemical effluent",  ours: "Lignin reused as bioenergy" },
+            { factor: "Supply chain",  conventional: "Import-dependent",               ours: "India-grown, locally sourced" },
+          ]}
+        />
       </div>
     ),
   },
   {
-    num: "03",
+    id: "02",
     title: "Circular Economy Thinking",
     content: (
       <div>
@@ -66,7 +54,7 @@ const gridItems = [
     ),
   },
   {
-    num: "04",
+    id: "03",
     title: "Health & Sustainability",
     content: (
       <div>
@@ -97,29 +85,39 @@ export default function Sustainability() {
           className="absolute inset-0"
           style={{ background: "radial-gradient(ellipse at 60% 30%, rgba(45,107,53,0.45) 0%, transparent 60%)", zIndex: 2 }}
         />
-        <div className="relative z-10 max-w-4xl mx-auto px-8 pt-28 pb-24">
-          <p
-            className="text-[11px] uppercase tracking-[0.2em] font-medium mb-7"
-            style={{ color: "#5BAC2E" }}
-          >
-            Sustainability &amp; Impact
-          </p>
-          <h1
-            className="text-4xl md:text-[52px] font-semibold leading-tight mb-8"
-            style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
-          >
-            Building Innovation with <span style={{ color: "#5BAC2E" }}>Long-Term Responsibility</span>
-          </h1>
-          <div className="space-y-5 max-w-2xl">
-            <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.78)" }}>
-              At XiliHerb, sustainability is not an afterthought — it is a core part of how
-              we think about technology, innovation, and long-term impact.
-            </p>
-            <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.78)" }}>
-              We believe future ingredient technologies should create value not only through
-              products, but also through responsible resource utilization, sustainable processing
-              systems, and broader ecosystem development.
-            </p>
+        <div className="relative z-10 max-w-7xl mx-auto px-8 pt-28 pb-24">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+
+            {/* Left — copy */}
+            <div>
+              <p
+                className="text-[11px] uppercase tracking-[0.2em] font-medium mb-7"
+                style={{ color: "#5BAC2E" }}
+              >
+                Sustainability &amp; Impact
+              </p>
+              <h1
+                className="text-4xl md:text-[52px] font-semibold leading-tight mb-8"
+                style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
+              >
+                Building Innovation with <span style={{ color: "#5BAC2E" }}>Long-Term Responsibility</span>
+              </h1>
+              <div className="space-y-5 max-w-xl">
+                <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.78)" }}>
+                  At XiliHerb, sustainability is not an afterthought — it is a core part of how
+                  we think about technology, innovation, and long-term impact.
+                </p>
+                <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.78)" }}>
+                  We believe future ingredient technologies should create value not only through
+                  products, but also through responsible resource utilization, sustainable processing
+                  systems, and broader ecosystem development.
+                </p>
+              </div>
+            </div>
+
+            {/* Right — animated stats + circular economy principles */}
+            <SustainabilityBanner />
+
           </div>
         </div>
         <div
@@ -137,7 +135,7 @@ export default function Sustainability() {
           >
             Our Approach
           </p>
-          <AccordionGrid items={gridItems} />
+          <Accordion05 items={accordionItems} defaultValue="01" />
         </div>
       </section>
 
