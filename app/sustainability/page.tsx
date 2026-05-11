@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Accordion05 } from "@/components/ui/accordion-05";
 import FeatureCards from "@/components/FeatureCards";
 import ComparisonTable from "@/components/ComparisonTable";
-import TopoLines from "@/components/TopoLines";
 import SustainabilityBanner from "@/components/SustainabilityBanner";
 import { GRAIN } from "@/lib/constants";
 
@@ -80,8 +79,7 @@ export default function Sustainability() {
       {/* ── HERO ── */}
       <section data-section="dark" className="relative overflow-hidden" style={{ background: "#1E3F6E" }}>
         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: GRAIN, zIndex: 0 }} />
-        <TopoLines />
-        <div
+<div
           className="absolute inset-0"
           style={{ background: "radial-gradient(ellipse at 60% 30%, rgba(45,107,53,0.45) 0%, transparent 60%)", zIndex: 2 }}
         />

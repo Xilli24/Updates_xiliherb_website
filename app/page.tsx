@@ -3,24 +3,7 @@ import { Leaf, FlaskConical, Droplets, Sparkles } from "lucide-react";
 import { GRAIN } from "@/lib/constants";
 import HeroCarousel from "@/components/HeroCarousel";
 import MagneticButton from "@/components/MagneticButton";
-
-const pillars = [
-  {
-    num: "01",
-    title: "Feedstock Selection",
-    desc: "Non-GMO corn cobs and other agricultural residues serve as our scalable raw material inputs for naturally derived ingredient pathways.",
-  },
-  {
-    num: "02",
-    title: "Conversion Pathways",
-    desc: "We apply bioconversion and sustainable extraction techniques for bio-based molecular transformation and circular resource utilization.",
-  },
-  {
-    num: "03",
-    title: "Platform Thinking",
-    desc: "Our technology platform generates multiple ingredient outputs from a single renewable biomass feedstock.",
-  },
-];
+import CardFlip from "@/components/ui/flip-card";
 
 const steps = [
   { label: "Biomass",     Icon: Leaf },
@@ -160,30 +143,46 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {pillars.map((item) => (
-              <div
-                key={item.num}
-                className="pt-8"
-                style={{ borderTop: "1px solid #E0E0DA" }}
-              >
-                <span
-                  className="font-mono text-[11px]"
-                  style={{ color: "#5BAC2E" }}
-                >
-                  {item.num}.
-                </span>
-                <h3
-                  className="text-[17px] font-semibold mt-4 mb-3 leading-snug"
-                  style={{ color: "#1E3F6E", fontFamily: "var(--font-display)" }}
-                >
-                  {item.title}
-                </h3>
-                <p className="text-[14px] leading-[1.75]" style={{ color: "#6B6B6B" }}>
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+          <div className="flex flex-wrap gap-6">
+            <CardFlip
+              color="#5BAC2E"
+              iconName="wheat"
+              title="Feedstock Selection"
+              subtitle="Agricultural waste, reimagined"
+              description="Non-GMO corn cobs and other agricultural residues serve as our scalable raw material inputs for naturally derived ingredient pathways."
+              features={[
+                "High xylan content (30–35%)",
+                "Zero-cost farm byproduct",
+                "India-grown & locally sourced",
+                "Diverts waste from open burning",
+              ]}
+            />
+            <CardFlip
+              color="#1A9BA0"
+              iconName="flask"
+              title="Conversion Pathways"
+              subtitle="Chemistry without compromise"
+              description="We apply bioconversion and sustainable extraction techniques for bio-based molecular transformation and circular resource utilization."
+              features={[
+                "No harsh acid catalysts",
+                "High process selectivity",
+                "Mild temperature & pressure",
+                "Scalable batch architecture",
+              ]}
+            />
+            <CardFlip
+              color="#2D6B35"
+              iconName="layers"
+              title="Platform Thinking"
+              subtitle="One feedstock, many outputs"
+              description="Our technology platform generates multiple ingredient outputs from a single renewable biomass feedstock, maximising value at every stage."
+              features={[
+                "Xylitol as primary output",
+                "Lignin → bioenergy input",
+                "Cellulose → material feedstock",
+                "Net-zero residue target",
+              ]}
+            />
           </div>
 
         </div>
