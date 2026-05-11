@@ -108,7 +108,7 @@ export default function Sustainability() {
             className="text-4xl md:text-[52px] font-semibold leading-tight mb-8"
             style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
           >
-            Building Innovation with Long-Term Responsibility
+            Building Innovation with <span style={{ color: "#5BAC2E" }}>Long-Term Responsibility</span>
           </h1>
           <div className="space-y-5 max-w-2xl">
             <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.78)" }}>

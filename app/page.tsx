@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Leaf, FlaskConical, Droplets, Sparkles } from "lucide-react";
 import { GRAIN } from "@/lib/constants";
 import HeroCarousel from "@/components/HeroCarousel";
-import TypewriterText from "@/components/TypewriterText";
 import MagneticButton from "@/components/MagneticButton";
 
 const pillars = [
@@ -62,10 +61,7 @@ export default function Home() {
                 className="text-5xl md:text-[58px] font-semibold leading-[1.06] mb-8"
                 style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
               >
-                <TypewriterText
-                  text="Engineering Sustainable Pathways for Bio-Based Ingredients"
-                  delay={300}
-                />
+                Engineering Sustainable Pathways for <span style={{ color: "#5BAC2E" }}>Bio-Based Ingredients</span>
               </h1>
 
               <p

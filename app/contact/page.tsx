@@ -30,7 +30,7 @@ export default function Contact() {
             className="text-4xl md:text-[52px] font-semibold leading-tight mb-8"
             style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
           >
-            Work With Us
+            Work <span style={{ color: "#5BAC2E" }}>With Us</span>
           </h1>
           <p
             className="text-[15px] leading-[1.8] max-w-xl"

@@ -146,8 +146,7 @@ export default function Team() {
                 className="text-5xl md:text-[68px] font-semibold leading-[1.04] mb-8"
                 style={{ fontFamily: "var(--font-display)", color: "#F7F6F2" }}
               >
-                The Minds<br />
-                <span style={{ color: "#5BAC2E" }}>Behind XiliHerb</span>
+                The Minds <span style={{ color: "#5BAC2E" }}>Behind XiliHerb</span>
               </h1>
               <p
                 className="text-[15px] leading-[1.8] max-w-xl"

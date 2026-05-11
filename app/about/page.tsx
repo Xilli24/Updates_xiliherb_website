@@ -65,7 +65,7 @@ export default function About() {
               className="text-5xl md:text-[62px] font-semibold leading-[1.04]"
               style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
             >
-              A Science-First Company at the Frontier of Bio-Based Innovation
+              A Science-First Company at the Frontier of <span style={{ color: "#5BAC2E" }}>Bio-Based Innovation</span>
             </h1>
             <div className="space-y-4 pb-1">
               <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.75)" }}>

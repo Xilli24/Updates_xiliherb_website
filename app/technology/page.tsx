@@ -147,7 +147,7 @@ export default function Technology() {
                     className="text-4xl md:text-[52px] font-semibold leading-tight mb-8"
                     style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
                   >
-                    From Corn Cob to Ingredient: How Our Process Works
+                    From Corn Cob to Ingredient: <span style={{ color: "#5BAC2E" }}>How Our Process Works</span>
                   </h1>
                   <div className="space-y-5 max-w-2xl">
                     <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.78)" }}>
