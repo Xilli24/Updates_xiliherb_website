@@ -1,7 +1,7 @@
 "use client"
 
 import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
+import { motion, useInView, type Transition } from "framer-motion"
 
 const founder = {
   initials: "XH",
@@ -82,7 +82,7 @@ export default function TeamBanner() {
   const fadeUp = (delay: number) => ({
     initial: { opacity: 0, y: 10 },
     animate: inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 },
-    transition: { duration: 0.45, delay, ease: "easeOut" as const },
+    transition: { duration: 0.45, delay, ease: "easeOut" } as Transition,
   })
 
   return (
