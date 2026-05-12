@@ -4,6 +4,7 @@ import ComparisonTable from "@/components/ComparisonTable";
 import RevealImage from "@/components/RevealImage";
 import AboutCards from "@/components/AboutCards";
 import type { SectionMeta } from "@/components/AboutCards";
+import DisciplineVenn from "@/components/DisciplineVenn";
 
 export const metadata: Metadata = {
   title: "About XiliHerb — Our Story, Conviction & Platform Vision",
@@ -47,7 +48,7 @@ export default function About() {
       <section
         data-section="dark"
         className="relative overflow-hidden"
-        style={{ background: "#1E3F6E", minHeight: "62vh" }}
+        style={{ background: "#1E3F6E" }}
       >
         <div
           className="absolute inset-0"
@@ -58,31 +59,41 @@ export default function About() {
           style={{ opacity: 0.18, zIndex: 0 }}
         />
         <div className="relative z-10 max-w-6xl mx-auto px-8 pt-28 pb-20">
-          <p
-            className="text-[13px] uppercase tracking-[0.16em] font-medium mb-10"
-            style={{ color: "#5BAC2E" }}
-          >
-            About XiliHerb
-          </p>
-          <div className="grid lg:grid-cols-[1fr,360px] gap-16 items-end">
-            <h1
-              className="text-5xl md:text-[62px] font-semibold leading-[1.04]"
-              style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
-            >
-              A Science-First Company at the Frontier of <span style={{ color: "#5BAC2E" }}>Bio-Based Innovation</span>
-            </h1>
-            <div className="space-y-4 pb-1">
-              <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.75)" }}>
-                XiliHerb is a science-driven biotechnology startup advancing natural extract and
-                molecular conversion technologies using renewable agricultural resources.
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            {/* Left — copy */}
+            <div>
+              <p
+                className="text-[13px] uppercase tracking-[0.16em] font-medium mb-10"
+                style={{ color: "#5BAC2E" }}
+              >
+                About XiliHerb
               </p>
-              <p className="text-[13px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.5)" }}>
-                Rather than positioning ourselves as a conventional product company, XiliHerb is
-                being built as a long-term technology and innovation platform — advancing scalable
-                bio-based processing systems for applications including naturally derived xylitol
-                and future health-focused ingredients.
-              </p>
+              <h1
+                className="text-5xl md:text-[56px] font-semibold leading-[1.06] mb-8"
+                style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
+              >
+                A Science-First Company at the Frontier of <span style={{ color: "#5BAC2E" }}>Bio-Based Innovation</span>
+              </h1>
+              <div className="space-y-4">
+                <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.75)" }}>
+                  XiliHerb is a science-driven biotechnology startup advancing natural extract and
+                  molecular conversion technologies using renewable agricultural resources.
+                </p>
+                <p className="text-[13px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.5)" }}>
+                  Rather than positioning ourselves as a conventional product company, XiliHerb is
+                  being built as a long-term technology and innovation platform — advancing scalable
+                  bio-based processing systems for applications including naturally derived xylitol
+                  and future health-focused ingredients.
+                </p>
+              </div>
             </div>
+
+            {/* Right — discipline Venn diagram */}
+            <div className="hidden lg:flex items-center justify-center" style={{ height: "460px" }}>
+              <DisciplineVenn />
+            </div>
+
           </div>
         </div>
         <div

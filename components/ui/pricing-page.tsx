@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Microscope, Sprout, TrendingUp, Building2 } from "lucide-react";
 
 // --- CheckIcon ---
@@ -31,6 +32,7 @@ interface PartnerCardProps {
   accentTo: string;
   isFeatured?: boolean;
   buttonText: string;
+  buttonHref: string;
 }
 
 // --- PartnerCard ---
@@ -47,6 +49,7 @@ function PartnerCard({
   accentTo,
   isFeatured = false,
   buttonText,
+  buttonHref,
 }: PartnerCardProps) {
   const cardStyle: React.CSSProperties = {
     backgroundColor: "hsla(215, 40%, 8%, 1)",
@@ -166,12 +169,13 @@ function PartnerCard({
       </div>
 
       <div className="relative z-10 mt-5">
-        <button
-          className="w-full h-10 rounded-lg text-[13px] font-semibold transition-all hover:opacity-90"
+        <Link
+          href={buttonHref}
+          className="flex items-center justify-center w-full h-10 rounded-lg text-[13px] font-semibold transition-all hover:opacity-90"
           style={{ background: "linear-gradient(90deg, #1E3F6E 0%, #2D6B35 100%)", color: "#F7F6F2" }}
         >
           {buttonText}
-        </button>
+        </Link>
       </div>
     </div>
   );
@@ -198,6 +202,7 @@ export function CollaborationCards() {
         "Scientific Collaboration Ecosystem",
       ],
       buttonText: "Explore Collaboration",
+      buttonHref: "/contact",
     },
     {
       name: "Agricultural Partners",
@@ -217,6 +222,7 @@ export function CollaborationCards() {
         "Corn Supply Collaborations",
       ],
       buttonText: "Join Network",
+      buttonHref: "/contact",
     },
     {
       name: "Investors",
@@ -236,6 +242,7 @@ export function CollaborationCards() {
         "Bioeconomy Investment Ecosystem",
       ],
       buttonText: "Investment Inquiry",
+      buttonHref: "/contact",
     },
     {
       name: "Industry Partners",
@@ -255,6 +262,7 @@ export function CollaborationCards() {
         "Industrial Ingredient Collaborations",
       ],
       buttonText: "Partner With Us",
+      buttonHref: "/contact",
     },
   ];
 

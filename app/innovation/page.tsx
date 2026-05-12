@@ -47,7 +47,7 @@ export default function Innovation() {
                   </h1>
                   <div className="space-y-5 max-w-2xl mb-10">
                     <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.78)" }}>
-                      XiliHerb is proudly associated with the AIC &amp; GKVK innovation ecosystem.
+                      XiliHerb is proudly associated with the Agri-Innovation Centre (AIC) and the University of Agricultural Sciences, GKVK, Bangalore innovation ecosystem.
                     </p>
                     <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.78)" }}>
                       Access to mentorship, research networks, startup infrastructure, and
