@@ -6,9 +6,13 @@ import AboutCards from "@/components/AboutCards";
 import type { SectionMeta } from "@/components/AboutCards";
 
 export const metadata: Metadata = {
-  title: "About — XiliHerb",
+  title: "About XiliHerb — Our Story, Conviction & Platform Vision",
   description:
-    "XiliHerb is a science-driven bio-innovation startup building sustainable technologies for natural extracts and next-generation bio-based ingredient systems.",
+    "XiliHerb was founded on a single observation: India burns millions of tonnes of corn cob residue annually while importing the same molecules it could produce domestically. We are building the bioconversion platform to close that gap — science-first, India-rooted, globally designed.",
+  openGraph: {
+    title: "About XiliHerb — Our Story & Platform Vision",
+    description: "Founded on one observation: India burns what it could build with. We are building the bioconversion platform to close that gap.",
+  },
 };
 
 const sections: SectionMeta[] = [

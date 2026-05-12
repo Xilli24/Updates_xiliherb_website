@@ -3,6 +3,7 @@ import { Leaf, FlaskConical, Droplets, Sparkles, Microscope, Globe, Sprout } fro
 import { GRAIN } from "@/lib/constants";
 import HeroCarousel from "@/components/HeroCarousel";
 import MagneticButton from "@/components/MagneticButton";
+import JsonLd from "@/components/JsonLd";
 import CardFlip from "@/components/ui/flip-card";
 
 const steps = [
@@ -12,9 +13,27 @@ const steps = [
   { label: "Ingredients", Icon: Sparkles,      iconAnim: "animate-[sparkTwinkle_2.4s_ease-in-out_infinite]" },
 ];
 
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Bio-Based Xylitol",
+  "description": "High-purity xylitol produced from non-GMO corn cob hemicellulose through enzymatic bioconversion. Naturally identical to conventional xylitol, bio-derived, with full farm-to-lab traceability.",
+  "brand": { "@type": "Brand", "name": "XiliHerb" },
+  "category": "Bio-based food ingredient",
+  "material": "Agricultural biomass — non-GMO corn cob hemicellulose",
+  "countryOfOrigin": "IN",
+  "manufacturer": { "@type": "Organization", "name": "XiliHerb", "url": "https://xiliherb.com" },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Production method", "value": "Enzymatic hydrolysis and bioconversion" },
+    { "@type": "PropertyValue", "name": "Feedstock", "value": "Non-GMO corn cob hemicellulose, India-grown" },
+    { "@type": "PropertyValue", "name": "Development stage", "value": "Lab-scale validation" },
+  ],
+};
+
 export default function Home() {
   return (
     <div>
+      <JsonLd data={productSchema} />
 
       {/* ══════════ HERO — Navy ══════════ */}
       <section
@@ -318,7 +337,7 @@ export default function Home() {
               Connect With Us
             </MagneticButton>
             <MagneticButton
-              href="/technology"
+              href="/xylitol-technology"
               className="inline-flex items-center gap-2 text-[13px] font-medium transition-colors hover:text-white"
               style={{ color: "rgba(255,255,255,0.60)" }}
             >

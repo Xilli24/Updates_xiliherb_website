@@ -8,7 +8,8 @@
       "Bash(npm run *)",
       "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('\\\\n'.join\\(sorted\\(d.get\\('dependencies',{}\\).keys\\(\\)\\)\\)\\)\")",
       "Bash(npm list *)",
-      "Bash(Select-String \"lucide|heroicons|react-icons|phosphor\")"
+      "Bash(Select-String \"lucide|heroicons|react-icons|phosphor\")",
+      "PowerShell(Move-Item \"c:\\\\Users\\\\DELL\\\\xiliherb-site\\\\app\\\\technology\" \"c:\\\\Users\\\\DELL\\\\xiliherb-site\\\\app\\\\xylitol-technology\")"
     ]
   }
 }

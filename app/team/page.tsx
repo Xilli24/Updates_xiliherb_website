@@ -3,11 +3,16 @@ import Link from "next/link";
 import { GRAIN } from "@/lib/constants";
 import RevealSection from "@/components/RevealSection";
 import TeamBanner from "@/components/TeamBanner";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Team — XiliHerb",
+  title: "Team & Advisors — The Scientists Behind XiliHerb",
   description:
-    "Meet the founders, researchers, and advisors driving XiliHerb's mission in sustainable bio-based innovation.",
+    "Meet the researchers, engineers, and scientific advisors building XiliHerb's agricultural bioconversion platform — supported by expertise from IISc Bangalore, GKVK University of Agricultural Sciences, and India's agri-biotech innovation ecosystem.",
+  openGraph: {
+    title: "Team & Advisors | XiliHerb",
+    description: "Researchers, engineers and advisors from IISc Bangalore and GKVK building India's agricultural bioconversion platform.",
+  },
 };
 
 /* ─── Data ────────────────────────────────────────────────────── */
@@ -123,9 +128,36 @@ function LinkedInIcon() {
 
 /* ─── Page ────────────────────────────────────────────────────── */
 
+const personSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "jobTitle": "Founder & CEO",
+    "worksFor": { "@type": "Organization", "name": "XiliHerb" },
+    "knowsAbout": ["Biotechnology", "Sustainable innovation", "Agricultural systems", "Bio-based ingredient platforms"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "jobTitle": "Scientific Advisor — Biochemical Engineering & Enzyme Technology",
+    "affiliation": { "@type": "Organization", "name": "Indian Institute of Science", "url": "https://www.iisc.ac.in" },
+    "worksFor": { "@type": "Organization", "name": "XiliHerb" },
+    "knowsAbout": ["Biochemical engineering", "Enzyme technology", "Bioprocess design"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "jobTitle": "Scientific Advisor — Agricultural Sciences & Biomass Utilization",
+    "affiliation": { "@type": "Organization", "name": "GKVK — University of Agricultural Sciences Bangalore", "url": "https://www.uasbangalore.edu.in" },
+    "worksFor": { "@type": "Organization", "name": "XiliHerb" },
+    "knowsAbout": ["Agricultural sciences", "Biomass utilisation", "Crop residue valorisation"],
+  },
+];
+
 export default function Team() {
   return (
     <div>
+      <JsonLd data={personSchema} />
 
       {/* ── HERO ── */}
       <section data-section="dark" className="relative overflow-hidden" style={{ background: "#1E3F6E" }}>

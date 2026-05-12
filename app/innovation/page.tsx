@@ -6,9 +6,13 @@ import RevealSection from "@/components/RevealSection";
 import { GRAIN } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Innovation & Ecosystem — XiliHerb",
+  title: "Partner, Invest & Collaborate — XiliHerb Agri-Biotech Ecosystem",
   description:
-    "XiliHerb is proudly associated with the AIC-GKVK innovation ecosystem, supported by mentorship, research networks, and a community of sustainability-focused innovators.",
+    "XiliHerb is open to seed investment, research collaboration, agricultural sourcing partnerships, and B2B supply discussions. Incubated at AIC-GKVK, Bangalore. Currently seeking aligned partners for pilot-scale development of our agricultural bioconversion platform.",
+  openGraph: {
+    title: "Partner & Invest — XiliHerb Agri-Biotech",
+    description: "Open to seed investment, research collaboration, FPO sourcing partnerships, and B2B supply discussions. Incubated at AIC-GKVK Bangalore.",
+  },
 };
 
 export default function Innovation() {

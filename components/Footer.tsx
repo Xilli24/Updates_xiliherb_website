@@ -6,7 +6,7 @@ import { FooterBackgroundGradient, TextHoverEffect } from "@/components/ui/hover
 
 const navLinks = [
   { href: "/about",          label: "About" },
-  { href: "/technology",     label: "Technology" },
+  { href: "/xylitol-technology", label: "Xylitol Technology" },
   { href: "/sustainability",  label: "Sustainability" },
   { href: "/innovation",     label: "Innovation & Ecosystem" },
   { href: "/team",           label: "Team" },

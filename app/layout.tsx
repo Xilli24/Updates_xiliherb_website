@@ -3,19 +3,66 @@ import Navbar from "../components/Navbar";
 import ProgressBar from "../components/ProgressBar";
 import type { Metadata } from "next";
 import "./globals.css";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "XiliHerb — Agricultural Bioconversion Platform | India",
   description:
-    "XiliHerb is an India-based biotechnology platform that converts agricultural crop residue into high-value bio-based molecules using enzymatic bioconversion. Xylitol represents our first validated output, with additional bio-based ingredient opportunities emerging from the same platform.",
-  keywords: "xylitol, plant-derived xylitol, sustainable biomass, food grade xylitol, pharmaceutical xylitol, oral care",
+    "XiliHerb is an India-based biotechnology platform converting agricultural crop residue into bio-based molecules through enzymatic bioconversion. Xylitol is our first validated output — with arabinoxylan and lignin derivatives following from the same platform.",
   openGraph: {
-    title: "XiliHerb — Agricultural Bioconversion Platform | India",
-    description: "XiliHerb is an India-based biotechnology platform that converts agricultural crop residue into high-value bio-based molecules using enzymatic bioconversion.",
+    title: "XiliHerb — Agricultural Bioconversion Platform",
+    description: "India-based biotech platform converting agricultural waste into bio-based molecules. Xylitol is the first validated output.",
     siteName: "XiliHerb",
     locale: "en_IN",
     type: "website",
   },
+  twitter: {
+    title: "XiliHerb — Agricultural Bioconversion Platform",
+    description: "India-based biotech platform converting agricultural waste into bio-based molecules.",
+  },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "XiliHerb",
+  "url": "https://xiliherb.com",
+  "logo": "https://xiliherb.com/logoxili.svg",
+  "description": "India-based biotechnology platform converting agricultural crop residue into bio-based molecules through enzymatic bioconversion.",
+  "foundingDate": "2026",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Bangalore, India",
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bangalore",
+    "addressRegion": "Karnataka",
+    "addressCountry": "IN",
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "team@xiliherb.com",
+    "contactType": "general",
+  },
+  "memberOf": {
+    "@type": "Organization",
+    "name": "AIC-GKVK Innovation Hub",
+    "url": "https://www.uasbangalore.edu.in",
+  },
+  "knowsAbout": [
+    "Enzymatic hydrolysis",
+    "Agricultural biomass valorisation",
+    "Bio-based xylitol production",
+    "Corn cob hemicellulose extraction",
+    "Circular bioeconomy",
+    "Enzymatic bioconversion",
+    "Arabinoxylan",
+    "Sustainable ingredient manufacturing",
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/company/xiliherb",
+  ],
 };
 
 export default function RootLayout({
@@ -26,6 +73,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body className="flex flex-col min-h-screen">
+        <JsonLd data={organizationSchema} />
         <ProgressBar />
         <Navbar />
         <main className="flex-1">{children}</main>

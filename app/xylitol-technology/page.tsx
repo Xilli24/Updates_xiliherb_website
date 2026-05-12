@@ -6,11 +6,20 @@ import { ExtractionCards, VisionCards } from "@/components/TechSectionCards";
 import RevealSection from "@/components/RevealSection";
 import TechnologyTimeline from "@/components/TechnologyTimeline";
 import { GRAIN } from "@/lib/constants";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Technology — XiliHerb",
+  title: "Xylitol Technology — Enzymatic Hydrolysis & Corn Cob Bioconversion | XiliHerb",
   description:
-    "XiliHerb's technology combines sustainable extraction, agricultural biomass valorization, and bio-based molecular conversion to build next-generation ingredient systems.",
+    "XiliHerb's xylitol technology converts non-GMO corn cob hemicellulose into bio-based xylitol through enzymatic hydrolysis — without harsh acid catalysts, at ambient temperature, with near-zero feedstock cost. Currently in lab-scale development with three active extraction protocols.",
+  openGraph: {
+    title: "Xylitol Technology — Enzymatic Hydrolysis | XiliHerb",
+    description: "Enzymatic hydrolysis of corn cob hemicellulose into bio-based xylitol. No harsh acids. Ambient temperature. Near-zero feedstock cost.",
+  },
+  twitter: {
+    title: "Xylitol Technology | XiliHerb",
+    description: "Enzymatic bioconversion of corn cob hemicellulose into bio-based xylitol. Lab-scale development stage.",
+  },
 };
 
 const accordionItems = [
@@ -84,9 +93,45 @@ const accordionItems = [
   },
 ];
 
+const techArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Xylitol Technology: Enzymatic Bioconversion of Corn Cob Hemicellulose",
+  "description": "XiliHerb's xylitol technology converts non-GMO corn cob hemicellulose into bio-based xylitol through enzymatic hydrolysis at ambient temperature without harsh acid catalysts.",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Enzymatic hydrolysis",
+      "description": "Biological process converting xylan polysaccharides into fermentable xylose without strong acid catalysts",
+    },
+    {
+      "@type": "Thing",
+      "name": "Corn cob hemicellulose",
+      "description": "Agricultural biomass fraction containing 30-35% xylan — primary feedstock for XiliHerb's xylitol bioconversion platform",
+    },
+    {
+      "@type": "Thing",
+      "name": "Bio-based xylitol",
+      "description": "Sugar alcohol produced from xylose via enzymatic bioconversion — naturally identical to conventional xylitol, used in food, oral care and pharmaceutical industries",
+    },
+  ],
+  "keywords": "xylitol technology, enzymatic hydrolysis xylitol, corn cob valorisation, xylan bioconversion, bio-based xylitol production, hemicellulose extraction India, xylose fermentation, xylitol manufacturing process",
+  "applicationCategory": "Biotechnology",
+  "author": {
+    "@type": "Organization",
+    "name": "XiliHerb",
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "XiliHerb",
+    "url": "https://xiliherb.com",
+  },
+};
+
 export default function Technology() {
   return (
     <div>
+      <JsonLd data={techArticleSchema} />
 
       {/* ── HERO ── */}
       <section data-section="dark" className="relative overflow-hidden" style={{ background: "#1E3F6E" }}>
@@ -109,7 +154,7 @@ export default function Technology() {
                     className="text-4xl md:text-[52px] font-semibold leading-tight mb-8"
                     style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
                   >
-                    From Corn Cob to Ingredient: <span style={{ color: "#5BAC2E" }}>How Our Process Works</span>
+                    Xylitol Technology: From Corn Cob to <span style={{ color: "#5BAC2E" }}>Bio-Based Molecule</span>
                   </h1>
                   <div className="space-y-5 max-w-2xl">
                     <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.78)" }}>
