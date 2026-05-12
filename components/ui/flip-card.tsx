@@ -74,16 +74,16 @@ export default function CardFlip({
             'absolute inset-0 h-full w-full',
             '[transform:rotateY(0deg)] [backface-visibility:hidden]',
             'overflow-hidden rounded-2xl',
-            'bg-gradient-to-br from-white via-slate-50 to-slate-100',
-            'border border-slate-200',
+            'bg-gradient-to-br from-[#0d1b2e] via-[#13243a] to-[#1a3a5c]',
+            'border border-white/10',
             'shadow-lg',
             'transition-all duration-700',
-            'group-hover:shadow-xl',
-            'group-hover:border-primary/20',
+            'group-hover:shadow-2xl',
+            'group-hover:border-primary/40',
             isFlipped ? 'opacity-0' : 'opacity-100',
           )}
         >
-          <div className="from-primary/5 absolute inset-0 bg-gradient-to-br via-transparent to-blue-500/5" />
+          <div className="from-primary/20 absolute inset-0 bg-gradient-to-br via-transparent to-transparent" />
 
           <div className="absolute inset-0 flex items-center justify-center pt-20">
             <div className="relative flex h-[100px] w-[200px] flex-col items-center justify-center gap-2">
@@ -124,10 +124,10 @@ export default function CardFlip({
           <div className="absolute right-0 bottom-0 left-0 p-5">
             <div className="flex items-center justify-between gap-3">
               <div className="space-y-1.5">
-                <h3 className="text-lg leading-snug font-semibold tracking-tight text-zinc-900 transition-all duration-500 ease-out group-hover:translate-y-[-4px]">
+                <h3 className="text-lg leading-snug font-semibold tracking-tight text-white transition-all duration-500 ease-out group-hover:translate-y-[-4px]">
                   {title}
                 </h3>
-                <p className="line-clamp-2 text-sm tracking-tight text-zinc-600 transition-all delay-[50ms] duration-500 ease-out group-hover:translate-y-[-4px]">
+                <p className="line-clamp-2 text-sm tracking-tight text-slate-400 transition-all delay-[50ms] duration-500 ease-out group-hover:translate-y-[-4px]">
                   {subtitle}
                 </p>
               </div>
@@ -173,7 +173,7 @@ export default function CardFlip({
                   {title}
                 </h3>
               </div>
-              <p className="line-clamp-2 text-sm tracking-tight text-zinc-600 transition-all duration-500 ease-out group-hover:translate-y-[-2px]">
+              <p className="line-clamp-3 text-sm tracking-tight text-zinc-600 transition-all duration-500 ease-out group-hover:translate-y-[-2px]">
                 {description}
               </p>
             </div>

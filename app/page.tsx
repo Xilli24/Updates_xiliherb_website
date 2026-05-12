@@ -1,15 +1,15 @@
 import Image from "next/image";
-import { Leaf, FlaskConical, Droplets, Sparkles } from "lucide-react";
+import { Leaf, FlaskConical, Droplets, Sparkles, Microscope, Globe, Sprout } from "lucide-react";
 import { GRAIN } from "@/lib/constants";
 import HeroCarousel from "@/components/HeroCarousel";
 import MagneticButton from "@/components/MagneticButton";
 import CardFlip from "@/components/ui/flip-card";
 
 const steps = [
-  { label: "Biomass",     Icon: Leaf },
-  { label: "Conversion",  Icon: FlaskConical },
-  { label: "Refinement",  Icon: Droplets },
-  { label: "Ingredients", Icon: Sparkles },
+  { label: "Biomass",     Icon: Leaf,         iconAnim: "animate-[leafSway_3s_ease-in-out_infinite]" },
+  { label: "Conversion",  Icon: FlaskConical,  iconAnim: "animate-[flaskBubble_2s_ease-in-out_infinite]" },
+  { label: "Refinement",  Icon: Droplets,      iconAnim: "animate-[dropFall_2.2s_ease-in-out_infinite]" },
+  { label: "Ingredients", Icon: Sparkles,      iconAnim: "animate-[sparkTwinkle_2.4s_ease-in-out_infinite]" },
 ];
 
 export default function Home() {
@@ -221,13 +221,13 @@ export default function Home() {
               className="hidden md:block absolute top-[27px] left-[56px] right-[56px] h-px"
               style={{ background: "linear-gradient(to right, #2D6B35, #5BAC2E, #1A9BA0)" }}
             />
-            {steps.map(({ label, Icon }, i) => (
+            {steps.map(({ label, Icon, iconAnim }, i) => (
               <div key={i} className="relative z-10 flex flex-col items-center gap-4">
                 <div
                   className="w-14 h-14 flex items-center justify-center rounded-full border"
                   style={{ background: "#16325A", borderColor: "#2D6B35" }}
                 >
-                  <Icon className="w-5 h-5" style={{ color: "#5BAC2E" }} />
+                  <Icon className={`w-5 h-5 ${iconAnim}`} style={{ color: "#5BAC2E" }} />
                 </div>
                 <p
                   className="text-[11px] uppercase tracking-[0.14em]"
@@ -242,55 +242,89 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════ CTA — Off-White ══════════ */}
-      <section data-section="light" style={{ background: "#F7F6F2" }}>
-        <div className="max-w-7xl mx-auto px-8 py-28">
-          <div className="grid lg:grid-cols-[1fr,auto] gap-16 items-end">
+      {/* ══════════ CLOSING HERO — Organic Gradient ══════════ */}
+      <section data-section="dark" className="relative overflow-hidden" style={{ background: "#061c2e" }}>
 
-            <div>
-              <p
-                className="text-[13px] uppercase tracking-[0.16em] font-medium mb-5"
-                style={{ color: "#2C2C2C" }}
-              >
-                Long-Term Vision &nbsp;&nbsp; 03 / 03
-              </p>
-              <h2
-                className="text-3xl md:text-[44px] font-semibold leading-[1.1] max-w-2xl"
-                style={{ color: "#1E3F6E", fontFamily: "var(--font-display)" }}
-              >
-                Building the Future of Sustainable Ingredient Innovation.
-              </h2>
-              <p
-                className="mt-5 text-[15px] leading-[1.8] max-w-xl"
-                style={{ color: "#6B6B6B" }}
-              >
-                We welcome collaboration across science, sustainability, biotechnology,
-                and future-oriented industrial ecosystems.
-              </p>
-            </div>
+        {/* Layered organic gradient blobs */}
+        <div className="absolute inset-0 pointer-events-none" style={{
+          background: [
+            "radial-gradient(ellipse at 72% 12%, rgba(26,155,160,0.55) 0%, transparent 50%)",
+            "radial-gradient(ellipse at 88% 65%, rgba(20,110,118,0.35) 0%, transparent 45%)",
+            "radial-gradient(ellipse at 18% 80%, rgba(45,107,53,0.30) 0%, transparent 50%)",
+            "radial-gradient(ellipse at 40% 50%, rgba(30,63,110,0.15) 0%, transparent 60%)",
+          ].join(", ")
+        }} />
 
-            <div className="flex flex-col gap-3 shrink-0 min-w-[180px]">
-              <MagneticButton
-                href="/contact"
-                className="text-[13px] font-medium px-6 py-3 text-center transition-opacity hover:opacity-80"
-                style={{ background: "#1A9BA0", color: "#FFFFFF", borderRadius: "2px" }}
-              >
-                Connect With Us
-              </MagneticButton>
-              <MagneticButton
-                href="/technology"
-                className="text-[13px] px-6 py-3 text-center transition-colors hover:bg-[#E0E0DA]"
-                style={{
-                  border: "1px solid #E0E0DA",
-                  color: "#1E3F6E",
-                  borderRadius: "2px",
-                }}
-              >
-                Explore Our Technology
-              </MagneticButton>
-            </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-8 py-32">
 
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full mb-12"
+            style={{ border: "1px solid rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.05)" }}>
+            <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#5BAC2E" }} />
+            <span className="text-[11px] uppercase tracking-[0.22em] font-medium" style={{ color: "rgba(255,255,255,0.65)" }}>
+              Long-Term Vision &nbsp;·&nbsp; 03 / 03
+            </span>
           </div>
+
+          {/* Heading */}
+          <h2
+            className="text-4xl md:text-[58px] font-semibold leading-[1.08] max-w-3xl mb-7"
+            style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
+          >
+            Building the Future of{" "}
+            <span style={{
+              color: "#5BAC2E",
+              textShadow: "0 0 35px rgba(91,172,46,0.65), 0 0 70px rgba(91,172,46,0.3)",
+            }}>
+              Sustainable
+            </span>{" "}
+            Ingredient Innovation.
+          </h2>
+
+          {/* Subtext */}
+          <p className="text-[15px] leading-[1.85] max-w-lg mb-10" style={{ color: "rgba(255,255,255,0.58)" }}>
+            We welcome collaboration across science, sustainability, biotechnology,
+            and future-oriented industrial ecosystems.
+          </p>
+
+          {/* Domain pills */}
+          <div className="flex flex-wrap gap-3 mb-10">
+            {[
+              { Icon: Microscope, label: "Science" },
+              { Icon: Leaf,       label: "Sustainability" },
+              { Icon: Sprout,     label: "Biotechnology" },
+              { Icon: Globe,      label: "Ecosystems" },
+            ].map(({ Icon: PillIcon, label }) => (
+              <div
+                key={label}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full transition-colors duration-300 hover:bg-white/10"
+                style={{ border: "1px solid rgba(255,255,255,0.14)", background: "rgba(255,255,255,0.05)" }}
+              >
+                <PillIcon className="w-3.5 h-3.5" style={{ color: "#5BAC2E" }} />
+                <span className="text-[13px] font-medium" style={{ color: "rgba(255,255,255,0.78)" }}>{label}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* CTAs */}
+          <div className="flex flex-wrap items-center gap-6">
+            <MagneticButton
+              href="/contact"
+              className="text-[13px] font-semibold px-7 py-3.5 rounded-lg transition-opacity hover:opacity-90"
+              style={{ background: "#5BAC2E", color: "#061c2e" }}
+            >
+              Connect With Us
+            </MagneticButton>
+            <MagneticButton
+              href="/technology"
+              className="inline-flex items-center gap-2 text-[13px] font-medium transition-colors hover:text-white"
+              style={{ color: "rgba(255,255,255,0.60)" }}
+            >
+              Explore Our Technology
+              <span style={{ color: "rgba(255,255,255,0.60)" }}>→</span>
+            </MagneticButton>
+          </div>
+
         </div>
       </section>
 
