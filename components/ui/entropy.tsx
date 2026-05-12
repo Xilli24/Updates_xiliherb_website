@@ -10,8 +10,9 @@ export function Entropy({ className = "" }: { className?: string }) {
     const canvas = canvasRef.current
     if (!canvas || !container) return
 
-    const ctx = canvas.getContext('2d')
-    if (!ctx) return
+    const ctxRaw = canvas.getContext('2d')
+    if (!ctxRaw) return
+    const ctx: CanvasRenderingContext2D = ctxRaw
 
     const W = container.offsetWidth || window.innerWidth
     const H = container.offsetHeight || window.innerHeight
