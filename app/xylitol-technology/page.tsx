@@ -160,7 +160,9 @@ export default function Technology() {
                     <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.78)" }}>
                       Our technology combines biotechnology, extraction science, and agricultural
                       resource utilization to convert renewable biomass into sustainable molecular
-                      and ingredient pathways.
+                      and ingredient pathways. Our primary feedstock is non-GMO corn cob
+                      hemicellulose — an agricultural residue naturally rich in xylan and sourced
+                      from India-grown farms.
                     </p>
                     <p className="text-[14px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.55)" }}>
                       Currently in technology development stage, the company is focused on research-oriented

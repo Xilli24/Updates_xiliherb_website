@@ -18,66 +18,40 @@ export const metadata: Metadata = {
 /* ─── Data ────────────────────────────────────────────────────── */
 
 const founder = {
-  initials: "XH",
+  initials: "MK",
   gradient: "linear-gradient(135deg, #1E3F6E 0%, #1A9BA0 100%)",
-  name: "Founder Name",
+  name: "Mallikarjuna G.",
   role: "Founder & CEO",
-  bio: "A science-driven entrepreneur at the intersection of biotechnology and sustainable agricultural innovation. Dedicated to building long-term technology platforms that advance naturally derived ingredient systems and circular bio-based industrial processes.",
-  tags: ["Biotechnology", "Sustainable Innovation", "Agricultural Systems"],
+  bio: "Mallikarjuna is an entrepreneur with experience across FMCG, entertainment, and technology-led ventures, bringing a multidisciplinary perspective to innovation-driven businesses. With a strong interest in sustainability, process innovation, and emerging technologies, he founded XiliHerb to explore scalable biotechnology pathways for naturally derived ingredients and next-generation bio-based systems. His vision is centered on building a long-term platform where science, sustainability, and industrial innovation converge.",
+  tags: ["FMCG", "Technology Ventures", "Sustainability", "Biotechnology"],
 };
 
 const team = [
   {
-    initials: "TM",
+    initials: "AA",
     gradient: "linear-gradient(135deg, #2D6B35 0%, #5BAC2E 100%)",
-    name: "Team Member",
-    role: "Head of Research & Development",
-    desc: "Leads the laboratory research program with a focus on enzymatic hydrolysis and bio-based extraction process development.",
+    name: "Ananya A.B",
+    role: "Research Associate",
+    desc: "A Food Science and Nutrition researcher with experience in sustainable food innovation, product development, and laboratory-based analysis. Currently pursuing doctoral studies, her work focuses on functional food systems, nutritional improvement, and research-driven ingredient innovation. She contributes to physicochemical analysis, formulation development, and sustainable food technologies.",
   },
   {
-    initials: "SM",
+    initials: "SP",
     gradient: "linear-gradient(135deg, #1E3F6E 0%, #2D6B35 100%)",
-    name: "Team Member",
-    role: "Process & Scale-Up Engineer",
-    desc: "Designs scalable bio-based conversion processes and bridges lab-scale R&D with pilot implementation.",
-  },
-  {
-    initials: "AM",
-    gradient: "linear-gradient(135deg, #1A9BA0 0%, #1E3F6E 100%)",
-    name: "Team Member",
-    role: "Agricultural Partnerships",
-    desc: "Builds sourcing networks with farmer producer organisations across corn-growing regions of Karnataka and Maharashtra.",
-  },
-  {
-    initials: "PM",
-    gradient: "linear-gradient(135deg, #2C2C2C 0%, #1E3F6E 100%)",
-    name: "Team Member",
-    role: "Science & Regulatory Affairs",
-    desc: "Oversees scientific documentation, regulatory pathways, and quality standards for bio-based ingredient development.",
+    name: "Sourabh Prabha",
+    role: "Senior Research Associate",
+    desc: "A Ph.D. scholar in Food Science and Nutrition with expertise in sustainable product development, functional ingredient systems, and quality assurance frameworks. His experience includes sensory evaluation, food safety systems (ISO 22000, GMP, GLP), and research-driven product innovation. He supports scalable and innovation-focused development initiatives.",
   },
 ];
 
 const advisors = [
   {
-    initials: "PA",
-    gradient: "linear-gradient(135deg, #1E3F6E 0%, #1A9BA0 100%)",
-    name: "Advisor Name",
-    affiliation: "Indian Institute of Science, Bangalore",
-    domain: "Biochemical Engineering & Enzyme Technology",
-  },
-  {
-    initials: "SA",
+    initials: "SS",
     gradient: "linear-gradient(135deg, #2D6B35 0%, #5BAC2E 100%)",
-    name: "Advisor Name",
-    affiliation: "GKVK — University of Agricultural Sciences",
-    domain: "Agricultural Sciences & Biomass Utilization",
-  },
-  {
-    initials: "IA",
-    gradient: "linear-gradient(135deg, #1E3F6E 0%, #2D6B35 100%)",
-    name: "Advisor Name",
-    affiliation: "Industry Expert",
-    domain: "Bio-Based Ingredient Commercialisation",
+    name: "Dr. Savita S. Manganavar",
+    role: "Academic Advisor",
+    affiliation: "University of Agricultural Sciences, Bangalore — Dept. of Food Science & Nutrition",
+    domain: "Food Science, Nutrition & Sustainable Food Systems",
+    bio: "Professor and Head of the Department of Food Science and Nutrition at University of Agricultural Sciences Bangalore. With extensive academic and research contributions in food science, nutrition, and sustainable food systems, she has authored numerous journal publications, conference papers, and academic research works. Her expertise and scientific guidance contribute to strengthening research-led innovation and biotechnology-focused development initiatives.",
   },
 ];
 
@@ -132,25 +106,35 @@ const personSchema = [
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "name": "Mallikarjuna G.",
     "jobTitle": "Founder & CEO",
     "worksFor": { "@type": "Organization", "name": "XiliHerb" },
-    "knowsAbout": ["Biotechnology", "Sustainable innovation", "Agricultural systems", "Bio-based ingredient platforms"],
+    "knowsAbout": ["FMCG", "Biotechnology", "Sustainable innovation", "Technology ventures"],
   },
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "jobTitle": "Scientific Advisor — Biochemical Engineering & Enzyme Technology",
-    "affiliation": { "@type": "Organization", "name": "Indian Institute of Science", "url": "https://www.iisc.ac.in" },
+    "name": "Ananya A.B",
+    "jobTitle": "Research Associate",
     "worksFor": { "@type": "Organization", "name": "XiliHerb" },
-    "knowsAbout": ["Biochemical engineering", "Enzyme technology", "Bioprocess design"],
+    "knowsAbout": ["Food science", "Sustainable food innovation", "Functional food systems", "Nutritional improvement"],
   },
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "jobTitle": "Scientific Advisor — Agricultural Sciences & Biomass Utilization",
-    "affiliation": { "@type": "Organization", "name": "GKVK — University of Agricultural Sciences Bangalore", "url": "https://www.uasbangalore.edu.in" },
+    "name": "Sourabh Prabha",
+    "jobTitle": "Senior Research Associate",
     "worksFor": { "@type": "Organization", "name": "XiliHerb" },
-    "knowsAbout": ["Agricultural sciences", "Biomass utilisation", "Crop residue valorisation"],
+    "knowsAbout": ["Food science", "Sustainable product development", "Quality assurance", "ISO 22000"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dr. Savita S. Manganavar",
+    "jobTitle": "Academic Advisor",
+    "affiliation": { "@type": "Organization", "name": "University of Agricultural Sciences, Bangalore" },
+    "worksFor": { "@type": "Organization", "name": "XiliHerb" },
+    "knowsAbout": ["Food science", "Nutrition", "Sustainable food systems", "Academic research"],
   },
 ];
 
@@ -343,7 +327,7 @@ export default function Team() {
           </div>
 
           {/* Team grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px" style={{ background: "#E0E0DA", border: "1px solid #E0E0DA", borderRadius: "4px", overflow: "hidden" }}>
+          <div className="grid sm:grid-cols-2 gap-px" style={{ background: "#E0E0DA", border: "1px solid #E0E0DA", borderRadius: "4px", overflow: "hidden" }}>
             {team.map((member, i) => (
               <RevealSection key={member.role} delay={i * 80}>
                 <div
@@ -459,33 +443,44 @@ export default function Team() {
             {advisors.map((advisor, i) => (
               <RevealSection key={advisor.domain} delay={i * 100}>
                 <div
-                  className="grid md:grid-cols-[56px,1fr,1fr,auto] gap-6 items-center py-7"
+                  className="grid md:grid-cols-[72px,1fr,auto] gap-8 items-start py-8"
                   style={{ borderColor: "rgba(255,255,255,0.12)" }}
                 >
                   <Avatar
                     initials={advisor.initials}
                     gradient={advisor.gradient}
-                    size={56}
-                    fontSize={18}
+                    size={72}
+                    fontSize={22}
                   />
                   <div>
                     <p
-                      className="text-[17px] font-semibold leading-snug"
+                      className="text-[10px] uppercase tracking-[0.14em] mb-2"
+                      style={{ color: "#5BAC2E" }}
+                    >
+                      {(advisor as any).role ?? "Scientific Advisor"}
+                    </p>
+                    <p
+                      className="text-[18px] font-semibold leading-snug mb-1"
                       style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
                     >
                       {advisor.name}
                     </p>
-                    <p className="text-[13px] mt-1" style={{ color: "rgba(255,255,255,0.5)" }}>
+                    <p className="text-[12px] mb-1" style={{ color: "rgba(255,255,255,0.45)" }}>
                       {advisor.affiliation}
                     </p>
+                    <p className="text-[12px] mb-4" style={{ color: "rgba(91,172,46,0.7)" }}>
+                      {advisor.domain}
+                    </p>
+                    {(advisor as any).bio && (
+                      <p className="text-[13px] leading-[1.75] max-w-2xl" style={{ color: "rgba(255,255,255,0.58)" }}>
+                        {(advisor as any).bio}
+                      </p>
+                    )}
                   </div>
-                  <p className="text-[13px] leading-[1.6]" style={{ color: "rgba(255,255,255,0.5)" }}>
-                    {advisor.domain}
-                  </p>
                   <Link
                     href="#"
-                    className="inline-flex items-center gap-1.5 text-[12px] transition-opacity hover:opacity-60"
-                    style={{ color: "rgba(255,255,255,0.55)" }}
+                    className="inline-flex items-center gap-1.5 text-[12px] transition-opacity hover:opacity-60 mt-1"
+                    style={{ color: "rgba(255,255,255,0.45)" }}
                   >
                     <LinkedInIcon />
                     <span className="hidden md:inline">Profile</span>

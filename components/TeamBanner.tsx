@@ -4,23 +4,19 @@ import { useRef } from "react"
 import { motion, useInView, type Transition } from "framer-motion"
 
 const founder = {
-  initials: "XH",
+  initials: "MK",
   gradient: "linear-gradient(135deg, #1E3F6E 0%, #1A9BA0 100%)",
-  name: "Founder Name",
+  name: "Mallikarjuna G.",
   role: "Founder & CEO",
 }
 
 const team = [
-  { initials: "TM", gradient: "linear-gradient(135deg, #2D6B35 0%, #5BAC2E 100%)", role: "Head of Research & Development" },
-  { initials: "SM", gradient: "linear-gradient(135deg, #1E3F6E 0%, #2D6B35 100%)", role: "Process & Scale-Up Engineer" },
-  { initials: "AM", gradient: "linear-gradient(135deg, #1A9BA0 0%, #1E3F6E 100%)", role: "Agricultural Partnerships" },
-  { initials: "PM", gradient: "linear-gradient(135deg, #2C2C2C 0%, #1E3F6E 100%)", role: "Science & Regulatory Affairs" },
+  { initials: "AA", gradient: "linear-gradient(135deg, #2D6B35 0%, #5BAC2E 100%)", name: "Ananya A.B", role: "Research Associate" },
+  { initials: "SP", gradient: "linear-gradient(135deg, #1E3F6E 0%, #2D6B35 100%)", name: "Sourabh Prabha", role: "Senior Research Associate" },
 ]
 
 const advisors = [
-  { initials: "PA", gradient: "linear-gradient(135deg, #1E3F6E 0%, #1A9BA0 100%)", domain: "Biochemical Engineering & Enzyme Technology", affiliation: "IISc, Bangalore" },
-  { initials: "SA", gradient: "linear-gradient(135deg, #2D6B35 0%, #5BAC2E 100%)", domain: "Agricultural Sciences & Biomass Utilization", affiliation: "GKVK — UAS, Bangalore" },
-  { initials: "IA", gradient: "linear-gradient(135deg, #1E3F6E 0%, #2D6B35 100%)", domain: "Bio-Based Ingredient Commercialisation", affiliation: "Industry Expert" },
+  { initials: "SS", gradient: "linear-gradient(135deg, #2D6B35 0%, #5BAC2E 100%)", name: "Dr. Savita S. Manganavar", role: "Academic Advisor", affiliation: "UAS, Bangalore — Dept. of Food Science & Nutrition" },
 ]
 
 function AvatarCircle({
@@ -124,15 +120,20 @@ export default function TeamBanner() {
             {...fadeUp(0.2 + i * 0.08)}
           >
             <AvatarCircle initials={member.initials} gradient={member.gradient} size={34} />
-            <p style={{ color: "rgba(255,255,255,0.72)", fontSize: "11px", lineHeight: "1.45" }}>
-              {member.role}
-            </p>
+            <div>
+              <p style={{ color: "#F7F6F2", fontSize: "11px", fontWeight: 600, lineHeight: "1.35" }}>
+                {member.name}
+              </p>
+              <p style={{ color: "rgba(255,255,255,0.42)", fontSize: "10px", marginTop: "2px" }}>
+                {member.role}
+              </p>
+            </div>
           </motion.div>
         ))}
       </div>
 
       {/* ── Tier 3: Advisors ── */}
-      <Divider label="Scientific & Strategic Advisors" />
+      <Divider label="Academic Advisors" />
       <div className="flex flex-col gap-2.5">
         {advisors.map((advisor, i) => (
           <motion.div
@@ -140,12 +141,15 @@ export default function TeamBanner() {
             className="flex items-center gap-3"
             {...fadeUp(0.55 + i * 0.09)}
           >
-            <AvatarCircle initials={advisor.initials} gradient={advisor.gradient} size={30} />
+            <AvatarCircle initials={advisor.initials} gradient={advisor.gradient} size={34} />
             <div>
-              <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "11px", lineHeight: "1.4" }}>
-                {advisor.domain}
+              <p style={{ color: "#F7F6F2", fontSize: "11px", fontWeight: 600, lineHeight: "1.35" }}>
+                {advisor.name}
               </p>
-              <p style={{ color: "rgba(255,255,255,0.32)", fontSize: "10px", marginTop: "2px" }}>
+              <p style={{ color: "rgba(91,172,46,0.75)", fontSize: "10px", marginTop: "2px" }}>
+                {advisor.role}
+              </p>
+              <p style={{ color: "rgba(255,255,255,0.32)", fontSize: "10px", marginTop: "1px" }}>
                 {advisor.affiliation}
               </p>
             </div>
