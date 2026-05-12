@@ -69,13 +69,14 @@ export default function About() {
             </h1>
             <div className="space-y-4 pb-1">
               <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.75)" }}>
-                XiliHerb is a science-driven bio-innovation startup developing sustainable
-                technologies for natural extracts and next-generation bio-based ingredient systems.
+                XiliHerb is a science-driven biotechnology startup advancing natural extract and
+                molecular conversion technologies using renewable agricultural resources.
               </p>
               <p className="text-[13px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.5)" }}>
                 Rather than positioning ourselves as a conventional product company, XiliHerb is
-                being built as a long-term technology and innovation platform — where science,
-                scalability, and environmental responsibility advance together.
+                being built as a long-term technology and innovation platform — advancing scalable
+                bio-based processing systems for applications including naturally derived xylitol
+                and future health-focused ingredients.
               </p>
             </div>
           </div>

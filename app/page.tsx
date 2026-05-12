@@ -62,7 +62,9 @@ export default function Home() {
               >
                 At the intersection of biotechnology, sustainability, and process
                 innovation, we build scalable next-generation ingredient systems through
-                research-led process development and agricultural biomass valorization.
+                research-led process development and agricultural biomass valorization,
+                including sustainable pathways for naturally derived xylitol and other
+                bio-based functional ingredients.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-12">

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BookOpen, Lightbulb, Cpu, Globe } from "lucide-react";
+import { BookOpen, Lightbulb, Cpu, Globe, Sprout } from "lucide-react";
 import Callout from "@/components/Callout";
 import { CollaborationCards } from "@/components/ui/pricing-page";
 import RevealSection from "@/components/RevealSection";
@@ -188,7 +188,7 @@ export default function Innovation() {
         />
       </section>
 
-      {/* ── 01: COLLABORATION & OPPORTUNITIES ── */}
+      {/* ── 01: THE OPPORTUNITY ── */}
       <section data-section="light" className="py-24" style={{ background: "#F7F6F2" }}>
         <div className="max-w-6xl mx-auto px-8">
 
@@ -202,7 +202,105 @@ export default function Innovation() {
             </p>
             <div className="pb-1" style={{ borderTop: "2px solid #5BAC2E", paddingTop: "16px" }}>
               <span className="text-[11px] uppercase tracking-[0.14em]" style={{ color: "#5BAC2E" }}>
-                Collaboration &amp; Opportunities
+                The Opportunity
+              </span>
+              <h2
+                className="text-xl font-semibold mt-2 leading-snug"
+                style={{ color: "#1E3F6E", fontFamily: "var(--font-display)" }}
+              >
+                A $1.3B Market India Currently Imports Entirely
+              </h2>
+            </div>
+          </div>
+
+          <RevealSection delay={100}>
+            <div>
+              <p className="text-[15px] leading-[1.8] mb-8 max-w-2xl" style={{ color: "#6B6B6B" }}>
+                Global demand for xylitol is growing at 6% annually. India produces virtually none
+                domestically — importing almost entirely from China and Europe. XiliHerb is building
+                the domestic alternative.
+              </p>
+
+              {/* Stat cards */}
+              <div className="grid md:grid-cols-3 gap-4 mb-8">
+                {([
+                  {
+                    stat: "~$1.3B",
+                    label: "global market size · 2024",
+                    sub: "Xylitol used across food, oral care & pharma industries",
+                  },
+                  {
+                    stat: "6%",
+                    label: "CAGR through 2030",
+                    sub: "Driven by clean-label and sugar-reduction trends globally",
+                  },
+                  {
+                    stat: "~100%",
+                    label: "India's import dependency",
+                    sub: "No domestic bio-based xylitol producer exists at scale",
+                  },
+                ] as const).map(({ stat, label, sub }) => (
+                  <div
+                    key={stat}
+                    className="p-6"
+                    style={{
+                      background: "#EEEEE8",
+                      border: "1px solid #E0E0DA",
+                      borderRadius: "2px",
+                    }}
+                  >
+                    <p
+                      className="text-[32px] font-bold leading-none mb-1"
+                      style={{ color: "#1E3F6E", fontFamily: "var(--font-display)" }}
+                    >
+                      {stat}
+                    </p>
+                    <p className="text-[11px] uppercase tracking-[0.12em] font-medium mb-3" style={{ color: "#5BAC2E" }}>
+                      {label}
+                    </p>
+                    <p className="text-[13px] leading-[1.65]" style={{ color: "#6B6B6B" }}>
+                      {sub}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Opportunity callout */}
+              <div
+                className="flex gap-4 p-6"
+                style={{
+                  background: "rgba(91,172,46,0.06)",
+                  borderLeft: "3px solid #5BAC2E",
+                  borderRadius: "2px",
+                }}
+              >
+                <Sprout size={18} strokeWidth={1.5} className="shrink-0 mt-0.5" style={{ color: "#5BAC2E" }} />
+                <p className="text-[14px] leading-[1.75]" style={{ color: "#4A4A4A" }}>
+                  India generates 30M+ tonnes of corn cob waste annually — most burned in open fields.
+                  XiliHerb converts this into the same high-purity xylitol currently imported at a premium.
+                </p>
+              </div>
+            </div>
+          </RevealSection>
+
+        </div>
+      </section>
+
+      {/* ── 02: COLLABORATION ── */}
+      <section data-section="light" className="py-24" style={{ background: "#F7F6F2", borderTop: "1px solid #E0E0DA" }}>
+        <div className="max-w-6xl mx-auto px-8">
+
+          {/* Section header */}
+          <div className="flex items-end gap-8 mb-12">
+            <p
+              className="text-[80px] font-bold leading-none select-none shrink-0"
+              style={{ color: "#E0E0DA", fontFamily: "var(--font-display)" }}
+            >
+              02
+            </p>
+            <div className="pb-1" style={{ borderTop: "2px solid #5BAC2E", paddingTop: "16px" }}>
+              <span className="text-[11px] uppercase tracking-[0.14em]" style={{ color: "#5BAC2E" }}>
+                Collaboration
               </span>
               <h2
                 className="text-xl font-semibold mt-2 leading-snug"

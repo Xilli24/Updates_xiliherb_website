@@ -3,6 +3,9 @@
 import type React from "react";
 import { useState } from "react";
 import { Children } from "react";
+import { Lightbulb, FlaskConical, Leaf } from "lucide-react";
+
+const sectionIcons = [Lightbulb, FlaskConical, Leaf];
 
 export interface SectionMeta {
   num: string;
@@ -28,6 +31,7 @@ export default function AboutCards({ sections, children }: Props) {
       <div className="grid md:grid-cols-3 gap-4">
         {sections.map((s, i) => {
           const isActive = active === i;
+          const Icon = sectionIcons[i];
           return (
             <div
               key={s.num}
@@ -45,15 +49,22 @@ export default function AboutCards({ sections, children }: Props) {
                 userSelect: "none",
               }}
             >
-              <p
-                className="text-[72px] font-bold leading-none select-none mb-5"
-                style={{
-                  color: isActive ? "rgba(91,172,46,0.12)" : "#E0E0DA",
-                  fontFamily: "var(--font-display)",
-                }}
-              >
-                {s.num}
-              </p>
+              <div className="flex items-center justify-between mb-5">
+                <p
+                  className="text-[72px] font-bold leading-none select-none"
+                  style={{
+                    color: isActive ? "rgba(91,172,46,0.12)" : "#E0E0DA",
+                    fontFamily: "var(--font-display)",
+                  }}
+                >
+                  {s.num}
+                </p>
+                <Icon
+                  size={28}
+                  strokeWidth={1.5}
+                  style={{ color: isActive ? "#5BAC2E" : "rgba(91,172,46,0.45)", flexShrink: 0 }}
+                />
+              </div>
 
               <span
                 className="text-[10px] uppercase tracking-[0.18em] font-medium"
