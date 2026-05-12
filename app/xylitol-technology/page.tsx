@@ -85,7 +85,7 @@ const accordionItems = [
             ingredient and molecular technologies shaped by biotechnology, renewable resources,
             and advanced process innovation.
           </p>
-          <Callout text="Our long-term ambition is to help enable industrial systems where agricultural resources can be transformed more intelligently, efficiently, and sustainably into higher-value bio-based applications." />
+          <Callout text="XiliHerb is building intelligent and sustainable bioconversion systems that transform agricultural resources into high-value bio-based applications, integrating biotechnology with AI-assisted process optimisation to analyse enzyme activity, feedstock composition, and reaction conditions while accelerating research efficiency and reducing experimental iteration cycles." />
           <VisionCards />
         </div>
       </RevealSection>

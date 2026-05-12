@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Microscope, Sprout, TrendingUp, Building2 } from "lucide-react";
+import { Microscope, Sprout, TrendingUp, Building2, BrainCircuit } from "lucide-react";
 
 // --- CheckIcon ---
 const CheckIcon = () => (
@@ -264,10 +264,30 @@ export function CollaborationCards() {
       buttonText: "Partner With Us",
       buttonHref: "/contact",
     },
+    {
+      name: "AI & Data Science",
+      tagline: "AI researchers, computational biologists, and data teams working on bioconversion process development",
+      typeLabel: "AI",
+      typeDesc: "collaboration",
+      icon: <BrainCircuit size={18} style={{ color: "#A78BFA" }} />,
+      iconBgClass: "from-violet-500/20 to-purple-500/20",
+      accentFrom: "hsla(263,70%,35%,0.5)",
+      accentMid:  "hsla(215,57%,30%,0.4)",
+      accentTo:   "hsla(182,73%,30%,0.35)",
+      isFeatured: false,
+      features: [
+        "Enzyme Activity Modelling",
+        "Yield Prediction Research",
+        "Sustainable Process Optimisation",
+        "Bioconversion Data Pipelines",
+      ],
+      buttonText: "Explore AI Collaboration",
+      buttonHref: "/contact",
+    },
   ];
 
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
       {cards.map((card) => (
         <PartnerCard key={card.name} {...card} />
       ))}

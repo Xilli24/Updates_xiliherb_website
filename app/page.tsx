@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { Leaf, FlaskConical, Droplets, Sparkles, Microscope, Globe, Sprout } from "lucide-react";
 import { GRAIN } from "@/lib/constants";
-import HeroCarousel from "@/components/HeroCarousel";
+import RadarHero from "@/components/RadarHero";
+import HeroBgCarousel from "@/components/HeroBgCarousel";
 import MagneticButton from "@/components/MagneticButton";
 import JsonLd from "@/components/JsonLd";
 import CardFlip from "@/components/ui/flip-card";
@@ -41,6 +42,7 @@ export default function Home() {
         className="relative overflow-hidden"
         style={{ background: "#1E3F6E", minHeight: "90vh" }}
       >
+        <HeroBgCarousel />
         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: GRAIN }} />
         <div
           className="absolute inset-0"
@@ -48,7 +50,7 @@ export default function Home() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto px-8 py-32">
-          <div className="grid lg:grid-cols-2 gap-20 items-start">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
 
             {/* Left — copy */}
             <div>
@@ -79,11 +81,12 @@ export default function Home() {
                 className="text-[14px] leading-[1.8] mb-10 max-w-lg"
                 style={{ color: "rgba(255,255,255,0.45)" }}
               >
-                At the intersection of biotechnology, sustainability, and process
-                innovation, we build scalable next-generation ingredient systems through
-                research-led process development and agricultural biomass valorization,
-                including sustainable pathways for naturally derived xylitol and other
-                bio-based functional ingredients.
+                XiliHerb operates at the intersection of biotechnology, sustainability,
+                and AI-driven process innovation, developing scalable bioconversion
+                systems for naturally derived xylitol and next-generation bio-based
+                ingredients. Our platform combines enzymatic science with AI-assisted
+                process modelling to accelerate optimisation in biomass conversion
+                research.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-12">
@@ -115,9 +118,9 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Right — image carousel */}
+            {/* Right — page navigation radar */}
             <div className="hidden lg:block">
-              <HeroCarousel />
+              <RadarHero />
             </div>
 
           </div>
