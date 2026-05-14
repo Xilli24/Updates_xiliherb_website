@@ -1,6 +1,7 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ProgressBar from "../components/ProgressBar";
+import ChatBot from "../components/ChatBot";
 import type { Metadata } from "next";
 import "./globals.css";
 import JsonLd from "@/components/JsonLd";
@@ -78,6 +79,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <ChatBot />
       </body>
     </html>
   );
