@@ -91,7 +91,7 @@ export default function SustainabilityBanner() {
       {/* ── Key metrics ── */}
       <div className="grid grid-cols-3 gap-6">
         {[
-          { value: 60,  suffix: "M",  unit: "tonnes / yr",  desc: "Corn cob agricultural waste generated in India annually",     delay: 0   },
+          { value: 60,  suffix: "M",  unit: "tonnes / yr",  desc: "Corn cob agricultural residues generated in India annually",  delay: 0   },
           { value: 3,   suffix: "×",  unit: "less water",   desc: "Bio-based extraction vs conventional chemical processing",    delay: 250 },
           { value: 100, suffix: "%",  unit: "renewable",    desc: "All feedstocks sourced from post-harvest crop residues",      delay: 500 },
         ].map(({ value, suffix, unit, desc, delay }) => (

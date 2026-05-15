@@ -8,7 +8,7 @@ import { GRAIN } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Sustainability & Circular Economy Impact | XiliHerb Bioconversion",
   description:
-    "XiliHerb's bioconversion process replaces petroleum-based chemistry with enzymatic routes from domestic agricultural residue — reducing carbon footprint, eliminating chemical effluent, and diverting crop waste from open-field burning. A circular economy approach to bio-based ingredient production.",
+    "XiliHerb's bioconversion process replaces petroleum-based chemistry with enzymatic routes from domestic agricultural residue — reducing carbon footprint, eliminating chemical effluent, and diverting crop residues from open-field burning. A circular economy approach to bio-based ingredient production.",
   openGraph: {
     title: "Sustainability & Circular Economy | XiliHerb",
     description: "Bio-based over petroleum. Domestic over imported. Enzymatic over chemical. XiliHerb's approach to sustainable ingredient production.",
@@ -29,9 +29,9 @@ const accordionItems = [
           convSubtitle="Chemical · Import-dependent"
           xiliSubtitle="Bio-based · Domestically Grown"
           rows={[
-            { factor: "Feedstock",     conventional: "Imported birch wood",            ours: "Domestic corn cob waste" },
+            { factor: "Feedstock",     conventional: "Imported birch wood",            ours: "Domestic corn cob residues" },
             { factor: "Process",       conventional: "High-pressure hydrogenation",    ours: "Enzymatic bioconversion" },
-            { factor: "Waste output",  conventional: "Significant chemical effluent",  ours: "Lignin reused as bioenergy" },
+            { factor: "By-product output",  conventional: "Significant chemical effluent",  ours: "Lignin reused as bioenergy" },
             { factor: "Supply chain",  conventional: "Import-dependent",               ours: "India-grown, locally sourced" },
           ]}
         />

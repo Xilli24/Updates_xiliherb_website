@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     "XiliHerb is an India-based biotechnology platform converting agricultural crop residue into bio-based molecules through enzymatic bioconversion. Xylitol is our first validated output — with arabinoxylan and lignin derivatives following from the same platform.",
   openGraph: {
     title: "XiliHerb — Agricultural Bioconversion Platform",
-    description: "India-based biotech platform converting agricultural waste into bio-based molecules. Xylitol is the first validated output.",
+    description: "India-based biotech platform converting agricultural residues into bio-based molecules. Xylitol is the first validated output.",
     siteName: "XiliHerb",
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     title: "XiliHerb — Agricultural Bioconversion Platform",
-    description: "India-based biotech platform converting agricultural waste into bio-based molecules.",
+    description: "India-based biotech platform converting agricultural residues into bio-based molecules.",
   },
 };
 

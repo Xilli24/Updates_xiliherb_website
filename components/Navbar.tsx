@@ -33,9 +33,9 @@ export default function Navbar() {
           <Image
             src="/logoxili.svg"
             alt="XiliHerb"
-            width={120}
-            height={44}
-            className="h-10 w-auto"
+            width={140}
+            height={52}
+            className="h-12 w-auto"
             priority
           />
         </Link>

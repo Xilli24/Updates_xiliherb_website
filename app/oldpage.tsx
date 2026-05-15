@@ -23,7 +23,7 @@ export default function Home() {
     {/* Headline */}
     <h1 className="text-5xl md:text-6xl font-semibold mt-4 leading-tight">
       Reimagining Ingredients —
-      <br /> From Waste to Value
+      <br /> From Residues to Value
     </h1>
 
     {/* Subtext */}

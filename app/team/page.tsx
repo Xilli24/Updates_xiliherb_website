@@ -28,18 +28,18 @@ const founder = {
 
 const team = [
   {
-    initials: "AA",
-    gradient: "linear-gradient(135deg, #2D6B35 0%, #5BAC2E 100%)",
-    name: "Ananya A.B",
-    role: "Research Associate",
-    desc: "A Food Science and Nutrition researcher with experience in sustainable food innovation, product development, and laboratory-based analysis. Currently pursuing doctoral studies, her work focuses on functional food systems, nutritional improvement, and research-driven ingredient innovation. She contributes to physicochemical analysis, formulation development, and sustainable food technologies.",
-  },
-  {
     initials: "SP",
     gradient: "linear-gradient(135deg, #1E3F6E 0%, #2D6B35 100%)",
     name: "Sourabh Prabha",
     role: "Senior Research Associate",
     desc: "A Ph.D. scholar in Food Science and Nutrition with expertise in sustainable product development, functional ingredient systems, and quality assurance frameworks. His experience includes sensory evaluation, food safety systems (ISO 22000, GMP, GLP), and research-driven product innovation. He supports scalable and innovation-focused development initiatives.",
+  },
+  {
+    initials: "AA",
+    gradient: "linear-gradient(135deg, #2D6B35 0%, #5BAC2E 100%)",
+    name: "Ananya A.B",
+    role: "Research Associate",
+    desc: "A Food Science and Nutrition researcher with experience in sustainable food innovation, product development, and laboratory-based analysis. Currently pursuing doctoral studies, her work focuses on functional food systems, nutritional improvement, and research-driven ingredient innovation. She contributes to physicochemical analysis, formulation development, and sustainable food technologies.",
   },
 ];
 

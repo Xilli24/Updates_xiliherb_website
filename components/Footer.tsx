@@ -1,7 +1,6 @@
 "use client";
-import React from "react";
 import Link from "next/link";
-import { Mail, MapPin, Share2, FlaskConical } from "lucide-react";
+import { Mail, MapPin, Phone, Share2, FlaskConical } from "lucide-react";
 import { FooterBackgroundGradient, TextHoverEffect } from "@/components/ui/hover-footer";
 
 const navLinks = [
@@ -20,8 +19,14 @@ const contactInfo = [
     href: "mailto:xilliherb@gmail.com",
   },
   {
+    icon: <Phone size={16} className="shrink-0" style={{ color: "#5BAC2E" }} />,
+    text: "+91 81055 18379",
+    href: "tel:+918105518379",
+  },
+  {
     icon: <MapPin size={16} className="shrink-0" style={{ color: "#5BAC2E" }} />,
     text: "AIC & GKVK Innovation Hub, Bangalore, India",
+    href: "https://www.google.com/maps/search/?api=1&query=AIC+GKVK+Innovation+Hub+Bangalore",
   },
 ];
 
@@ -140,6 +145,8 @@ export default function Footer() {
                   {item.href ? (
                     <a
                       href={item.href}
+                      target={item.href?.startsWith("http") ? "_blank" : undefined}
+                      rel={item.href?.startsWith("http") ? "noopener noreferrer" : undefined}
                       className="text-[13px] leading-relaxed transition-colors"
                       style={{ color: "rgba(255,255,255,0.55)" }}
                       onMouseOver={(e) => (e.currentTarget.style.color = "#5BAC2E")}
@@ -179,7 +186,7 @@ export default function Footer() {
             ))}
           </div>
           <span style={{ color: "rgba(255,255,255,0.3)" }}>
-            © {new Date().getFullYear()} XiliHerb. All rights reserved.
+            © {new Date().getFullYear()} Xiliherb Naturals Pvt Ltd. All rights reserved.
           </span>
           <span
             className="uppercase tracking-[0.1em] hidden md:block"

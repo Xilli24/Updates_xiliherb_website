@@ -11,8 +11,8 @@ const founder = {
 }
 
 const team = [
-  { initials: "AA", gradient: "linear-gradient(135deg, #2D6B35 0%, #5BAC2E 100%)", name: "Ananya A.B", role: "Research Associate" },
   { initials: "SP", gradient: "linear-gradient(135deg, #1E3F6E 0%, #2D6B35 100%)", name: "Sourabh Prabha", role: "Senior Research Associate" },
+  { initials: "AA", gradient: "linear-gradient(135deg, #2D6B35 0%, #5BAC2E 100%)", name: "Ananya A.B", role: "Research Associate" },
 ]
 
 const advisors = [

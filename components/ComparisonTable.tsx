@@ -17,7 +17,7 @@ const factorIconMap: Record<string, ReactNode> = {
   "end product":     <Atom size={13} />,
   "feedstock":       <Wheat size={13} />,
   "process":         <FlaskConical size={13} />,
-  "waste output":    <Recycle size={13} />,
+  "by-product output": <Recycle size={13} />,
   "supply chain":    <Globe size={13} />,
 }
 

@@ -280,7 +280,7 @@ export default function Innovation() {
               >
                 <Sprout size={18} strokeWidth={1.5} className="shrink-0 mt-0.5" style={{ color: "#5BAC2E" }} />
                 <p className="text-[14px] leading-[1.75]" style={{ color: "#4A4A4A" }}>
-                  India generates 30M+ tonnes of corn cob waste annually — most burned in open fields.
+                  India generates 30M+ tonnes of corn cob residues annually — most burned in open fields.
                   XiliHerb converts this into the same high-purity xylitol currently imported at a premium.
                 </p>
               </div>

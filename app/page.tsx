@@ -172,13 +172,13 @@ export default function Home() {
               color="#5BAC2E"
               iconName="wheat"
               title="Feedstock Selection"
-              subtitle="Agricultural waste, reimagined"
+              subtitle="Agricultural residues, reimagined"
               description="Non-GMO corn cobs and other agricultural residues serve as our scalable raw material inputs for naturally derived ingredient pathways."
               features={[
                 "High xylan content (30–35%)",
                 "Zero-cost farm byproduct",
                 "India-grown & locally sourced",
-                "Diverts waste from open burning",
+                "Diverts residues from open burning",
               ]}
             />
             <CardFlip
