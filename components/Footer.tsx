@@ -15,8 +15,8 @@ const navLinks = [
 const contactInfo = [
   {
     icon: <Mail size={16} className="shrink-0" style={{ color: "#5BAC2E" }} />,
-    text: "xilliherb@gmail.com",
-    href: "mailto:xilliherb@gmail.com",
+    text: "info@xiliherb.com",
+    href: "mailto:info@xiliherb.com",
   },
   {
     icon: <Phone size={16} className="shrink-0" style={{ color: "#5BAC2E" }} />,
@@ -44,7 +44,7 @@ const socialLinks = [
   {
     icon: <Mail size={18} />,
     label: "Email",
-    href: "mailto:xilliherb@gmail.com",
+    href: "mailto:info@xiliherb.com",
   },
 ];
 
