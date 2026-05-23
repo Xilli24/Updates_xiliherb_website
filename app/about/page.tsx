@@ -5,6 +5,7 @@ import RevealImage from "@/components/RevealImage";
 import AboutCards from "@/components/AboutCards";
 import type { SectionMeta } from "@/components/AboutCards";
 import DisciplineVenn from "@/components/DisciplineVenn";
+import BrochureSection from "@/components/BrochureSection";
 
 export const metadata: Metadata = {
   title: "About XiliHerb — Our Story, Conviction & Platform Vision",
@@ -178,6 +179,8 @@ export default function About() {
           </AboutCards>
         </div>
       </section>
+
+      <BrochureSection />
 
     </div>
   );
