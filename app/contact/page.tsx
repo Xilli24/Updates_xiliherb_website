@@ -78,7 +78,7 @@ export default function Contact() {
                     Email
                   </p>
                   <p className="text-[15px]" style={{ color: "#1E3F6E" }}>
-                    xilliherb@gmail.com
+                    info@xiliherb.com
                   </p>
                 </div>
                 <div>
