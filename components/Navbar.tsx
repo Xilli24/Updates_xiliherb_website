@@ -32,7 +32,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center" onClick={() => setMobileOpen(false)}>
           <Image
             src="/logoxili.svg"
-            alt="XiliHerb"
+            alt="Xiliherb Naturals Pvt Ltd"
             width={140}
             height={52}
             className="h-12 w-auto"

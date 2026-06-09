@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Leaf, FlaskConical, Droplets, Sparkles, Microscope, Globe, Sprout } from "lucide-react";
 import { GRAIN } from "@/lib/constants";
@@ -13,6 +14,59 @@ const steps = [
   { label: "Refinement",  Icon: Droplets,      iconAnim: "animate-[dropFall_2.2s_ease-in-out_infinite]" },
   { label: "Ingredients", Icon: Sparkles,      iconAnim: "animate-[sparkTwinkle_2.4s_ease-in-out_infinite]" },
 ];
+
+export const metadata: Metadata = {
+  title: "Xiliherb | Bio-Based Xylitol from Agricultural Biomass",
+  description:
+    "Xiliherb Naturals Pvt Ltd. From Biomass to Breakthrough — converting low-value corn cob biomass into high-value xylitol and sustainable bio-based ingredients through enzymatic bioprocessing.",
+  alternates: {
+    canonical: "https://www.xiliherb.com",
+  },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Xiliherb Naturals Pvt Ltd",
+  "legalName": "Xiliherb Naturals Private Limited",
+  "url": "https://www.xiliherb.com",
+  "logo": "https://www.xiliherb.com/logoxili.svg",
+  "description":
+    "Xiliherb Naturals Pvt Ltd converts low-value agricultural biomass into high-value sustainable ingredients through innovative enzymatic bioprocessing. Xylitol from corn cob hemicellulose is our first validated output.",
+  "slogan": "From Biomass to Breakthrough",
+  "foundingDate": "2026",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Bangalore, India",
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bangalore",
+    "addressRegion": "Karnataka",
+    "addressCountry": "IN",
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "team@xiliherb.com",
+    "contactType": "general",
+  },
+  "memberOf": {
+    "@type": "Organization",
+    "name": "AIC-GKVK Innovation Hub",
+    "url": "https://www.uasbangalore.edu.in",
+  },
+  "knowsAbout": [
+    "Enzymatic hydrolysis",
+    "Agricultural biomass valorisation",
+    "Bio-based xylitol production",
+    "Corn cob hemicellulose extraction",
+    "Circular bioeconomy",
+    "Enzymatic bioconversion",
+    "Arabinoxylan",
+    "Sustainable ingredient manufacturing",
+  ],
+  "sameAs": ["https://www.linkedin.com/company/xiliherb"],
+};
 
 const productSchema = {
   "@context": "https://schema.org",
@@ -34,6 +88,7 @@ const productSchema = {
 export default function Home() {
   return (
     <div>
+      <JsonLd data={organizationSchema} />
       <JsonLd data={productSchema} />
 
       {/* ══════════ HERO — Navy ══════════ */}
@@ -62,11 +117,25 @@ export default function Home() {
               </p>
 
               <h1
-                className="text-5xl md:text-[58px] font-semibold leading-[1.06] mb-8"
+                className="text-5xl md:text-[58px] font-semibold leading-[1.06] mb-5"
                 style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
               >
-                Engineering Sustainable Pathways for <span style={{ color: "#5BAC2E" }}>Bio-Based Ingredients</span>
+                <span
+                  className="block text-[26px] font-bold tracking-[0.04em] mb-3"
+                  style={{ color: "#5BAC2E" }}
+                >
+                  Xiliherb
+                </span>
+                Engineering Sustainable Pathways for{" "}
+                <span style={{ color: "#5BAC2E" }}>Bio-Based Ingredients</span>
               </h1>
+
+              <p
+                className="text-[12px] uppercase tracking-[0.18em] font-medium mb-5"
+                style={{ color: "rgba(255,255,255,0.42)", fontStyle: "italic" }}
+              >
+                From Biomass to Breakthrough
+              </p>
 
               <p
                 className="text-[15px] leading-[1.8] mb-5 max-w-lg"

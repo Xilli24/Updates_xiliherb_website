@@ -4,66 +4,58 @@ import ProgressBar from "../components/ProgressBar";
 import ChatBot from "../components/ChatBot";
 import type { Metadata } from "next";
 import "./globals.css";
-import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "XiliHerb — Agricultural Bioconversion Platform | India",
+  title: {
+    default: "Xiliherb Naturals Pvt Ltd | From Biomass to Breakthrough",
+    template: "%s | Xiliherb",
+  },
   description:
-    "XiliHerb is an India-based biotechnology platform converting agricultural crop residue into bio-based molecules through enzymatic bioconversion. Xylitol is our first validated output — with arabinoxylan and lignin derivatives following from the same platform.",
+    "Xiliherb Naturals Pvt Ltd converts low-value agricultural biomass into high-value sustainable ingredients through innovative bioprocessing. Naturally derived xylitol from corn cob residues — India's agricultural bioconversion platform.",
+  keywords: [
+    "xiliherb",
+    "xiliherb naturals",
+    "xiliherb naturals pvt ltd",
+    "bio-based xylitol",
+    "agricultural biomass bioconversion",
+    "corn cob xylitol india",
+    "enzymatic hydrolysis",
+    "sustainable ingredients",
+    "biomass valorization",
+    "circular bioeconomy india",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+  alternates: {
+    canonical: "https://www.xiliherb.com",
+  },
   openGraph: {
-    title: "XiliHerb — Agricultural Bioconversion Platform",
-    description: "India-based biotech platform converting agricultural residues into bio-based molecules. Xylitol is the first validated output.",
-    siteName: "XiliHerb",
+    title: "Xiliherb Naturals Pvt Ltd | From Biomass to Breakthrough",
+    description:
+      "Xiliherb Naturals Pvt Ltd — converting agricultural biomass into high-value sustainable ingredients through innovative enzymatic bioprocessing. Naturally derived xylitol from corn cob residues.",
+    url: "https://www.xiliherb.com",
+    siteName: "Xiliherb",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "https://www.xiliherb.com/logoxili.png",
+        width: 340,
+        height: 274,
+        alt: "Xiliherb Naturals Pvt Ltd — From Biomass to Breakthrough",
+      },
+    ],
   },
   twitter: {
-    title: "XiliHerb — Agricultural Bioconversion Platform",
-    description: "India-based biotech platform converting agricultural residues into bio-based molecules.",
+    card: "summary_large_image",
+    title: "Xiliherb Naturals Pvt Ltd | From Biomass to Breakthrough",
+    description:
+      "Xiliherb Naturals Pvt Ltd — converting agricultural biomass into high-value sustainable ingredients through innovative bioprocessing.",
+    images: ["https://www.xiliherb.com/logoxili.png"],
   },
-};
-
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "XiliHerb",
-  "url": "https://xiliherb.com",
-  "logo": "https://xiliherb.com/logoxili.svg",
-  "description": "India-based biotechnology platform converting agricultural crop residue into bio-based molecules through enzymatic bioconversion.",
-  "foundingDate": "2026",
-  "foundingLocation": {
-    "@type": "Place",
-    "name": "Bangalore, India",
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Bangalore",
-    "addressRegion": "Karnataka",
-    "addressCountry": "IN",
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "team@xiliherb.com",
-    "contactType": "general",
-  },
-  "memberOf": {
-    "@type": "Organization",
-    "name": "AIC-GKVK Innovation Hub",
-    "url": "https://www.uasbangalore.edu.in",
-  },
-  "knowsAbout": [
-    "Enzymatic hydrolysis",
-    "Agricultural biomass valorisation",
-    "Bio-based xylitol production",
-    "Corn cob hemicellulose extraction",
-    "Circular bioeconomy",
-    "Enzymatic bioconversion",
-    "Arabinoxylan",
-    "Sustainable ingredient manufacturing",
-  ],
-  "sameAs": [
-    "https://www.linkedin.com/company/xiliherb",
-  ],
 };
 
 export default function RootLayout({
@@ -74,7 +66,6 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body className="flex flex-col min-h-screen">
-        <JsonLd data={organizationSchema} />
         <ProgressBar />
         <Navbar />
         <main className="flex-1">{children}</main>
