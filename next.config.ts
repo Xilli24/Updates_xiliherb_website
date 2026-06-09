@@ -8,7 +8,6 @@ const nextConfig: NextConfig = {
         has: [{ type: "host", value: "xiliherb.com" }],
         destination: "https://www.xiliherb.com/:path*",
         permanent: true,
-        statusCode: 308,
       },
     ];
   },
