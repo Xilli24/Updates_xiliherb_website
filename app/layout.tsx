@@ -57,6 +57,9 @@ export const metadata: Metadata = {
       "Xiliherb Naturals Pvt Ltd — converting agricultural biomass into high-value sustainable ingredients through innovative bioprocessing.",
     images: ["https://www.xiliherb.com/logoxili.png"],
   },
+  verification: {
+    google: "FgsAuQDRVtfLhzN9NL0mwRGChVrSHeKTU-XTeWyi084",
+  },
 };
 
 export default function RootLayout({
