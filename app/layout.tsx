@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.xiliherb.com"),
   title: {
     default: "Xiliherb Naturals Pvt Ltd | From Biomass to Breakthrough",
     template: "%s | Xiliherb",
