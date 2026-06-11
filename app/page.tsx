@@ -83,6 +83,14 @@ const productSchema = {
     { "@type": "PropertyValue", "name": "Feedstock", "value": "Non-GMO corn cob hemicellulose, India-grown" },
     { "@type": "PropertyValue", "name": "Development stage", "value": "Lab-scale validation" },
   ],
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "price": "0",
+    "priceCurrency": "INR",
+    "priceValidUntil": "2027-12-31",
+    "url": "https://www.xiliherb.com/contact",
+  },
 };
 
 export default function Home() {

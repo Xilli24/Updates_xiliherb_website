@@ -80,7 +80,7 @@ export async function sendEmail(data: FormData): Promise<SendResult> {
   try {
     await transporter.sendMail({
       from: `"XiliHerb Website" <${process.env.GMAIL_USER}>`,
-      to: "xiliherbs@gmail.com",
+      to: "info@xiliherb.com",
       replyTo: email,
       subject: `New Inquiry — ${inquiryLabels[inquiry] ?? "General"} from ${name}`,
       html,
