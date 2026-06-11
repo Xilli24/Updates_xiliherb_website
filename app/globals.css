@@ -134,3 +134,13 @@ h1, h2, h3 {
 .glass-float-2 { animation: glass-float 6s ease-in-out infinite; animation-delay: 1.2s; }
 .glass-float-3 { animation: glass-float 6s ease-in-out infinite; animation-delay: 2.4s; }
 .glass-float-4 { animation: glass-float 6s ease-in-out infinite; animation-delay: 0.6s; }
+
+@keyframes orbit-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes orbit-counter-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}

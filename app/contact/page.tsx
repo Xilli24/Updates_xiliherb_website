@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GRAIN } from "@/lib/constants";
 import ContactForm from "@/components/ContactForm";
+import ContactOrbitBanner from "@/components/ui/contact-orbit-banner";
 
 export const metadata: Metadata = {
   title: "Contact — XiliHerb",
@@ -13,12 +14,21 @@ export default function Contact() {
     <div>
 
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden" style={{ background: "#1E3F6E" }}>
+      <section className="relative overflow-hidden" style={{ background: "#1E3F6E", minHeight: "480px" }}>
         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: GRAIN }} />
         <div
           className="absolute inset-0"
           style={{ background: "radial-gradient(ellipse at 20% 60%, rgba(26,155,160,0.15) 0%, transparent 60%)" }}
         />
+
+        {/* Orbit half-circle — centre sits on the right border, left half visible */}
+        <div
+          className="hidden lg:flex absolute right-0 top-0 bottom-0 items-center z-[5] pointer-events-none"
+          style={{ transform: "translateX(50%)" }}
+        >
+          <ContactOrbitBanner />
+        </div>
+
         <div className="relative z-10 max-w-4xl mx-auto px-8 pt-28 pb-24">
           <p
             className="text-[11px] uppercase tracking-[0.2em] font-medium mb-7"
