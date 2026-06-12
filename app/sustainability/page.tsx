@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Sustainability & Circular Economy Impact | XiliHerb Bioconversion",
   description:
     "XiliHerb's bioconversion process replaces petroleum-based chemistry with enzymatic routes from domestic agricultural residue — reducing carbon footprint, eliminating chemical effluent, and diverting crop residues from open-field burning. A circular economy approach to bio-based ingredient production.",
+  alternates: {
+    canonical: "https://www.xiliherb.com/sustainability",
+  },
   openGraph: {
     title: "Sustainability & Circular Economy | XiliHerb",
     description: "Bio-based over petroleum. Domestic over imported. Enzymatic over chemical. XiliHerb's approach to sustainable ingredient production.",

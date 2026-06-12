@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Partner, Invest & Collaborate — XiliHerb Agri-Biotech Ecosystem",
   description:
     "XiliHerb is open to seed investment, research collaboration, agricultural sourcing partnerships, and B2B supply discussions. Incubated at AIC-GKVK, Bangalore. Currently seeking aligned partners for pilot-scale development of our agricultural bioconversion platform.",
+  alternates: {
+    canonical: "https://www.xiliherb.com/innovation",
+  },
   openGraph: {
     title: "Partner & Invest — XiliHerb Agri-Biotech",
     description: "Open to seed investment, research collaboration, FPO sourcing partnerships, and B2B supply discussions. Incubated at AIC-GKVK Bangalore.",

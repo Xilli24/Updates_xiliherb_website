@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "About XiliHerb — Our Story, Conviction & Platform Vision",
   description:
     "XiliHerb was founded on a single observation: India burns millions of tonnes of corn cob residue annually while importing the same molecules it could produce domestically. We are building the bioconversion platform to close that gap — science-first, India-rooted, globally designed.",
+  alternates: {
+    canonical: "https://www.xiliherb.com/about",
+  },
   openGraph: {
     title: "About XiliHerb — Our Story & Platform Vision",
     description: "Founded on one observation: India burns what it could build with. We are building the bioconversion platform to close that gap.",

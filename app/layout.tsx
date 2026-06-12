@@ -30,9 +30,6 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true },
   },
-  alternates: {
-    canonical: "https://www.xiliherb.com",
-  },
   openGraph: {
     title: "Xiliherb Naturals Pvt Ltd | From Biomass to Breakthrough",
     description:

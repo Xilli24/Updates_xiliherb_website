@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Contact — XiliHerb",
   description:
     "Reach out to XiliHerb for partnership inquiries, research collaborations, investment conversations, or to learn more about our sustainable bio-based ingredient technology.",
+  alternates: {
+    canonical: "https://www.xiliherb.com/contact",
+  },
 };
 
 export default function Contact() {

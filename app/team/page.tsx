@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Team & Advisors — The Scientists Behind XiliHerb",
   description:
     "Meet the researchers, engineers, and scientific advisors building XiliHerb's agricultural bioconversion platform — supported by expertise from IISc Bangalore, GKVK University of Agricultural Sciences, and India's agri-biotech innovation ecosystem.",
+  alternates: {
+    canonical: "https://www.xiliherb.com/team",
+  },
   openGraph: {
     title: "Team & Advisors | XiliHerb",
     description: "Researchers, engineers and advisors from IISc Bangalore and GKVK building India's agricultural bioconversion platform.",

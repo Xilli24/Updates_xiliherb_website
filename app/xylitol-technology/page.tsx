@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Xylitol Technology — Enzymatic Hydrolysis & Corn Cob Bioconversion | XiliHerb",
   description:
     "XiliHerb's xylitol technology converts non-GMO corn cob hemicellulose into bio-based xylitol through enzymatic hydrolysis — without harsh acid catalysts, at ambient temperature, with near-zero feedstock cost. Currently in lab-scale development with three active extraction protocols.",
+  alternates: {
+    canonical: "https://www.xiliherb.com/xylitol-technology",
+  },
   openGraph: {
     title: "Xylitol Technology — Enzymatic Hydrolysis | XiliHerb",
     description: "Enzymatic hydrolysis of corn cob hemicellulose into bio-based xylitol. No harsh acids. Ambient temperature. Near-zero feedstock cost.",
