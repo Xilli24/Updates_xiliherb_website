@@ -73,6 +73,7 @@ const productSchema = {
   "@type": "Product",
   "name": "Bio-Based Xylitol",
   "description": "High-purity xylitol produced from non-GMO corn cob hemicellulose through enzymatic bioconversion. Naturally identical to conventional xylitol, bio-derived, with full farm-to-lab traceability.",
+  "image": "https://www.xiliherb.com/xylitol.jpg",
   "brand": { "@type": "Brand", "name": "XiliHerb" },
   "category": "Bio-based food ingredient",
   "material": "Agricultural biomass — non-GMO corn cob hemicellulose",
