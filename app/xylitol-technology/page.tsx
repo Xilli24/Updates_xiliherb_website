@@ -9,19 +9,19 @@ import { GRAIN } from "@/lib/constants";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Xylitol Technology — Enzymatic Hydrolysis & Corn Cob Bioconversion | XiliHerb",
+  title: "Bio-Based Xylitol Research India — Corn Cob to Xylitol Bioconversion & Enzymatic Hydrolysis | XiliHerb",
   description:
-    "XiliHerb's xylitol technology converts non-GMO corn cob hemicellulose into bio-based xylitol through enzymatic hydrolysis — without harsh acid catalysts, at ambient temperature, with near-zero feedstock cost. Currently in lab-scale development with three active extraction protocols.",
+    "Pioneering bio-based xylitol research in India, XiliHerb's enzymatic hydrolysis xylitol platform converts non-GMO corn cob hemicellulose into bio-based xylitol — without harsh acid catalysts, at ambient temperature, with near-zero feedstock cost. Corn cob to xylitol bioconversion, currently in lab-scale development with three active extraction protocols.",
   alternates: {
     canonical: "https://www.xiliherb.com/xylitol-technology",
   },
   openGraph: {
-    title: "Xylitol Technology — Enzymatic Hydrolysis | XiliHerb",
-    description: "Enzymatic hydrolysis of corn cob hemicellulose into bio-based xylitol. No harsh acids. Ambient temperature. Near-zero feedstock cost.",
+    title: "Bio-Based Xylitol Research India — Enzymatic Hydrolysis & Corn Cob Bioconversion | XiliHerb",
+    description: "Bio-based xylitol research in India: enzymatic hydrolysis xylitol bioconversion from corn cob hemicellulose. No harsh acids. Ambient temperature. Near-zero feedstock cost.",
   },
   twitter: {
-    title: "Xylitol Technology | XiliHerb",
-    description: "Enzymatic bioconversion of corn cob hemicellulose into bio-based xylitol. Lab-scale development stage.",
+    title: "Bio-Based Xylitol Research India | XiliHerb",
+    description: "Corn cob to xylitol bioconversion via enzymatic hydrolysis — bio-based xylitol research in India, lab-scale development stage.",
   },
 };
 
@@ -36,7 +36,7 @@ const accordionItems = [
             Research-Led Approaches to Resource-Efficient Processing
           </p>
           <p className="text-[15px] leading-[1.8] mb-5" style={{ color: "#6B6B6B" }}>
-            At XiliHerb, sustainable extraction is viewed as more than a manufacturing
+            At XiliHerb, sustainable extraction is viewed as more than a processing
             step — it is a foundational design philosophy.
           </p>
           <p className="text-[15px] leading-[1.8] mb-2" style={{ color: "#6B6B6B" }}>
@@ -118,7 +118,7 @@ const techArticleSchema = {
       "description": "Sugar alcohol produced from xylose via enzymatic bioconversion — naturally identical to conventional xylitol, used in food, oral care and pharmaceutical industries",
     },
   ],
-  "keywords": "xylitol technology, enzymatic hydrolysis xylitol, corn cob valorisation, xylan bioconversion, bio-based xylitol production, hemicellulose extraction India, xylose fermentation, xylitol manufacturing process",
+  "keywords": "bio-based xylitol research India, enzymatic hydrolysis xylitol, corn cob to xylitol bioconversion, xylitol technology, corn cob valorisation, xylan bioconversion, bio-based xylitol production, hemicellulose extraction India, xylose fermentation, xylitol bioconversion process",
   "applicationCategory": "Biotechnology",
   "author": {
     "@type": "Organization",

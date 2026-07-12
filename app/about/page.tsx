@@ -161,7 +161,7 @@ export default function About() {
               </p>
               <p className="text-[15px] leading-[1.8] mb-6" style={{ color: "#6B6B6B" }}>
                 As industries increasingly seek sustainable alternatives to traditional
-                ingredient manufacturing approaches, there is growing importance in developing
+                ingredient production approaches, there is growing importance in developing
                 technologies that can leverage renewable biological resources more efficiently
                 and responsibly.
               </p>

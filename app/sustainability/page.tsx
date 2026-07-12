@@ -6,15 +6,15 @@ import SustainabilityBanner from "@/components/SustainabilityBanner";
 import { GRAIN } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Sustainability & Circular Economy Impact | XiliHerb Bioconversion",
+  title: "Waste to Wealth Biotechnology India — Agricultural Residue Valorization & Corn Cob Waste Innovation | XiliHerb",
   description:
-    "XiliHerb's bioconversion process replaces petroleum-based chemistry with enzymatic routes from domestic agricultural residue — reducing carbon footprint, eliminating chemical effluent, and diverting crop residues from open-field burning. A circular economy approach to bio-based ingredient production.",
+    "XiliHerb's waste-to-wealth biotechnology in India transforms corn cob waste into bio-based xylitol through enzymatic routes — a model of agricultural residue valorization that reduces carbon footprint, eliminates chemical effluent, and diverts crop residues from open-field burning. Corn cob waste innovation for a circular bio-based economy.",
   alternates: {
     canonical: "https://www.xiliherb.com/sustainability",
   },
   openGraph: {
-    title: "Sustainability & Circular Economy | XiliHerb",
-    description: "Bio-based over petroleum. Domestic over imported. Enzymatic over chemical. XiliHerb's approach to sustainable ingredient production.",
+    title: "Waste to Wealth Biotechnology India — Agricultural Residue Valorization | XiliHerb",
+    description: "Waste-to-wealth biotechnology in India. Agricultural residue valorization from corn cob waste. Bio-based over petroleum. Domestic over imported. Enzymatic over chemical.",
   },
 };
 
@@ -25,8 +25,7 @@ const accordionItems = [
     content: (
       <div>
         <p className="text-[14px] leading-[1.75] mb-4" style={{ color: "#6B6B6B" }}>
-          Large volumes of agricultural resources remain underutilized despite their
-          potential to support higher-value applications.
+          Agricultural residue valorization is at the core of XiliHerb's approach — large volumes of corn cob waste remain underutilized despite their potential to support higher-value bio-based applications.
         </p>
         <ComparisonTable
           convSubtitle="Chemical · Import-dependent"
@@ -114,8 +113,8 @@ export default function Sustainability() {
                 </p>
                 <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.78)" }}>
                   We believe future ingredient technologies should create value not only through
-                  products, but also through responsible resource utilization, sustainable processing
-                  systems, and broader ecosystem development.
+                  products, but through waste-to-wealth biotechnology — transforming agricultural
+                  residues into sustainable outputs and contributing to broader ecosystem development.
                 </p>
               </div>
             </div>

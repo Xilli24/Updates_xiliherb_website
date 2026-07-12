@@ -6,15 +6,15 @@ import RevealSection from "@/components/RevealSection";
 import { GRAIN } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Partner, Invest & Collaborate — XiliHerb Agri-Biotech Ecosystem",
+  title: "Biotechnology Startup India — Biomass Bioprocessing Research & Sustainable Ingredient Innovation | XiliHerb",
   description:
-    "XiliHerb is open to seed investment, research collaboration, agricultural sourcing partnerships, and B2B supply discussions. Incubated at AIC-GKVK, Bangalore. Currently seeking aligned partners for pilot-scale development of our agricultural bioconversion platform.",
+    "XiliHerb is a biotechnology startup in India advancing sustainable ingredient innovation through biomass bioprocessing research. Incubated at AIC-GKVK, Bangalore. Open to seed investment, research collaboration, and partnerships for pilot-scale development of our agricultural bioconversion platform.",
   alternates: {
     canonical: "https://www.xiliherb.com/innovation",
   },
   openGraph: {
-    title: "Partner & Invest — XiliHerb Agri-Biotech",
-    description: "Open to seed investment, research collaboration, FPO sourcing partnerships, and B2B supply discussions. Incubated at AIC-GKVK Bangalore.",
+    title: "Biotechnology Startup India — Sustainable Ingredient Innovation | XiliHerb",
+    description: "A biotechnology startup in India advancing biomass bioprocessing research and sustainable ingredient innovation. Open to seed investment, research collaboration, and FPO sourcing partnerships. Incubated at AIC-GKVK Bangalore.",
   },
 };
 
@@ -55,7 +55,7 @@ export default function Innovation() {
                     <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.78)" }}>
                       Access to mentorship, research networks, startup infrastructure, and
                       innovation-driven communities plays an important role in strengthening our
-                      long-term technology and sustainability vision.
+                      biomass bioprocessing research and sustainable ingredient innovation vision.
                     </p>
                   </div>
                 </div>
@@ -224,8 +224,8 @@ export default function Innovation() {
             <div>
               <p className="text-[15px] leading-[1.8] mb-8 max-w-2xl" style={{ color: "#6B6B6B" }}>
                 Global demand for xylitol is growing at 6% annually. India produces virtually none
-                domestically — importing almost entirely from China and Europe. XiliHerb is building
-                the domestic alternative.
+                domestically — importing almost entirely from China and Europe. As a biotechnology
+                startup in India, XiliHerb is building the domestic bio-based alternative.
               </p>
 
               {/* Stat cards */}
@@ -284,7 +284,8 @@ export default function Innovation() {
                 <Sprout size={18} strokeWidth={1.5} className="shrink-0 mt-0.5" style={{ color: "#5BAC2E" }} />
                 <p className="text-[14px] leading-[1.75]" style={{ color: "#4A4A4A" }}>
                   India generates 30M+ tonnes of corn cob residues annually — most burned in open fields.
-                  XiliHerb converts this into the same high-purity xylitol currently imported at a premium.
+                  Through biomass bioprocessing research, XiliHerb converts this agricultural waste into
+                  the same high-purity xylitol currently imported at a premium.
                 </p>
               </div>
             </div>
@@ -330,7 +331,7 @@ export default function Innovation() {
                 <CollaborationCards />
               </RevealSection>
 
-              <Callout text="As we continue to strengthen our technology direction, we remain open to partnerships aligned with our long-term vision for sustainable bio-based innovation." />
+              <Callout text="As we continue to strengthen our technology direction, we remain open to partnerships aligned with our long-term vision for sustainable ingredient innovation and responsible biomass bioprocessing." />
             </div>
           </RevealSection>
 

@@ -27,6 +27,7 @@ const founder = {
   role: "Founder & CEO",
   bio: "Mallikarjuna is an entrepreneur with experience across FMCG, entertainment, and technology-led ventures, bringing a multidisciplinary perspective to innovation-driven businesses. With a strong interest in sustainability, process innovation, and emerging technologies, he founded XiliHerb to explore scalable biotechnology pathways for naturally derived ingredients and next-generation bio-based systems. His vision is centered on building a long-term platform where science, sustainability, and industrial innovation converge.",
   tags: ["FMCG", "Technology Ventures", "Sustainability", "Biotechnology"],
+  linkedin: "https://www.linkedin.com/in/mallikarjun-gowda/",
 };
 
 const team = [
@@ -36,6 +37,7 @@ const team = [
     name: "Sourabh Prabha",
     role: "Senior Research Associate",
     desc: "A Ph.D. scholar in Food Science and Nutrition with expertise in sustainable product development, functional ingredient systems, and quality assurance frameworks. His experience includes sensory evaluation, food safety systems (ISO 22000, GMP, GLP), and research-driven product innovation. He supports scalable and innovation-focused development initiatives.",
+    linkedin: "https://www.linkedin.com/in/sourabh-prabha/",
   },
   {
     initials: "AA",
@@ -113,6 +115,7 @@ const personSchema = [
     "jobTitle": "Founder & CEO",
     "worksFor": { "@type": "Organization", "name": "XiliHerb" },
     "knowsAbout": ["FMCG", "Biotechnology", "Sustainable innovation", "Technology ventures"],
+    "sameAs": ["https://www.linkedin.com/in/mallikarjun-gowda/"],
   },
   {
     "@context": "https://schema.org",
@@ -129,6 +132,7 @@ const personSchema = [
     "jobTitle": "Senior Research Associate",
     "worksFor": { "@type": "Organization", "name": "XiliHerb" },
     "knowsAbout": ["Food science", "Sustainable product development", "Quality assurance", "ISO 22000"],
+    "sameAs": ["https://www.linkedin.com/in/sourabh-prabha/"],
   },
   {
     "@context": "https://schema.org",
@@ -296,7 +300,9 @@ export default function Team() {
                   ))}
                 </div>
                 <Link
-                  href="#"
+                  href={founder.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-[13px] font-medium transition-opacity hover:opacity-70"
                   style={{ color: "#1E3F6E" }}
                 >
@@ -391,16 +397,20 @@ export default function Team() {
                     >
                       {member.desc}
                     </p>
-                    <div className="mt-5 pt-4" style={{ borderTop: "1px solid #E0E0DA" }}>
-                      <Link
-                        href="#"
-                        className="inline-flex items-center gap-1.5 text-[12px] transition-opacity hover:opacity-60"
-                        style={{ color: "#2C2C2C" }}
-                      >
-                        <LinkedInIcon />
-                        LinkedIn
-                      </Link>
-                    </div>
+                    {member.linkedin && (
+                      <div className="mt-5 pt-4" style={{ borderTop: "1px solid #E0E0DA" }}>
+                        <Link
+                          href={member.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-[12px] transition-opacity hover:opacity-60"
+                          style={{ color: "#2C2C2C" }}
+                        >
+                          <LinkedInIcon />
+                          LinkedIn
+                        </Link>
+                      </div>
+                    )}
                   </div>
                 </div>
               </RevealSection>

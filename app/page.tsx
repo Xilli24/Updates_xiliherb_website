@@ -63,9 +63,9 @@ const organizationSchema = {
     "Circular bioeconomy",
     "Enzymatic bioconversion",
     "Arabinoxylan",
-    "Sustainable ingredient manufacturing",
+    "Sustainable ingredient innovation",
   ],
-  "sameAs": ["https://www.linkedin.com/company/xiliherb"],
+  "sameAs": ["https://www.linkedin.com/company/xiliherb-naturals-private-limited"],
 };
 
 const productSchema = {
@@ -78,7 +78,7 @@ const productSchema = {
   "category": "Bio-based food ingredient",
   "material": "Agricultural biomass — non-GMO corn cob hemicellulose",
   "countryOfOrigin": "IN",
-  "manufacturer": { "@type": "Organization", "name": "XiliHerb", "url": "https://xiliherb.com" },
+  "producer": { "@type": "Organization", "name": "XiliHerb", "url": "https://xiliherb.com" },
   "additionalProperty": [
     { "@type": "PropertyValue", "name": "Production method", "value": "Enzymatic hydrolysis and bioconversion" },
     { "@type": "PropertyValue", "name": "Feedstock", "value": "Non-GMO corn cob hemicellulose, India-grown" },

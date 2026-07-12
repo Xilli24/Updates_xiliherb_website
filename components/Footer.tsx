@@ -57,7 +57,7 @@ const socialLinks = [
   {
     icon: <LinkedInIcon />,
     label: "LinkedIn",
-    href: "https://linkedin.com/in/xiliherb-naturals-bb4477415",
+    href: "https://www.linkedin.com/company/xiliherb-naturals-private-limited",
   },
   {
     icon: <WhatsAppIcon />,

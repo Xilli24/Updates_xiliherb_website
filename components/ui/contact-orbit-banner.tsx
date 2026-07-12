@@ -30,7 +30,7 @@ const innerOrbit: OrbitItem[] = [
 const outerOrbit: OrbitItem[] = [
   { Icon: Rocket,    color: "#FB923C", label: "Incubators" },
   { Icon: Sprout,    color: "#5BAC2E", label: "Agriculture" },
-  { Icon: Factory,   color: "#94A3B8", label: "Manufacturing" },
+  { Icon: Factory,   color: "#94A3B8", label: "Industry" },
   { Icon: Building2, color: "#22D3EE", label: "Corporate" },
 ];
 
