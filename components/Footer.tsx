@@ -43,8 +43,8 @@ const contactInfo = [
   },
   {
     icon: <MapPin size={16} className="shrink-0" style={{ color: "#5BAC2E" }} />,
-    text: "AIC & GKVK Innovation Hub, Bangalore, India",
-    href: "https://www.google.com/maps/search/?api=1&query=AIC+GKVK+Innovation+Hub+Bangalore",
+    text: "No. 472/7, Balaji Arcade, 20th L Cross Rd, Ejipura, Koramangala VI Bk, Bangalore South, Bangalore - 560095",
+    href: "https://www.google.com/maps/search/?api=1&query=No.+472%2F7%2C+Balaji+Arcade%2C+20th+L+Cross+Rd%2C+Ejipura%2C+Koramangala+VI+Bk%2C+Bangalore+South%2C+Bangalore+-+560095",
   },
 ];
 

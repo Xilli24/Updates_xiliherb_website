@@ -41,8 +41,10 @@ const organizationSchema = {
   },
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "No. 472/7, Balaji Arcade, 20th L Cross Rd, Ejipura, Koramangala VI Bk",
     "addressLocality": "Bangalore",
     "addressRegion": "Karnataka",
+    "postalCode": "560095",
     "addressCountry": "IN",
   },
   "contactPoint": {

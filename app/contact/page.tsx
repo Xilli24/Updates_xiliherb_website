@@ -99,6 +99,19 @@ export default function Contact() {
                     className="text-[11px] uppercase tracking-[0.14em] mb-2"
                     style={{ color: "#5BAC2E" }}
                   >
+                    Office
+                  </p>
+                  <p className="text-[14px] leading-[1.7]" style={{ color: "#6B6B6B" }}>
+                    No. 472/7, Balaji Arcade, 20th L Cross Rd, Ejipura,
+                    <br />
+                    Koramangala VI Bk, Bangalore South, Bangalore - 560095
+                  </p>
+                </div>
+                <div>
+                  <p
+                    className="text-[11px] uppercase tracking-[0.14em] mb-2"
+                    style={{ color: "#5BAC2E" }}
+                  >
                     Ecosystem
                   </p>
                   <p className="text-[14px] leading-[1.7]" style={{ color: "#6B6B6B" }}>

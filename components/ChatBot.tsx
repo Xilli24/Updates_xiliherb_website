@@ -73,7 +73,7 @@ const faqs: FAQ[] = [
   {
     keywords: ["location", "based", "india", "bangalore", "where", "address", "office"],
     answer:
-      "XiliHerb is based in Bangalore, Karnataka, India — incubated at the AIC-GKVK Innovation Hub at the University of Agricultural Sciences, Bangalore.",
+      "XiliHerb's office is at No. 472/7, Balaji Arcade, 20th L Cross Rd, Ejipura, Koramangala VI Bk, Bangalore South, Bangalore - 560095 — incubated at the AIC-GKVK Innovation Hub at the University of Agricultural Sciences, Bangalore.",
   },
   {
     keywords: ["arabinoxylan", "lignin", "cellulose", "other products", "other outputs", "byproduct"],
