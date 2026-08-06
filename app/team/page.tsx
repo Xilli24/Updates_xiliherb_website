@@ -74,7 +74,7 @@ const advisors = [
     role: "Academic Advisor",
     affiliation: "University of Agricultural Sciences, Bangalore — Dept. of Agricultural Microbiology",
     domain: "Agricultural Microbiology, Biocontrol & Bioenergy",
-    bio: "Professor in the Department of Agricultural Microbiology at University of Agricultural Sciences, Bangalore, with over 18 years of academic and research experience. His work spans biocontrol agents, plant growth-promoting rhizobacteria, mushroom cultivation, and bioenergy development, reflected in more than 60 journal publications. His expertise strengthens XiliHerb's research foundations in microbial applications for sustainable agricultural bioconversion.",
+    bio: "Professor and Head of the Department of Agricultural Microbiology at University of Agricultural Sciences, Bangalore, with over 18 years of academic and research experience. His work spans biocontrol agents, plant growth-promoting rhizobacteria, mushroom cultivation, and bioenergy development, reflected in more than 60 journal publications. His expertise strengthens XiliHerb's research foundations in microbial applications for sustainable agricultural bioconversion.",
   },
 ];
 
@@ -487,53 +487,52 @@ export default function Team() {
           </div>
 
           <div
-            className="divide-y"
-            style={{ borderTop: "1px solid rgba(255,255,255,0.12)", borderBottom: "1px solid rgba(255,255,255,0.12)" }}
+            className="grid md:grid-cols-2 gap-x-16 gap-y-12"
+            style={{ borderTop: "1px solid rgba(255,255,255,0.12)", paddingTop: 48 }}
           >
             {advisors.map((advisor, i) => (
               <RevealSection key={advisor.domain} delay={i * 100}>
-                <div
-                  className="grid md:grid-cols-[72px,1fr,auto] gap-8 items-start py-8"
-                  style={{ borderColor: "rgba(255,255,255,0.12)" }}
-                >
-                  <Avatar
-                    initials={advisor.initials}
-                    gradient={advisor.gradient}
-                    size={72}
-                    fontSize={22}
-                  />
-                  <div>
-                    <p
-                      className="text-[10px] uppercase tracking-[0.14em] mb-2"
-                      style={{ color: "#5BAC2E" }}
-                    >
-                      {(advisor as any).role ?? "Scientific Advisor"}
-                    </p>
-                    <p
-                      className="text-[18px] font-semibold leading-snug mb-1"
-                      style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
-                    >
-                      {advisor.name}
-                    </p>
-                    <p className="text-[12px] mb-1" style={{ color: "rgba(255,255,255,0.45)" }}>
-                      {advisor.affiliation}
-                    </p>
-                    <p className="text-[12px] mb-4" style={{ color: "rgba(91,172,46,0.7)" }}>
-                      {advisor.domain}
-                    </p>
-                    {(advisor as any).bio && (
-                      <p className="text-[13px] leading-[1.75] max-w-2xl" style={{ color: "rgba(255,255,255,0.58)" }}>
-                        {(advisor as any).bio}
+                <div className="flex flex-col gap-5 h-full">
+                  <div className="flex items-start gap-5">
+                    <Avatar
+                      initials={advisor.initials}
+                      gradient={advisor.gradient}
+                      size={64}
+                      fontSize={20}
+                    />
+                    <div>
+                      <p
+                        className="text-[10px] uppercase tracking-[0.14em] mb-2"
+                        style={{ color: "#5BAC2E" }}
+                      >
+                        {(advisor as any).role ?? "Scientific Advisor"}
                       </p>
-                    )}
+                      <p
+                        className="text-[18px] font-semibold leading-snug mb-1"
+                        style={{ color: "#F7F6F2", fontFamily: "var(--font-display)" }}
+                      >
+                        {advisor.name}
+                      </p>
+                      <p className="text-[12px] mb-1" style={{ color: "rgba(255,255,255,0.45)" }}>
+                        {advisor.affiliation}
+                      </p>
+                      <p className="text-[12px]" style={{ color: "rgba(91,172,46,0.7)" }}>
+                        {advisor.domain}
+                      </p>
+                    </div>
                   </div>
+                  {(advisor as any).bio && (
+                    <p className="text-[13px] leading-[1.75]" style={{ color: "rgba(255,255,255,0.58)" }}>
+                      {(advisor as any).bio}
+                    </p>
+                  )}
                   <Link
                     href="#"
-                    className="inline-flex items-center gap-1.5 text-[12px] transition-opacity hover:opacity-60 mt-1"
+                    className="inline-flex items-center gap-1.5 text-[12px] transition-opacity hover:opacity-60 mt-auto pt-2"
                     style={{ color: "rgba(255,255,255,0.45)" }}
                   >
                     <LinkedInIcon />
-                    <span className="hidden md:inline">Profile</span>
+                    <span>Profile</span>
                   </Link>
                 </div>
               </RevealSection>
