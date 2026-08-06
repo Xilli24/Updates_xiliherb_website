@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GRAIN } from "@/lib/constants";
 import RevealSection from "@/components/RevealSection";
-import TeamBanner from "@/components/TeamBanner";
+import TeamMarquee from "@/components/TeamMarquee";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
@@ -32,6 +32,7 @@ const founder = {
 
 const team = [
   {
+    slug: "sourabh-prabha",
     initials: "SP",
     gradient: "linear-gradient(135deg, #1E3F6E 0%, #2D6B35 100%)",
     name: "Sourabh Prabha",
@@ -40,6 +41,7 @@ const team = [
     linkedin: "https://www.linkedin.com/in/sourabh-prabha/",
   },
   {
+    slug: "ananya-a-b",
     initials: "AA",
     gradient: "linear-gradient(135deg, #2D6B35 0%, #5BAC2E 100%)",
     name: "Ananya A.B",
@@ -48,6 +50,7 @@ const team = [
     linkedin: "https://www.linkedin.com/in/ananya-a-b-a00927422/",
   },
   {
+    slug: "sakshi-raibagi",
     initials: "SR",
     gradient: "linear-gradient(135deg, #1A9BA0 0%, #5BAC2E 100%)",
     name: "Sakshi Raibagi",
@@ -59,6 +62,7 @@ const team = [
 
 const advisors = [
   {
+    slug: "savita-manganavar",
     initials: "SS",
     gradient: "linear-gradient(135deg, #2D6B35 0%, #5BAC2E 100%)",
     name: "Dr. Savita S. Manganavar",
@@ -68,6 +72,7 @@ const advisors = [
     bio: "Professor and Head of the Department of Food Science and Nutrition at University of Agricultural Sciences Bangalore. With extensive academic and research contributions in food science, nutrition, and sustainable food systems, she has authored numerous journal publications, conference papers, and academic research works. Her expertise and scientific guidance contribute to strengthening research-led innovation and biotechnology-focused development initiatives.",
   },
   {
+    slug: "umashankar-n",
     initials: "UN",
     gradient: "linear-gradient(135deg, #1A9BA0 0%, #1E3F6E 100%)",
     name: "Dr. Umashankar N.",
@@ -223,8 +228,10 @@ export default function Team() {
               </div>
             </RevealSection>
 
-            {/* Right — animated org structure */}
-            <TeamBanner />
+            {/* Right — scrolling team carousel */}
+            <RevealSection delay={120}>
+              <TeamMarquee />
+            </RevealSection>
 
           </div>
         </div>
@@ -255,7 +262,8 @@ export default function Team() {
 
           <RevealSection delay={100}>
             <div
-              className="grid lg:grid-cols-[1fr,1.6fr] gap-0 overflow-hidden"
+              id="mallikarjuna-g"
+              className="grid lg:grid-cols-[1fr,1.6fr] gap-0 overflow-hidden scroll-mt-28"
               style={{ border: "1px solid #E0E0DA", borderRadius: "4px" }}
             >
               {/* Photo area */}
@@ -377,7 +385,8 @@ export default function Team() {
             {team.map((member, i) => (
               <RevealSection key={member.role} delay={i * 80}>
                 <div
-                  className="flex flex-col h-full"
+                  id={member.slug}
+                  className="flex flex-col h-full scroll-mt-28"
                   style={{ background: "#F7F6F2" }}
                 >
                   {/* Photo placeholder */}
@@ -452,6 +461,9 @@ export default function Team() {
                 </div>
               </RevealSection>
             ))}
+            {team.length % 2 !== 0 && (
+              <div className="hidden sm:block" style={{ background: "#F7F6F2" }} />
+            )}
           </div>
         </div>
       </section>
@@ -492,7 +504,7 @@ export default function Team() {
           >
             {advisors.map((advisor, i) => (
               <RevealSection key={advisor.domain} delay={i * 100}>
-                <div className="flex flex-col gap-5 h-full">
+                <div id={advisor.slug} className="flex flex-col gap-5 h-full scroll-mt-28">
                   <div className="flex items-start gap-5">
                     <Avatar
                       initials={advisor.initials}
