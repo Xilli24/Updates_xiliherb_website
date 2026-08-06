@@ -43,7 +43,7 @@ export default function BrochureSection() {
           className="text-[15px] leading-[1.8] mb-8 max-w-xl"
           style={{ color: "rgba(255,255,255,0.65)" }}
         >
-          Our company brochure covers XiliHerb's technology platform,
+          Our company brochure covers XiliHerb&apos;s technology platform,
           sustainability approach, and partnership opportunities.
         </p>
         <a

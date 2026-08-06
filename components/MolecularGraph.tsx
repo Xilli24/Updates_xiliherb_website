@@ -95,7 +95,7 @@ export default function MolecularGraph({ fillParent = false }: Props) {
       cancelAnimationFrame(animId);
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [fillParent]);
 
   return (
     <div className={fillParent ? "absolute inset-0" : "relative w-full"}>

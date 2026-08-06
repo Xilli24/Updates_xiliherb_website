@@ -76,7 +76,7 @@ export default function ContactForm() {
           Inquiry sent
         </p>
         <p className="text-[14px] leading-[1.7]" style={{ color: "#6B6B6B" }}>
-          Thank you — we'll be in touch within 2–3 business days.
+          Thank you — we&apos;ll be in touch within 2–3 business days.
         </p>
       </div>
     );

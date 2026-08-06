@@ -7,21 +7,34 @@ interface ParticlesProps {
   className?: string;
 }
 
+interface PJSInstance {
+  pJS: {
+    fn: {
+      vendors: {
+        destroypJS: () => void;
+      };
+    };
+  };
+}
+
+declare global {
+  interface Window {
+    pJSDom?: PJSInstance[];
+    particlesJS?: (id: string, config: Record<string, unknown>) => void;
+  }
+}
+
 export default function ParticlesComponent({ id = "particles-js", className = "" }: ParticlesProps) {
   const initParticles = useCallback(() => {
     const oldCanvas = document.querySelector(`#${id} canvas`);
     if (oldCanvas) oldCanvas.remove();
 
-    // @ts-ignore
-    if (window.pJSDom?.length > 0) {
-      // @ts-ignore
-      window.pJSDom.forEach((p: any) => p.pJS.fn.vendors.destroypJS());
-      // @ts-ignore
+    if (window.pJSDom && window.pJSDom.length > 0) {
+      window.pJSDom.forEach((p) => p.pJS.fn.vendors.destroypJS());
       window.pJSDom = [];
     }
 
-    // @ts-ignore
-    window.particlesJS(id, {
+    window.particlesJS?.(id, {
       particles: {
         number: { value: 110, density: { enable: true, value_area: 800 } },
         color: { value: "#00e5ff" },
@@ -66,7 +79,6 @@ export default function ParticlesComponent({ id = "particles-js", className = ""
 
     const existing = document.querySelector('script[src*="particles.min.js"]');
     if (existing) {
-      // @ts-ignore
       if (window.particlesJS) {
         initParticles();
       } else {
@@ -88,11 +100,8 @@ export default function ParticlesComponent({ id = "particles-js", className = ""
     return () => {
       const c = document.querySelector(`#${id} canvas`);
       if (c) c.remove();
-      // @ts-ignore
-      if (window.pJSDom?.length > 0) {
-        // @ts-ignore
-        window.pJSDom.forEach((p: any) => p.pJS.fn.vendors.destroypJS());
-        // @ts-ignore
+      if (window.pJSDom && window.pJSDom.length > 0) {
+        window.pJSDom.forEach((p) => p.pJS.fn.vendors.destroypJS());
         window.pJSDom = [];
       }
     };

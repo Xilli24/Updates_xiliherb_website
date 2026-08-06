@@ -25,7 +25,7 @@ const accordionItems = [
     content: (
       <div>
         <p className="text-[14px] leading-[1.75] mb-4" style={{ color: "#6B6B6B" }}>
-          Agricultural residue valorization is at the core of XiliHerb's approach — large volumes of corn cob waste remain underutilized despite their potential to support higher-value bio-based applications.
+          Agricultural residue valorization is at the core of XiliHerb&apos;s approach — large volumes of corn cob waste remain underutilized despite their potential to support higher-value bio-based applications.
         </p>
         <ComparisonTable
           convSubtitle="Chemical · Import-dependent"

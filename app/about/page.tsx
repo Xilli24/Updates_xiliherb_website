@@ -126,7 +126,7 @@ export default function About() {
                 advanced.
               </p>
               <p className="text-[15px] leading-[1.8] mb-6" style={{ color: "#6B6B6B" }}>
-                XiliHerb's vision is to help accelerate the transition toward bio-based
+                XiliHerb&apos;s vision is to help accelerate the transition toward bio-based
                 ingredient ecosystems by developing technologies that utilize renewable
                 feedstocks, reduce dependency on conventional chemical-intensive pathways,
                 and unlock greater value from agricultural resources.

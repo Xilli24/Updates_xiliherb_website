@@ -5,7 +5,6 @@ import {Leaf,
   Droplets, 
   Sparkles  } from "lucide-react";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (

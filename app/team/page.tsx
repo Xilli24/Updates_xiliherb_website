@@ -517,7 +517,7 @@ export default function Team() {
                         className="text-[10px] uppercase tracking-[0.14em] mb-2"
                         style={{ color: "#5BAC2E" }}
                       >
-                        {(advisor as any).role ?? "Scientific Advisor"}
+                        {advisor.role}
                       </p>
                       <p
                         className="text-[18px] font-semibold leading-snug mb-1"
@@ -533,9 +533,9 @@ export default function Team() {
                       </p>
                     </div>
                   </div>
-                  {(advisor as any).bio && (
+                  {advisor.bio && (
                     <p className="text-[13px] leading-[1.75]" style={{ color: "rgba(255,255,255,0.58)" }}>
-                      {(advisor as any).bio}
+                      {advisor.bio}
                     </p>
                   )}
                   <Link

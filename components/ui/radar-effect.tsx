@@ -4,7 +4,11 @@ import { twMerge } from "tailwind-merge";
 import Link from "next/link";
 import React from "react";
 
-export const Circle = ({ className, idx, ...rest }: any) => {
+interface CircleProps extends React.ComponentPropsWithoutRef<typeof motion.div> {
+  idx: number;
+}
+
+export const Circle = ({ className, idx, ...rest }: CircleProps) => {
   return (
     <motion.div
       {...rest}

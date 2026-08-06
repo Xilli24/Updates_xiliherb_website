@@ -27,7 +27,6 @@ export default function RadialOrbitalTimeline({
   timelineData,
   className,
 }: RadialOrbitalTimelineProps) {
-  const [mounted, setMounted] = useState(false);
   const [expandedItems, setExpandedItems] = useState<Record<number, boolean>>(
     {}
   );
@@ -40,10 +39,6 @@ export default function RadialOrbitalTimeline({
   const containerRef = useRef<HTMLDivElement>(null);
   const orbitRef = useRef<HTMLDivElement>(null);
   const nodeRefs = useRef<Record<number, HTMLDivElement | null>>({});
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const handleContainerClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === containerRef.current || e.target === orbitRef.current) {
@@ -109,10 +104,10 @@ export default function RadialOrbitalTimeline({
     const angle = ((index / total) * 360 + rotationAngle) % 360;
     const radius = 160;
     const radian = (angle * Math.PI) / 180;
-    const x = radius * Math.cos(radian) + centerOffset.x;
-    const y = radius * Math.sin(radian) + centerOffset.y;
+    const x = Math.round((radius * Math.cos(radian) + centerOffset.x) * 100) / 100;
+    const y = Math.round((radius * Math.sin(radian) + centerOffset.y) * 100) / 100;
     const zIndex = Math.round(100 + 50 * Math.cos(radian));
-    const opacity = Math.max(0.4, Math.min(1, 0.4 + 0.6 * ((1 + Math.sin(radian)) / 2)));
+    const opacity = Math.round(Math.max(0.4, Math.min(1, 0.4 + 0.6 * ((1 + Math.sin(radian)) / 2))) * 1000) / 1000;
     return { x, y, angle, zIndex, opacity };
   };
 
@@ -168,7 +163,7 @@ export default function RadialOrbitalTimeline({
           {/* Orbit ring */}
           <div className="absolute w-80 h-80 rounded-full border border-white/15"></div>
 
-          {mounted && timelineData.map((item, index) => {
+          {timelineData.map((item, index) => {
             const position = calculateNodePosition(index, timelineData.length);
             const isExpanded = expandedItems[item.id];
             const isRelated = isRelatedToActive(item.id);
