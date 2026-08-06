@@ -45,6 +45,15 @@ const team = [
     name: "Ananya A.B",
     role: "Research Associate",
     desc: "A Food Science and Nutrition researcher with experience in sustainable food innovation, product development, and laboratory-based analysis. Currently pursuing doctoral studies, her work focuses on functional food systems, nutritional improvement, and research-driven ingredient innovation. She contributes to physicochemical analysis, formulation development, and sustainable food technologies.",
+    linkedin: "https://www.linkedin.com/in/ananya-a-b-a00927422/",
+  },
+  {
+    initials: "SR",
+    gradient: "linear-gradient(135deg, #1A9BA0 0%, #5BAC2E 100%)",
+    name: "Sakshi Raibagi",
+    role: "Research Intern",
+    desc: "A Food Science and Nutrition graduate (M.Sc., University of Agricultural Sciences, Bangalore) with research experience in the valorisation of underutilised plant materials and functional ingredient development. Her Master's work involved full-fraction utilisation of an underutilised tropical fruit for value-added product development, spanning compositional analysis, techno-functional characterisation, and shelf-life evaluation. She also completed an Erasmus+ exchange semester in International Food Business and Consumer Studies at the University of Kassel, Germany. At XiliHerb, she contributes to research-driven ingredient innovation and analytical characterisation work.",
+    linkedin: "https://www.linkedin.com/in/sakshi-raibagi-a2471b242/",
   },
 ];
 
@@ -124,6 +133,16 @@ const personSchema = [
     "jobTitle": "Research Associate",
     "worksFor": { "@type": "Organization", "name": "XiliHerb" },
     "knowsAbout": ["Food science", "Sustainable food innovation", "Functional food systems", "Nutritional improvement"],
+    "sameAs": ["https://www.linkedin.com/in/ananya-a-b-a00927422/"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sakshi Raibagi",
+    "jobTitle": "Research Intern",
+    "worksFor": { "@type": "Organization", "name": "XiliHerb" },
+    "knowsAbout": ["Food science", "Plant material valorisation", "Functional ingredient development", "Techno-functional characterisation"],
+    "sameAs": ["https://www.linkedin.com/in/sakshi-raibagi-a2471b242/"],
   },
   {
     "@context": "https://schema.org",
