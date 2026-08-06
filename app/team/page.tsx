@@ -70,7 +70,7 @@ const advisors = [
   {
     initials: "UN",
     gradient: "linear-gradient(135deg, #1A9BA0 0%, #1E3F6E 100%)",
-    name: "Prof. Umashankar N.",
+    name: "Dr. Umashankar N.",
     role: "Academic Advisor",
     affiliation: "University of Agricultural Sciences, Bangalore — Dept. of Agricultural Microbiology",
     domain: "Agricultural Microbiology, Biocontrol & Bioenergy",
@@ -174,7 +174,7 @@ const personSchema = [
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Prof. Umashankar N.",
+    "name": "Dr. Umashankar N.",
     "jobTitle": "Academic Advisor",
     "affiliation": { "@type": "Organization", "name": "University of Agricultural Sciences, Bangalore" },
     "worksFor": { "@type": "Organization", "name": "XiliHerb" },
