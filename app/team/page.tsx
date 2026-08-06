@@ -67,6 +67,15 @@ const advisors = [
     domain: "Food Science, Nutrition & Sustainable Food Systems",
     bio: "Professor and Head of the Department of Food Science and Nutrition at University of Agricultural Sciences Bangalore. With extensive academic and research contributions in food science, nutrition, and sustainable food systems, she has authored numerous journal publications, conference papers, and academic research works. Her expertise and scientific guidance contribute to strengthening research-led innovation and biotechnology-focused development initiatives.",
   },
+  {
+    initials: "UN",
+    gradient: "linear-gradient(135deg, #1A9BA0 0%, #1E3F6E 100%)",
+    name: "Prof. Umashankar N.",
+    role: "Academic Advisor",
+    affiliation: "University of Agricultural Sciences, Bangalore — Dept. of Agricultural Microbiology",
+    domain: "Agricultural Microbiology, Biocontrol & Bioenergy",
+    bio: "Professor in the Department of Agricultural Microbiology at University of Agricultural Sciences, Bangalore, with over 18 years of academic and research experience. His work spans biocontrol agents, plant growth-promoting rhizobacteria, mushroom cultivation, and bioenergy development, reflected in more than 60 journal publications. His expertise strengthens XiliHerb's research foundations in microbial applications for sustainable agricultural bioconversion.",
+  },
 ];
 
 /* ─── Sub-components ──────────────────────────────────────────── */
@@ -161,6 +170,15 @@ const personSchema = [
     "affiliation": { "@type": "Organization", "name": "University of Agricultural Sciences, Bangalore" },
     "worksFor": { "@type": "Organization", "name": "XiliHerb" },
     "knowsAbout": ["Food science", "Nutrition", "Sustainable food systems", "Academic research"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Prof. Umashankar N.",
+    "jobTitle": "Academic Advisor",
+    "affiliation": { "@type": "Organization", "name": "University of Agricultural Sciences, Bangalore" },
+    "worksFor": { "@type": "Organization", "name": "XiliHerb" },
+    "knowsAbout": ["Agricultural microbiology", "Biocontrol agents", "Plant growth-promoting rhizobacteria", "Bioenergy"],
   },
 ];
 
