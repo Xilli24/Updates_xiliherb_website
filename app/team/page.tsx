@@ -52,7 +52,7 @@ const team = [
     gradient: "linear-gradient(135deg, #1A9BA0 0%, #5BAC2E 100%)",
     name: "Sakshi Raibagi",
     role: "Research Intern",
-    desc: "A Food Science and Nutrition graduate (M.Sc., University of Agricultural Sciences, Bangalore) with research experience in the valorisation of underutilised plant materials and functional ingredient development. Her Master's work involved full-fraction utilisation of an underutilised tropical fruit for value-added product development, spanning compositional analysis, techno-functional characterisation, and shelf-life evaluation. She also completed an Erasmus+ exchange semester in International Food Business and Consumer Studies at the University of Kassel, Germany. At XiliHerb, she contributes to research-driven ingredient innovation and analytical characterisation work.",
+    desc: "A Food Science and Nutrition graduate (M.Sc., University of Agricultural Sciences, Bangalore) with research experience in the valorisation of underutilised plant materials and functional ingredient development, including an Erasmus+ exchange semester at the University of Kassel, Germany. At XiliHerb, she contributes to research-driven ingredient innovation and analytical characterisation work.",
     linkedin: "https://www.linkedin.com/in/sakshi-raibagi-a2471b242/",
   },
 ];
