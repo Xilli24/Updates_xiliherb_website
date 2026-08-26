@@ -4,16 +4,17 @@ import { GRAIN } from "@/lib/constants";
 import RevealSection from "@/components/RevealSection";
 import TeamMarquee from "@/components/TeamMarquee";
 import JsonLd from "@/components/JsonLd";
+import { SITE } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Team & Advisors — The Scientists Behind XiliHerb",
+  title: `Team & Advisors — The Scientists Behind ${SITE.brand}`,
   description:
-    "Meet the researchers, engineers, and scientific advisors building XiliHerb's agricultural bioconversion platform — supported by expertise from IISc Bangalore, GKVK University of Agricultural Sciences, and India's agri-biotech innovation ecosystem.",
+    `Meet the researchers, engineers, and scientific advisors building ${SITE.brand}'s agricultural bioconversion platform — supported by expertise from IISc Bangalore, GKVK University of Agricultural Sciences, and India's agri-biotech innovation ecosystem.`,
   alternates: {
-    canonical: "https://www.xiliherb.com/team",
+    canonical: `${SITE.canonicalBase}/team`,
   },
   openGraph: {
-    title: "Team & Advisors | XiliHerb",
+    title: `Team & Advisors | ${SITE.brand}`,
     description: "Researchers, engineers and advisors from IISc Bangalore and GKVK building India's agricultural bioconversion platform.",
   },
 };
@@ -60,7 +61,17 @@ const team = [
   },
 ];
 
-const advisors = [
+const advisors: {
+  slug: string;
+  initials: string;
+  gradient: string;
+  name: string;
+  role: string;
+  affiliation: string;
+  domain: string;
+  bio: string;
+  linkedin?: string;
+}[] = [
   {
     slug: "savita-manganavar",
     initials: "SS",
@@ -136,7 +147,7 @@ const personSchema = [
     "@type": "Person",
     "name": "Mallikarjuna G.",
     "jobTitle": "Founder & CEO",
-    "worksFor": { "@type": "Organization", "name": "XiliHerb" },
+    "worksFor": { "@type": "Organization", "name": SITE.brand },
     "knowsAbout": ["FMCG", "Biotechnology", "Sustainable innovation", "Technology ventures"],
     "sameAs": ["https://www.linkedin.com/in/mallikarjun-gowda/"],
   },
@@ -145,7 +156,7 @@ const personSchema = [
     "@type": "Person",
     "name": "Ananya A.B",
     "jobTitle": "Research Associate",
-    "worksFor": { "@type": "Organization", "name": "XiliHerb" },
+    "worksFor": { "@type": "Organization", "name": SITE.brand },
     "knowsAbout": ["Food science", "Sustainable food innovation", "Functional food systems", "Nutritional improvement"],
     "sameAs": ["https://www.linkedin.com/in/ananya-a-b-a00927422/"],
   },
@@ -154,7 +165,7 @@ const personSchema = [
     "@type": "Person",
     "name": "Sakshi Raibagi",
     "jobTitle": "Research Intern",
-    "worksFor": { "@type": "Organization", "name": "XiliHerb" },
+    "worksFor": { "@type": "Organization", "name": SITE.brand },
     "knowsAbout": ["Food science", "Plant material valorisation", "Functional ingredient development", "Techno-functional characterisation"],
     "sameAs": ["https://www.linkedin.com/in/sakshi-raibagi-a2471b242/"],
   },
@@ -163,7 +174,7 @@ const personSchema = [
     "@type": "Person",
     "name": "Sourabh Prabha",
     "jobTitle": "Senior Research Associate",
-    "worksFor": { "@type": "Organization", "name": "XiliHerb" },
+    "worksFor": { "@type": "Organization", "name": SITE.brand },
     "knowsAbout": ["Food science", "Sustainable product development", "Quality assurance", "ISO 22000"],
     "sameAs": ["https://www.linkedin.com/in/sourabh-prabha/"],
   },
@@ -173,7 +184,7 @@ const personSchema = [
     "name": "Dr. Savita S. Manganavar",
     "jobTitle": "Academic Advisor",
     "affiliation": { "@type": "Organization", "name": "University of Agricultural Sciences, Bangalore" },
-    "worksFor": { "@type": "Organization", "name": "XiliHerb" },
+    "worksFor": { "@type": "Organization", "name": SITE.brand },
     "knowsAbout": ["Food science", "Nutrition", "Sustainable food systems", "Academic research"],
   },
   {
@@ -182,7 +193,7 @@ const personSchema = [
     "name": "Dr. Umashankar N.",
     "jobTitle": "Academic Advisor",
     "affiliation": { "@type": "Organization", "name": "University of Agricultural Sciences, Bangalore" },
-    "worksFor": { "@type": "Organization", "name": "XiliHerb" },
+    "worksFor": { "@type": "Organization", "name": SITE.brand },
     "knowsAbout": ["Agricultural microbiology", "Biocontrol agents", "Plant growth-promoting rhizobacteria", "Bioenergy"],
   },
 ];
@@ -538,14 +549,18 @@ export default function Team() {
                       {advisor.bio}
                     </p>
                   )}
-                  <Link
-                    href="#"
-                    className="inline-flex items-center gap-1.5 text-[12px] transition-opacity hover:opacity-60 mt-auto pt-2"
-                    style={{ color: "rgba(255,255,255,0.45)" }}
-                  >
-                    <LinkedInIcon />
-                    <span>Profile</span>
-                  </Link>
+                  {advisor.linkedin && (
+                    <Link
+                      href={advisor.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-[12px] transition-opacity hover:opacity-60 mt-auto pt-2"
+                      style={{ color: "rgba(255,255,255,0.45)" }}
+                    >
+                      <LinkedInIcon />
+                      <span>Profile</span>
+                    </Link>
+                  )}
                 </div>
               </RevealSection>
             ))}

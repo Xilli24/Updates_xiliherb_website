@@ -1,6 +1,7 @@
 "use server";
 
 import nodemailer from "nodemailer";
+import { SITE } from "@/lib/site-config";
 
 export interface FormData {
   name: string;
@@ -42,7 +43,7 @@ export async function sendEmail(data: FormData): Promise<SendResult> {
     <div style="font-family: Arial, sans-serif; max-width: 600px; color: #1A1A18;">
       <div style="background: #1A1A18; padding: 24px 32px; margin-bottom: 0;">
         <p style="color: #C9CBBE; font-size: 12px; text-transform: uppercase; letter-spacing: 0.14em; margin: 0;">
-          XiliHerb — New Inquiry
+          ${SITE.brand} — New Inquiry
         </p>
       </div>
       <div style="border: 1px solid #E8E6DE; border-top: none; padding: 32px;">
@@ -79,8 +80,8 @@ export async function sendEmail(data: FormData): Promise<SendResult> {
 
   try {
     await transporter.sendMail({
-      from: `"XiliHerb Website" <${process.env.GMAIL_USER}>`,
-      to: "info@xiliherb.com",
+      from: `"${SITE.brand} Website" <${process.env.GMAIL_USER}>`,
+      to: SITE.email,
       replyTo: email,
       subject: `New Inquiry — ${inquiryLabels[inquiry] ?? "General"} from ${name}`,
       html,

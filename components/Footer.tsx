@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { FooterBackgroundGradient, TextHoverEffect } from "@/components/ui/hover-footer";
+import { SITE } from "@/lib/site-config";
 
 const XIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -33,18 +34,18 @@ const navLinks = [
 const contactInfo = [
   {
     icon: <Mail size={16} className="shrink-0" style={{ color: "#5BAC2E" }} />,
-    text: "info@xiliherb.com",
-    href: "mailto:info@xiliherb.com",
+    text: SITE.email,
+    href: `mailto:${SITE.email}`,
   },
   {
     icon: <Phone size={16} className="shrink-0" style={{ color: "#5BAC2E" }} />,
-    text: "+91 81055 18379",
-    href: "tel:+918105518379",
+    text: SITE.phone,
+    href: SITE.phoneHref,
   },
   {
     icon: <MapPin size={16} className="shrink-0" style={{ color: "#5BAC2E" }} />,
-    text: "No. 472/7, Balaji Arcade, 20th L Cross Rd, Ejipura, Koramangala VI Bk, Bangalore South, Bangalore - 560095",
-    href: "https://www.google.com/maps/search/?api=1&query=No.+472%2F7%2C+Balaji+Arcade%2C+20th+L+Cross+Rd%2C+Ejipura%2C+Koramangala+VI+Bk%2C+Bangalore+South%2C+Bangalore+-+560095",
+    text: SITE.registeredAddress.full,
+    href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SITE.registeredAddress.full)}`,
   },
 ];
 
@@ -52,17 +53,17 @@ const socialLinks = [
   {
     icon: <XIcon />,
     label: "X (Twitter)",
-    href: "https://x.com/xiliherb",
+    href: SITE.social.x,
   },
   {
     icon: <LinkedInIcon />,
     label: "LinkedIn",
-    href: "https://www.linkedin.com/company/xiliherb-naturals-private-limited",
+    href: SITE.social.linkedin,
   },
   {
     icon: <WhatsAppIcon />,
     label: "WhatsApp",
-    href: "https://wa.me/918105518379",
+    href: SITE.whatsappHref,
   },
 ];
 
@@ -204,7 +205,7 @@ export default function Footer() {
             ))}
           </div>
           <span style={{ color: "rgba(255,255,255,0.3)" }}>
-            © {new Date().getFullYear()} Xiliherb Naturals Pvt Ltd. All rights reserved.
+            © {new Date().getFullYear()} {SITE.legalName}. All rights reserved.
           </span>
           <span
             className="uppercase tracking-[0.1em] hidden md:block"
@@ -216,7 +217,7 @@ export default function Footer() {
 
         {/* Text hover effect — sits flush below the copyright bar */}
         <Link href="/" className="lg:flex hidden h-[8rem]">
-          <TextHoverEffect text="XiliHerb" />
+          <TextHoverEffect text={SITE.brand} />
         </Link>
       </div>
 

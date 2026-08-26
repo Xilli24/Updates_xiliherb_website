@@ -1,50 +1,69 @@
 import type { MetadataRoute } from "next";
-
-const BASE_URL = "https://www.xiliherb.com";
+import { SITE } from "@/lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: BASE_URL,
+      url: SITE.canonicalBase,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 1,
+      priority: 1.0,
     },
     {
-      url: `${BASE_URL}/about`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/xylitol-technology`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/sustainability`,
+      url: `${SITE.canonicalBase}/about`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/innovation`,
+      url: `${SITE.canonicalBase}/team`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/team`,
+      url: `${SITE.canonicalBase}/xylitol-technology`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.6,
+      priority: 0.7,
     },
     {
-      url: `${BASE_URL}/contact`,
+      url: `${SITE.canonicalBase}/sustainability`,
       lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.5,
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
+    {
+      url: `${SITE.canonicalBase}/innovation`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${SITE.canonicalBase}/contact`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+
+    // Sprint 5 — uncomment once each route ships (do not list routes that 404):
+    // {
+    //   url: `${SITE.canonicalBase}/products/xylitol`,
+    //   lastModified: new Date(),
+    //   changeFrequency: "monthly",
+    //   priority: 0.7,
+    // },
+    // {
+    //   url: `${SITE.canonicalBase}/resources`,
+    //   lastModified: new Date(),
+    //   changeFrequency: "monthly",
+    //   priority: 0.7,
+    // },
+    // {
+    //   url: `${SITE.canonicalBase}/faq`,
+    //   lastModified: new Date(),
+    //   changeFrequency: "monthly",
+    //   priority: 0.7,
+    // },
   ];
 }

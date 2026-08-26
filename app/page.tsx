@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Leaf, FlaskConical, Droplets, Sparkles, Microscope, Globe, Sprout } from "lucide-react";
 import { GRAIN } from "@/lib/constants";
+import { SITE } from "@/lib/site-config";
 import RadarHero from "@/components/RadarHero";
 import HeroBgCarousel from "@/components/HeroBgCarousel";
 import MagneticButton from "@/components/MagneticButton";
@@ -16,45 +17,46 @@ const steps = [
 ];
 
 export const metadata: Metadata = {
-  title: "Xiliherb | Bio-Based Xylitol from Agricultural Biomass",
+  title: `${SITE.brand} | Bio-Based Xylitol from Agricultural Biomass`,
   description:
-    "Xiliherb Naturals Pvt Ltd. From Biomass to Breakthrough — converting low-value corn cob biomass into high-value xylitol and sustainable bio-based ingredients through enzymatic bioprocessing.",
+    `${SITE.legalName}. From Biomass to Breakthrough — converting low-value corn cob biomass into high-value xylitol and sustainable bio-based ingredients through enzymatic bioprocessing.`,
   alternates: {
-    canonical: "https://www.xiliherb.com",
+    canonical: SITE.canonicalBase,
   },
 };
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Xiliherb Naturals Pvt Ltd",
-  "legalName": "Xiliherb Naturals Private Limited",
-  "url": "https://www.xiliherb.com",
-  "logo": "https://www.xiliherb.com/logoxili.svg",
+  "name": SITE.legalName,
+  "legalName": SITE.legalName,
+  "url": SITE.canonicalBase,
+  "logo": `${SITE.canonicalBase}/logoxili.svg`,
   "description":
-    "Xiliherb Naturals Pvt Ltd converts low-value agricultural biomass into high-value sustainable ingredients through innovative enzymatic bioprocessing. Xylitol from corn cob hemicellulose is our first validated output.",
+    `${SITE.legalName} converts low-value agricultural biomass into high-value sustainable ingredients through innovative enzymatic bioprocessing. Xylitol from corn cob hemicellulose is our first validated output.`,
   "slogan": "From Biomass to Breakthrough",
   "foundingDate": "2026",
   "foundingLocation": {
     "@type": "Place",
-    "name": "Bangalore, India",
+    "name": `${SITE.registeredAddress.locality}, India`,
   },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "No. 472/7, Balaji Arcade, 20th L Cross Rd, Ejipura, Koramangala VI Bk",
-    "addressLocality": "Bangalore",
-    "addressRegion": "Karnataka",
-    "postalCode": "560095",
-    "addressCountry": "IN",
+    "streetAddress": SITE.registeredAddress.street,
+    "addressLocality": SITE.registeredAddress.locality,
+    "addressRegion": SITE.registeredAddress.region,
+    "postalCode": SITE.registeredAddress.postalCode,
+    "addressCountry": SITE.registeredAddress.country,
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "email": "team@xiliherb.com",
+    "email": SITE.email,
+    "telephone": SITE.phone,
     "contactType": "general",
   },
   "memberOf": {
     "@type": "Organization",
-    "name": "AIC-GKVK Innovation Hub",
+    "name": SITE.incubation,
     "url": "https://www.uasbangalore.edu.in",
   },
   "knowsAbout": [
@@ -67,7 +69,7 @@ const organizationSchema = {
     "Arabinoxylan",
     "Sustainable ingredient innovation",
   ],
-  "sameAs": ["https://www.linkedin.com/company/xiliherb-naturals-private-limited"],
+  "sameAs": [SITE.social.linkedin],
 };
 
 const productSchema = {
@@ -75,12 +77,12 @@ const productSchema = {
   "@type": "Product",
   "name": "Bio-Based Xylitol",
   "description": "High-purity xylitol produced from non-GMO corn cob hemicellulose through enzymatic bioconversion. Naturally identical to conventional xylitol, bio-derived, with full farm-to-lab traceability.",
-  "image": "https://www.xiliherb.com/xylitol.jpg",
-  "brand": { "@type": "Brand", "name": "XiliHerb" },
+  "image": `${SITE.canonicalBase}/xylitol.jpg`,
+  "brand": { "@type": "Brand", "name": SITE.brand },
   "category": "Bio-based food ingredient",
   "material": "Agricultural biomass — non-GMO corn cob hemicellulose",
   "countryOfOrigin": "IN",
-  "producer": { "@type": "Organization", "name": "XiliHerb", "url": "https://xiliherb.com" },
+  "producer": { "@type": "Organization", "name": SITE.brand, "url": SITE.canonicalBase },
   "additionalProperty": [
     { "@type": "PropertyValue", "name": "Production method", "value": "Enzymatic hydrolysis and bioconversion" },
     { "@type": "PropertyValue", "name": "Feedstock", "value": "Non-GMO corn cob hemicellulose, India-grown" },
@@ -92,7 +94,7 @@ const productSchema = {
     "price": "0",
     "priceCurrency": "INR",
     "priceValidUntil": "2027-12-31",
-    "url": "https://www.xiliherb.com/contact",
+    "url": `${SITE.canonicalBase}/contact`,
   },
 };
 
@@ -135,7 +137,7 @@ export default function Home() {
                   className="block text-[26px] font-bold tracking-[0.04em] mb-3"
                   style={{ color: "#5BAC2E" }}
                 >
-                  Xiliherb
+                  {SITE.brand}
                 </span>
                 Engineering Sustainable Pathways for{" "}
                 <span style={{ color: "#5BAC2E" }}>Bio-Based Ingredients</span>

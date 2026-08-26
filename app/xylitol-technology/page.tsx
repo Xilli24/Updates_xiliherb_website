@@ -6,6 +6,7 @@ import { ExtractionCards, VisionCards } from "@/components/TechSectionCards";
 import RevealSection from "@/components/RevealSection";
 import TechnologyTimeline from "@/components/TechnologyTimeline";
 import { GRAIN } from "@/lib/constants";
+import { SITE } from "@/lib/site-config";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
@@ -127,7 +128,7 @@ const techArticleSchema = {
   "publisher": {
     "@type": "Organization",
     "name": "XiliHerb",
-    "url": "https://xiliherb.com",
+    "url": SITE.canonicalBase,
   },
 };
 

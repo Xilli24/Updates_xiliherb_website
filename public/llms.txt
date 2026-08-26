@@ -1,0 +1,35 @@
+# XiliHerb
+
+> XiliHerb Naturals Pvt Ltd is a science-driven biotechnology startup based in Bangalore, India. It converts low-value agricultural biomass — primarily non-GMO corn cob residue — into high-value, sustainable bio-based ingredients through enzymatic bioconversion. Its first validated output is xylitol, produced via enzymatic hydrolysis of corn cob hemicellulose at ambient temperature, without harsh acid catalysts.
+
+## Entity
+
+- Legal name: XiliHerb Naturals Pvt Ltd
+- Brand: XiliHerb
+- Founded: 2026, Bangalore, India
+- Stage: Lab-scale validation, advancing toward pilot and commercial production
+
+## Process
+
+XiliHerb's core technology converts non-GMO corn cob hemicellulose into bio-based xylitol through enzymatic hydrolysis — no harsh acid catalysts, ambient temperature, near-zero feedstock cost. Corn cobs represent roughly 40% of the harvestable plant by dry weight and are naturally rich in xylan (30–35%). The same feedstock also yields arabinoxylan and lignin derivatives. AI-assisted process modelling is used to accelerate enzyme activity analysis and reduce experimental iteration cycles.
+
+## Location
+
+Registered office: No. 472/7, Balaji Arcade, 20th L Cross Rd, Ejipura, Koramangala VI Bk, Bangalore South, Bangalore - 560095, Karnataka, India
+Incubated at: AIC-GKVK Innovation Hub, University of Agricultural Sciences, Bangalore
+
+## Contact
+
+- Email: info@xiliherb.com
+- Phone: +91 81055 18379
+- Web: https://www.xiliherb.com/contact
+
+## Pages
+
+- Home: https://www.xiliherb.com
+- About: https://www.xiliherb.com/about
+- Xylitol Technology: https://www.xiliherb.com/xylitol-technology
+- Sustainability: https://www.xiliherb.com/sustainability
+- Innovation & Ecosystem: https://www.xiliherb.com/innovation
+- Team & Advisors: https://www.xiliherb.com/team
+- Contact: https://www.xiliherb.com/contact

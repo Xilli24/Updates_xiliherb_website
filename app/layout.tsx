@@ -3,16 +3,17 @@ import Navbar from "../components/Navbar";
 import ProgressBar from "../components/ProgressBar";
 import ChatBot from "../components/ChatBot";
 import type { Metadata } from "next";
+import { SITE } from "@/lib/site-config";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.xiliherb.com"),
+  metadataBase: new URL(SITE.canonicalBase),
   title: {
-    default: "Xiliherb Naturals Pvt Ltd | From Biomass to Breakthrough",
-    template: "%s | Xiliherb",
+    default: `${SITE.legalName} | From Biomass to Breakthrough`,
+    template: `%s | ${SITE.brand}`,
   },
   description:
-    "Xiliherb Naturals Pvt Ltd converts low-value agricultural biomass into high-value sustainable ingredients through innovative bioprocessing. Naturally derived xylitol from corn cob residues — India's agricultural bioconversion platform.",
+    `${SITE.legalName} converts low-value agricultural biomass into high-value sustainable ingredients through innovative bioprocessing. Naturally derived xylitol from corn cob residues — India's agricultural bioconversion platform.`,
   keywords: [
     "xiliherb",
     "xiliherb naturals",
@@ -31,28 +32,28 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   openGraph: {
-    title: "Xiliherb Naturals Pvt Ltd | From Biomass to Breakthrough",
+    title: `${SITE.legalName} | From Biomass to Breakthrough`,
     description:
-      "Xiliherb Naturals Pvt Ltd — converting agricultural biomass into high-value sustainable ingredients through innovative enzymatic bioprocessing. Naturally derived xylitol from corn cob residues.",
-    url: "https://www.xiliherb.com",
-    siteName: "Xiliherb",
+      `${SITE.legalName} — converting agricultural biomass into high-value sustainable ingredients through innovative enzymatic bioprocessing. Naturally derived xylitol from corn cob residues.`,
+    url: SITE.canonicalBase,
+    siteName: SITE.brand,
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "https://www.xiliherb.com/logoxili.png",
+        url: `${SITE.canonicalBase}/logoxili.png`,
         width: 340,
         height: 274,
-        alt: "Xiliherb Naturals Pvt Ltd — From Biomass to Breakthrough",
+        alt: `${SITE.legalName} — From Biomass to Breakthrough`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Xiliherb Naturals Pvt Ltd | From Biomass to Breakthrough",
+    title: `${SITE.legalName} | From Biomass to Breakthrough`,
     description:
-      "Xiliherb Naturals Pvt Ltd — converting agricultural biomass into high-value sustainable ingredients through innovative bioprocessing.",
-    images: ["https://www.xiliherb.com/logoxili.png"],
+      `${SITE.legalName} — converting agricultural biomass into high-value sustainable ingredients through innovative bioprocessing.`,
+    images: [`${SITE.canonicalBase}/logoxili.png`],
   },
   verification: {
     google: "FgsAuQDRVtfLhzN9NL0mwRGChVrSHeKTU-XTeWyi084",

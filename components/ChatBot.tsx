@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { X, Send, ChevronDown } from "lucide-react";
+import { SITE } from "@/lib/site-config";
 
 interface Message {
   role: "bot" | "user";
@@ -38,7 +39,7 @@ const faqs: FAQ[] = [
   {
     keywords: ["contact", "reach", "email", "talk", "speak", "get in touch", "enquire", "inquiry", "message"],
     answer:
-      "You can reach the XiliHerb team at team@xiliherb.com or through our contact form.",
+      `You can reach the ${SITE.brand} team at ${SITE.email} or through our contact form.`,
     links: [{ text: "Open contact page", href: "/contact" }],
   },
   {
@@ -73,7 +74,7 @@ const faqs: FAQ[] = [
   {
     keywords: ["location", "based", "india", "bangalore", "where", "address", "office"],
     answer:
-      "XiliHerb's office is at No. 472/7, Balaji Arcade, 20th L Cross Rd, Ejipura, Koramangala VI Bk, Bangalore South, Bangalore - 560095 — incubated at the AIC-GKVK Innovation Hub at the University of Agricultural Sciences, Bangalore.",
+      `${SITE.brand}'s office is at ${SITE.registeredAddress.full} — incubated at the ${SITE.incubation}.`,
   },
   {
     keywords: ["arabinoxylan", "lignin", "cellulose", "other products", "other outputs", "byproduct"],

@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { GRAIN } from "@/lib/constants";
+import { SITE } from "@/lib/site-config";
 import ContactForm from "@/components/ContactForm";
 import ContactOrbitBanner from "@/components/ui/contact-orbit-banner";
 
 export const metadata: Metadata = {
-  title: "Contact — XiliHerb",
+  title: `Contact — ${SITE.brand}`,
   description:
-    "Reach out to XiliHerb for partnership inquiries, research collaborations, investment conversations, or to learn more about our sustainable bio-based ingredient technology.",
+    `Reach out to ${SITE.brand} for partnership inquiries, research collaborations, investment conversations, or to learn more about our sustainable bio-based ingredient technology.`,
   alternates: {
-    canonical: "https://www.xiliherb.com/contact",
+    canonical: `${SITE.canonicalBase}/contact`,
   },
 };
 
@@ -79,7 +80,7 @@ export default function Contact() {
                 We welcome conversations aligned with our vision
               </h2>
               <p className="text-[15px] leading-[1.8] mb-10" style={{ color: "#6B6B6B" }}>
-                XiliHerb is open to partnerships, research collaborations, and inquiries
+                {SITE.brand} is open to partnerships, research collaborations, and inquiries
                 from those who share our commitment to sustainable bio-based innovation.
               </p>
               <div style={{ borderTop: "1px solid #E0E0DA", paddingTop: "28px" }} className="space-y-6">
@@ -90,9 +91,28 @@ export default function Contact() {
                   >
                     Email
                   </p>
-                  <p className="text-[15px]" style={{ color: "#1E3F6E" }}>
-                    info@xiliherb.com
+                  <a
+                    href={`mailto:${SITE.email}`}
+                    className="text-[15px]"
+                    style={{ color: "#1E3F6E" }}
+                  >
+                    {SITE.email}
+                  </a>
+                </div>
+                <div>
+                  <p
+                    className="text-[11px] uppercase tracking-[0.14em] mb-2"
+                    style={{ color: "#5BAC2E" }}
+                  >
+                    Phone
                   </p>
+                  <a
+                    href={SITE.phoneHref}
+                    className="text-[15px]"
+                    style={{ color: "#1E3F6E" }}
+                  >
+                    {SITE.phone}
+                  </a>
                 </div>
                 <div>
                   <p
@@ -102,9 +122,7 @@ export default function Contact() {
                     Office
                   </p>
                   <p className="text-[14px] leading-[1.7]" style={{ color: "#6B6B6B" }}>
-                    No. 472/7, Balaji Arcade, 20th L Cross Rd, Ejipura,
-                    <br />
-                    Koramangala VI Bk, Bangalore South, Bangalore - 560095
+                    {SITE.registeredAddress.full}
                   </p>
                 </div>
                 <div>
@@ -115,7 +133,7 @@ export default function Contact() {
                     Ecosystem
                   </p>
                   <p className="text-[14px] leading-[1.7]" style={{ color: "#6B6B6B" }}>
-                    AIC &amp; GKVK Innovation Hub
+                    {SITE.incubation}
                   </p>
                 </div>
               </div>
